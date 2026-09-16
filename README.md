@@ -1,6 +1,3 @@
-### 📄 `README.md` (Copy & Paste this)
-
-```markdown
 # 🛰️ Zynq PYNQ GNSS Receiver
 
 A hardware-accelerated Software-Defined GNSS Receiver built on the **PYNQ** framework for Zynq SoCs. 
