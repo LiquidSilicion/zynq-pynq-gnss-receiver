@@ -107,4 +107,3 @@ zynq-pynq-gnss-receiver/
 This project is licensed under the MIT License. 
 Special thanks to the [GNSS-SDR](https://gnss-sdr.org/) and [Analog Devices](https://github.com/analogdevicesinc/hdl) open-source communities for their foundational tools and HDL references.
 ```
----
