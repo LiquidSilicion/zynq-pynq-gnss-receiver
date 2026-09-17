@@ -1,0 +1,22 @@
+{
+  "0": {
+    "basicblocks": 47,
+    "calls": "",
+    "control_depth": 8,
+    "def_use_depth": 10,
+    "file": "gnss_correlator.cpp",
+    "fileloc": 8,
+    "instructions": 370,
+    "loads": {
+      "L": 4,
+      "T": 4
+    },
+    "memory_accesses": 16,
+    "name": "gnss_correlator",
+    "stores": {
+      "L": 8,
+      "T": 2
+    },
+    "total_instructions": 370
+  }
+}

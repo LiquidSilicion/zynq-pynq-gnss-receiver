@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "gnss_correlator",
+        "file": "gnss_correlator.cpp",
+        "fileloc": "8",
+        "instructions": "82",
+        "total_instructions": "309",
+        "calls": "1",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "13",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "1": {
+        "name": "gnss_correlator_Pipeline_VITIS_LOOP_30_1",
+        "file": "vivado\/ip_repo\/gnss_correlator\/src\/gnss_correlator.cpp",
+        "fileloc": "27",
+        "instructions": "227",
+        "total_instructions": "227",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "14",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<msgs>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished File checks and directory preparation: CPU user time: 7.43 seconds. CPU system time: 1.23 seconds. Elapsed time: 8.3 seconds; current allocated memory: 486.488 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Source Code Analysis and Preprocessing: CPU user time: 16.26 seconds. CPU system time: 1.42 seconds. Elapsed time: 17.78 seconds; current allocated memory: 488.289 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Compiling Optimization and Transform: CPU user time: 5.82 seconds. CPU system time: 0.91 seconds. Elapsed time: 10.76 seconds; current allocated memory: 490.188 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 490.188 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 490.625 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 490.645 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 513.617 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Architecture Synthesis: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 514.359 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-1470" tags="SCHEDULE,VITIS_THROUGHPUT" msg_body="Pipelining result : Target II = 1, Final II = 2, Depth = 20, loop 'VITIS_LOOP_30_1'"/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.34 seconds; current allocated memory: 515.941 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 515.941 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 515.941 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 515.941 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 516.094 MB."/>
+<msg msg_severity="INFO" msg_id="HLS 200-111" tags="RUNTIME" msg_body="Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.51 seconds; current allocated memory: 522.012 MB."/>
+</msgs>

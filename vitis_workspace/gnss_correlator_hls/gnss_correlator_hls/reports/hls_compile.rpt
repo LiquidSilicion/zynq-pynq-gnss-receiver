@@ -1,0 +1,315 @@
+
+
+================================================================
+== Synthesis Summary Report of 'gnss_correlator'
+================================================================
++ General Information: 
+    * Date:           Wed Sep 16 17:42:52 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        gnss_correlator_hls
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
+* Performance & Resource Estimates: 
++---------------------------------------------+------+---------------------+----------+---------+------+----------+---------+-----+------+--------+--------+-----------+------------+-----+
+|                   Modules                   | Issue|                     | Iteration|         | Trip |          |    Latency    |      |        |        |           |            |     |
+|                   & Loops                   | Type |    Violation Type   |  Latency | Interval| Count| Pipelined| (cycles)| (ns)| Slack|  BRAM  |   DSP  |     FF    |     LUT    | URAM|
++---------------------------------------------+------+---------------------+----------+---------+------+----------+---------+-----+------+--------+--------+-----------+------------+-----+
+|+ gnss_correlator                            |     -|                    -|         -|        -|     -|        no|        -|    -|  0.00|  4 (1%)|  4 (1%)|  3931 (3%)|  5659 (10%)|    -|
+| + gnss_correlator_Pipeline_VITIS_LOOP_30_1  |     -|                    -|         -|        -|     -|       yes|        -|    -|  0.00|       -|  4 (1%)|  1719 (1%)|   2872 (5%)|    -|
+|  o VITIS_LOOP_30_1                          |    II|  Resource Limitation|        20|        2|     -|       yes|        -|    -|  7.30|       -|       -|          -|           -|    -|
++---------------------------------------------+------+---------------------+----------+---------+------+----------+---------+-----+------+--------+--------+-----------+------------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 6             | 16     | 0        |
+| s_axi_control_r | 32         | 6             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register    | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | corr_I      | 0x10   | 32    | R      | Data signal of corr_I            |                                                                      |
+| s_axi_control   | corr_I_ctrl | 0x14   | 32    | R      | Control signal of corr_I         | 0=corr_I_ap_vld                                                      |
+| s_axi_control   | corr_Q      | 0x20   | 32    | R      | Data signal of corr_Q            |                                                                      |
+| s_axi_control   | corr_Q_ctrl | 0x24   | 32    | R      | Control signal of corr_Q         | 0=corr_Q_ap_vld                                                      |
+| s_axi_control   | num_samples | 0x30   | 32    | W      | Data signal of num_samples       |                                                                      |
+| s_axi_control_r | signal_I_1  | 0x10   | 32    | W      | Data signal of signal_I          |                                                                      |
+| s_axi_control_r | signal_I_2  | 0x14   | 32    | W      | Data signal of signal_I          |                                                                      |
+| s_axi_control_r | signal_Q_1  | 0x1c   | 32    | W      | Data signal of signal_Q          |                                                                      |
+| s_axi_control_r | signal_Q_2  | 0x20   | 32    | W      | Data signal of signal_Q          |                                                                      |
+| s_axi_control_r | code_I_1    | 0x28   | 32    | W      | Data signal of code_I            |                                                                      |
+| s_axi_control_r | code_I_2    | 0x2c   | 32    | W      | Data signal of code_I            |                                                                      |
+| s_axi_control_r | code_Q_1    | 0x34   | 32    | W      | Data signal of code_Q            |                                                                      |
+| s_axi_control_r | code_Q_2    | 0x38   | 32    | W      | Data signal of code_Q            |                                                                      |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| signal_I    | in        | float const * |
+| signal_Q    | in        | float const * |
+| code_I      | in        | float const * |
+| code_Q      | in        | float const * |
+| corr_I      | out       | float*        |
+| corr_Q      | out       | float*        |
+| num_samples | in        | int           |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+-----------------+-----------+----------+---------------------------------------+
+| Argument    | HW Interface    | HW Type   | HW Usage | HW Info                               |
++-------------+-----------------+-----------+----------+---------------------------------------+
+| signal_I    | m_axi_gmem0     | interface |          | channel=0                             |
+| signal_I    | s_axi_control_r | register  | offset   | name=signal_I_1 offset=0x10 range=32  |
+| signal_I    | s_axi_control_r | register  | offset   | name=signal_I_2 offset=0x14 range=32  |
+| signal_Q    | m_axi_gmem0     | interface |          | channel=0                             |
+| signal_Q    | s_axi_control_r | register  | offset   | name=signal_Q_1 offset=0x1c range=32  |
+| signal_Q    | s_axi_control_r | register  | offset   | name=signal_Q_2 offset=0x20 range=32  |
+| code_I      | m_axi_gmem1     | interface |          | channel=0                             |
+| code_I      | s_axi_control_r | register  | offset   | name=code_I_1 offset=0x28 range=32    |
+| code_I      | s_axi_control_r | register  | offset   | name=code_I_2 offset=0x2c range=32    |
+| code_Q      | m_axi_gmem1     | interface |          | channel=0                             |
+| code_Q      | s_axi_control_r | register  | offset   | name=code_Q_1 offset=0x34 range=32    |
+| code_Q      | s_axi_control_r | register  | offset   | name=code_Q_2 offset=0x38 range=32    |
+| corr_I      | s_axi_control   | register  |          | name=corr_I offset=0x10 range=32      |
+| corr_I      | s_axi_control   | register  |          | name=corr_I_ctrl offset=0x14 range=32 |
+| corr_Q      | s_axi_control   | register  |          | name=corr_Q offset=0x20 range=32      |
+| corr_Q      | s_axi_control   | register  |          | name=corr_Q_ctrl offset=0x24 range=32 |
+| num_samples | s_axi_control   | register  |          | name=num_samples offset=0x30 range=32 |
++-------------+-----------------+-----------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------------+-----------+--------------+----------+-----------------+--------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                              | Direction | Burst Status | Length   | Loop            | Loop Location                                                | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------------+-----------+--------------+----------+-----------------+--------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  |          | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | read      | Fail         |          |                 |                                                              | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem0  | signal_I | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34:21 | read      | Widen Fail   |          | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | signal_I | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34:21 | read      | Inferred     | variable | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 |            |                                                                                                         |
+| m_axi_gmem0  | signal_Q | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35:21 | read      | Widen Fail   |          | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | signal_Q | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35:21 | read      | Inferred     | variable | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 |            |                                                                                                         |
+| m_axi_gmem1  |          | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | read      | Fail         |          |                 |                                                              | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem1  | code_I   | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36:21 | read      | Widen Fail   |          | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | code_I   | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36:21 | read      | Inferred     | variable | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 |            |                                                                                                         |
+| m_axi_gmem1  | code_Q   | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37:21 | read      | Widen Fail   |          | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | code_Q   | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37:21 | read      | Inferred     | variable | VITIS_LOOP_30_1 | vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22 |            |                                                                                                         |
++--------------+----------+--------------------------------------------------------------+-----------+--------------+----------+-----------------+--------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------+-----+--------+----------------+-----------+------------------------+---------+
+| Name                                        | DSP | Pragma | Variable       | Op        | Impl                   | Latency |
++---------------------------------------------+-----+--------+----------------+-----------+------------------------+---------+
+| + gnss_correlator                           | 4   |        |                |           |                        |         |
+|   icmp_ln45_fu_236_p2                       |     |        | icmp_ln45      | seteq     | auto                   | 0       |
+|   sub_ln45_fu_250_p2                        |     |        | sub_ln45       | sub       | fabric                 | 0       |
+|   tmp_5_fu_264_p1                           |     |        | select_ln45    | select    | auto_sel               | 0       |
+|   ctlz_18_18_1_1_U25                        |     |        | tmp_5          | ctlz      | auto                   | 0       |
+|   add_ln45_fu_276_p2                        |     |        | add_ln45       | add       | fabric                 | 0       |
+|   shl_ln45_fu_334_p2                        |     |        | shl_ln45       | shl       | auto_pipe              | 0       |
+|   select_ln45_1_fu_362_p3                   |     |        | select_ln45_1  | select    | auto_sel               | 0       |
+|   sub_ln45_1_fu_370_p2                      |     |        | sub_ln45_1     | sub       | fabric                 | 0       |
+|   add_ln45_1_fu_379_p2                      |     |        | add_ln45_1     | add       | fabric                 | 0       |
+|   retval_0_i_i69_fu_408_p3                  |     |        | retval_0_i_i69 | select    | auto_sel               | 0       |
+|   icmp_ln46_fu_282_p2                       |     |        | icmp_ln46      | seteq     | auto                   | 0       |
+|   sub_ln46_fu_296_p2                        |     |        | sub_ln46       | sub       | fabric                 | 0       |
+|   tmp_s_fu_310_p1                           |     |        | select_ln46    | select    | auto_sel               | 0       |
+|   ctlz_18_18_1_1_U26                        |     |        | tmp_s          | ctlz      | auto                   | 0       |
+|   add_ln46_fu_322_p2                        |     |        | add_ln46       | add       | fabric                 | 0       |
+|   shl_ln46_fu_421_p2                        |     |        | shl_ln46       | shl       | auto_pipe              | 0       |
+|   select_ln46_1_fu_449_p3                   |     |        | select_ln46_1  | select    | auto_sel               | 0       |
+|   sub_ln46_1_fu_457_p2                      |     |        | sub_ln46_1     | sub       | fabric                 | 0       |
+|   add_ln46_1_fu_466_p2                      |     |        | add_ln46_1     | add       | fabric                 | 0       |
+|   retval_0_i_i_fu_495_p3                    |     |        | retval_0_i_i   | select    | auto_sel               | 0       |
+|  + gnss_correlator_Pipeline_VITIS_LOOP_30_1 | 4   |        |                |           |                        |         |
+|    icmp_ln30_fu_250_p2                      |     |        | icmp_ln30      | setlt     | auto                   | 0       |
+|    add_ln30_fu_256_p2                       |     |        | add_ln30       | add       | fabric                 | 0       |
+|    add_ln34_fu_266_p2                       |     |        | add_ln34       | add       | fabric                 | 0       |
+|    fpext_32ns_64_2_no_dsp_1_U1              |     |        | pf             | fpext     | auto                   | 1       |
+|    sub_ln34_fu_425_p2                       |     |        | sub_ln34       | sub       | fabric                 | 0       |
+|    select_ln34_fu_431_p3                    |     |        | select_ln34    | select    | auto_sel               | 0       |
+|    icmp_ln34_fu_438_p2                      |     |        | icmp_ln34      | seteq     | auto                   | 0       |
+|    sub_ln34_1_fu_443_p2                     |     |        | sub_ln34_1     | sub       | fabric                 | 0       |
+|    icmp_ln34_1_fu_453_p2                    |     |        | icmp_ln34_1    | setgt     | auto                   | 0       |
+|    add_ln34_1_fu_459_p2                     |     |        | add_ln34_1     | add       | fabric                 | 0       |
+|    sub_ln34_2_fu_465_p2                     |     |        | sub_ln34_2     | sub       | fabric                 | 0       |
+|    select_ln34_1_fu_471_p3                  |     |        | select_ln34_1  | select    | auto_sel               | 0       |
+|    icmp_ln34_2_fu_479_p2                    |     |        | icmp_ln34_2    | seteq     | auto                   | 0       |
+|    icmp_ln34_3_fu_623_p2                    |     |        | icmp_ln34_3    | setlt     | auto                   | 0       |
+|    select_ln34_4_fu_628_p3                  |     |        | select_ln34_4  | select    | auto_sel               | 0       |
+|    ashr_ln34_fu_638_p2                      |     |        | ashr_ln34      | ashr      | auto_pipe              | 0       |
+|    select_ln34_2_fu_647_p3                  |     |        | select_ln34_2  | select    | auto_sel               | 0       |
+|    icmp_ln34_4_fu_655_p2                    |     |        | icmp_ln34_4    | setlt     | auto                   | 0       |
+|    shl_ln34_fu_663_p2                       |     |        | shl_ln34       | shl       | auto_pipe              | 0       |
+|    select_ln34_3_fu_668_p3                  |     |        | select_ln34_3  | select    | auto_sel               | 0       |
+|    xor_ln34_fu_903_p2                       |     |        | xor_ln34       | xor       | auto                   | 0       |
+|    and_ln34_fu_908_p2                       |     |        | and_ln34       | and       | auto                   | 0       |
+|    or_ln34_fu_913_p2                        |     |        | or_ln34        | or        | auto                   | 0       |
+|    xor_ln34_1_fu_917_p2                     |     |        | xor_ln34_1     | xor       | auto                   | 0       |
+|    and_ln34_1_fu_923_p2                     |     |        | and_ln34_1     | and       | auto                   | 0       |
+|    sparsemux_9_3_18_1_1_U3                  |     |        | a              | sparsemux | onehotencoding_realdef | 0       |
+|    add_ln35_fu_282_p2                       |     |        | add_ln35       | add       | fabric                 | 0       |
+|    fpext_32ns_64_2_no_dsp_1_U1              |     |        | pf_1           | fpext     | auto                   | 1       |
+|    sub_ln35_fu_690_p2                       |     |        | sub_ln35       | sub       | fabric                 | 0       |
+|    select_ln35_fu_696_p3                    |     |        | select_ln35    | select    | auto_sel               | 0       |
+|    icmp_ln35_fu_703_p2                      |     |        | icmp_ln35      | seteq     | auto                   | 0       |
+|    sub_ln35_1_fu_708_p2                     |     |        | sub_ln35_1     | sub       | fabric                 | 0       |
+|    icmp_ln35_1_fu_718_p2                    |     |        | icmp_ln35_1    | setgt     | auto                   | 0       |
+|    add_ln35_1_fu_724_p2                     |     |        | add_ln35_1     | add       | fabric                 | 0       |
+|    sub_ln35_2_fu_730_p2                     |     |        | sub_ln35_2     | sub       | fabric                 | 0       |
+|    select_ln35_1_fu_736_p3                  |     |        | select_ln35_1  | select    | auto_sel               | 0       |
+|    icmp_ln35_2_fu_744_p2                    |     |        | icmp_ln35_2    | seteq     | auto                   | 0       |
+|    icmp_ln35_3_fu_958_p2                    |     |        | icmp_ln35_3    | setlt     | auto                   | 0       |
+|    select_ln35_4_fu_963_p3                  |     |        | select_ln35_4  | select    | auto_sel               | 0       |
+|    ashr_ln35_fu_973_p2                      |     |        | ashr_ln35      | ashr      | auto_pipe              | 0       |
+|    select_ln35_2_fu_982_p3                  |     |        | select_ln35_2  | select    | auto_sel               | 0       |
+|    icmp_ln35_4_fu_990_p2                    |     |        | icmp_ln35_4    | setlt     | auto                   | 0       |
+|    shl_ln35_fu_998_p2                       |     |        | shl_ln35       | shl       | auto_pipe              | 0       |
+|    select_ln35_3_fu_1003_p3                 |     |        | select_ln35_3  | select    | auto_sel               | 0       |
+|    xor_ln35_fu_1119_p2                      |     |        | xor_ln35       | xor       | auto                   | 0       |
+|    and_ln35_fu_1124_p2                      |     |        | and_ln35       | and       | auto                   | 0       |
+|    or_ln35_fu_754_p2                        |     |        | or_ln35        | or        | auto                   | 0       |
+|    xor_ln35_1_fu_760_p2                     |     |        | xor_ln35_1     | xor       | auto                   | 0       |
+|    and_ln35_1_fu_766_p2                     |     |        | and_ln35_1     | and       | auto                   | 0       |
+|    sparsemux_9_3_18_1_1_U5                  |     |        | b              | sparsemux | onehotencoding_realdef | 0       |
+|    add_ln36_fu_298_p2                       |     |        | add_ln36       | add       | fabric                 | 0       |
+|    fpext_32ns_64_2_no_dsp_1_U2              |     |        | pf_2           | fpext     | auto                   | 1       |
+|    sub_ln36_fu_531_p2                       |     |        | sub_ln36       | sub       | fabric                 | 0       |
+|    select_ln36_fu_537_p3                    |     |        | select_ln36    | select    | auto_sel               | 0       |
+|    icmp_ln36_fu_544_p2                      |     |        | icmp_ln36      | seteq     | auto                   | 0       |
+|    sub_ln36_1_fu_549_p2                     |     |        | sub_ln36_1     | sub       | fabric                 | 0       |
+|    icmp_ln36_1_fu_559_p2                    |     |        | icmp_ln36_1    | setgt     | auto                   | 0       |
+|    add_ln36_1_fu_565_p2                     |     |        | add_ln36_1     | add       | fabric                 | 0       |
+|    sub_ln36_2_fu_571_p2                     |     |        | sub_ln36_2     | sub       | fabric                 | 0       |
+|    select_ln36_1_fu_577_p3                  |     |        | select_ln36_1  | select    | auto_sel               | 0       |
+|    icmp_ln36_2_fu_585_p2                    |     |        | icmp_ln36_2    | seteq     | auto                   | 0       |
+|    icmp_ln36_3_fu_772_p2                    |     |        | icmp_ln36_3    | setlt     | auto                   | 0       |
+|    select_ln36_4_fu_777_p3                  |     |        | select_ln36_4  | select    | auto_sel               | 0       |
+|    ashr_ln36_fu_787_p2                      |     |        | ashr_ln36      | ashr      | auto_pipe              | 0       |
+|    select_ln36_2_fu_796_p3                  |     |        | select_ln36_2  | select    | auto_sel               | 0       |
+|    icmp_ln36_4_fu_804_p2                    |     |        | icmp_ln36_4    | setlt     | auto                   | 0       |
+|    shl_ln36_fu_812_p2                       |     |        | shl_ln36       | shl       | auto_pipe              | 0       |
+|    select_ln36_3_fu_817_p3                  |     |        | select_ln36_3  | select    | auto_sel               | 0       |
+|    xor_ln36_fu_1011_p2                      |     |        | xor_ln36       | xor       | auto                   | 0       |
+|    and_ln36_fu_1016_p2                      |     |        | and_ln36       | and       | auto                   | 0       |
+|    or_ln36_fu_1021_p2                       |     |        | or_ln36        | or        | auto                   | 0       |
+|    xor_ln36_1_fu_1025_p2                    |     |        | xor_ln36_1     | xor       | auto                   | 0       |
+|    and_ln36_1_fu_1031_p2                    |     |        | and_ln36_1     | and       | auto                   | 0       |
+|    sparsemux_9_3_18_1_1_U4                  |     |        | c              | sparsemux | onehotencoding_realdef | 0       |
+|    add_ln37_fu_314_p2                       |     |        | add_ln37       | add       | fabric                 | 0       |
+|    fpext_32ns_64_2_no_dsp_1_U2              |     |        | pf_3           | fpext     | auto                   | 1       |
+|    sub_ln37_fu_839_p2                       |     |        | sub_ln37       | sub       | fabric                 | 0       |
+|    select_ln37_fu_845_p3                    |     |        | select_ln37    | select    | auto_sel               | 0       |
+|    icmp_ln37_fu_852_p2                      |     |        | icmp_ln37      | seteq     | auto                   | 0       |
+|    sub_ln37_1_fu_857_p2                     |     |        | sub_ln37_1     | sub       | fabric                 | 0       |
+|    icmp_ln37_1_fu_867_p2                    |     |        | icmp_ln37_1    | setgt     | auto                   | 0       |
+|    add_ln37_1_fu_873_p2                     |     |        | add_ln37_1     | add       | fabric                 | 0       |
+|    sub_ln37_2_fu_879_p2                     |     |        | sub_ln37_2     | sub       | fabric                 | 0       |
+|    select_ln37_1_fu_885_p3                  |     |        | select_ln37_1  | select    | auto_sel               | 0       |
+|    icmp_ln37_2_fu_893_p2                    |     |        | icmp_ln37_2    | seteq     | auto                   | 0       |
+|    icmp_ln37_3_fu_1066_p2                   |     |        | icmp_ln37_3    | setlt     | auto                   | 0       |
+|    select_ln37_4_fu_1071_p3                 |     |        | select_ln37_4  | select    | auto_sel               | 0       |
+|    ashr_ln37_fu_1081_p2                     |     |        | ashr_ln37      | ashr      | auto_pipe              | 0       |
+|    select_ln37_2_fu_1090_p3                 |     |        | select_ln37_2  | select    | auto_sel               | 0       |
+|    icmp_ln37_4_fu_1098_p2                   |     |        | icmp_ln37_4    | setlt     | auto                   | 0       |
+|    shl_ln37_fu_1106_p2                      |     |        | shl_ln37       | shl       | auto_pipe              | 0       |
+|    select_ln37_3_fu_1111_p3                 |     |        | select_ln37_3  | select    | auto_sel               | 0       |
+|    xor_ln37_fu_1158_p2                      |     |        | xor_ln37       | xor       | auto                   | 0       |
+|    and_ln37_fu_1163_p2                      |     |        | and_ln37       | and       | auto                   | 0       |
+|    or_ln37_fu_1168_p2                       |     |        | or_ln37        | or        | auto                   | 0       |
+|    xor_ln37_1_fu_1172_p2                    |     |        | xor_ln37_1     | xor       | auto                   | 0       |
+|    and_ln37_1_fu_1178_p2                    |     |        | and_ln37_1     | and       | auto                   | 0       |
+|    sparsemux_9_3_18_1_1_U6                  |     |        | d              | sparsemux | onehotencoding_realdef | 0       |
+|    mul_18s_18s_34_1_1_U7                    | 1   |        | mul_ln40       | mul       | auto                   | 0       |
+|    mac_mulsub_18s_18s_34s_34_4_1_U9         | 1   |        | mul_ln40_1     | mul       | dsp_slice              | 3       |
+|    mac_mulsub_18s_18s_34s_34_4_1_U9         | 1   |        | sub_ln40       | sub       | dsp_slice              | 3       |
+|    add_ln40_fu_1248_p2                      |     |        | add_ln40       | add       | fabric                 | 0       |
+|    mul_18s_18s_34_1_1_U8                    | 1   |        | mul_ln41       | mul       | auto                   | 0       |
+|    mac_muladd_18s_18s_34s_34_4_1_U10        | 1   |        | mul_ln41_1     | mul       | dsp_slice              | 3       |
+|    mac_muladd_18s_18s_34s_34_4_1_U10        | 1   |        | add_ln41       | add       | dsp_slice              | 3       |
+|    add_ln41_1_fu_1279_p2                    |     |        | add_ln41_1     | add       | fabric                 | 0       |
++---------------------------------------------+-----+--------+----------------+-----------+------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name                | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                     |           |           |      |      |        |          |      |         | Banks            |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + gnss_correlator   |           |           | 4    | 0    |        |          |      |         |                  |
+|   control_s_axi_U   | interface | s_axilite |      |      |        |          |      |         |                  |
+|   control_r_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem0_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem1_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------+--------------------------------------------------------------------------------------+
+| Type      | Options                                       | Location                                                                             |
++-----------+-----------------------------------------------+--------------------------------------------------------------------------------------+
+| INTERFACE | m_axi port=signal_I offset=slave bundle=gmem0 | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:16) |
+| INTERFACE | m_axi port=signal_Q offset=slave bundle=gmem0 | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:17) |
+| INTERFACE | m_axi port=code_I offset=slave bundle=gmem1   | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:18) |
+| INTERFACE | m_axi port=code_Q offset=slave bundle=gmem1   | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:19) |
+| INTERFACE | s_axilite port=corr_I bundle=control          | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:22) |
+| INTERFACE | s_axilite port=corr_Q bundle=control          | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:23) |
+| INTERFACE | s_axilite port=num_samples bundle=control     | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:24) |
+| INTERFACE | s_axilite port=return bundle=control          | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:25) |
+| PIPELINE  | ii=1                                          | in gnss_correlator (../../vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) |
++-----------+-----------------------------------------------+--------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,9 @@
+{
+  "name": "gnss_correlator_hls",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/correlator_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

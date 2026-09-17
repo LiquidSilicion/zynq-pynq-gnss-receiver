@@ -1,0 +1,318 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_gnss_correlator_ir
+Args:            
+  - Callee:          'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_gnss_correlator_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        signal_Iseq
+  - ArrayName:       signal_I
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 34, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        signal_Qseq
+  - ArrayName:       signal_Q
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 35, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          _ZN13ap_fixed_baseILi18ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ed.exit.load.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        code_Iseq
+  - ArrayName:       code_I
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 36, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          _ZN13ap_fixed_baseILi18ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ed.exit558.load.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        code_Qseq
+  - ArrayName:       code_Q
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 37, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          _ZN13ap_fixed_baseILi18ELi2ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ed.exit594.load.4
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          code_Qseq
+  - ArrayName:       code_Q
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          code_Iseq
+  - ArrayName:       code_I
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          signal_Qseq
+  - ArrayName:       signal_Q
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          signal_Iseq
+  - ArrayName:       signal_I
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_1
+  - String:          ' '
+  - LoopLoc:         'vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22'
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                   Line: 30, Column: 22 }
+Function:        _Z15gnss_correlatorPKfS0_S0_S0_PfS1_i
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 30, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'gnss_correlator(float const*, float const*, float const*, float const*, float*, float*, int)'
+    DebugLoc:        { File: vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...

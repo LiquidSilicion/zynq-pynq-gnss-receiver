@@ -1,0 +1,64 @@
+---
+MainSourceFile:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+          Offset:          280551
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+          Offset:          281022
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+          Offset:          281494
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+          Offset:          627990
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_30_1:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp'
+      FileOffset:      30
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp'
+          Offset:          2325152
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_30_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls'
+...

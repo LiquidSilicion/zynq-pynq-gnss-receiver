@@ -1,0 +1,14 @@
+{
+  "name": "gnss_correlator_hls",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "correlator_hls_config.cfg"
+    ],
+    "work_dir": "gnss_correlator_hls"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

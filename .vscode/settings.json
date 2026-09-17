@@ -1,0 +1,4 @@
+{
+    "cmake.sourceDirectory": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/gnss-sdr",
+    "C_Cpp.errorSquiggles": "disabled"
+}

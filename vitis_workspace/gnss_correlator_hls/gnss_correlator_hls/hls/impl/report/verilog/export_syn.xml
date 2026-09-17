@@ -1,0 +1,175 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.454</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.454</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>6.454</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.546</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>3.546</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.546</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>3.546</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>2</BRAM>
+      <CLB>0</CLB>
+      <DSP>4</DSP>
+      <FF>3634</FF>
+      <LATCH>0</LATCH>
+      <LUT>3141</LUT>
+      <SRL>128</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="gnss_correlator" DISPNAME="inst" RTLNAME="gnss_correlator">
+      <SubModules count="5">control_r_s_axi_U control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</SubModules>
+      <Resources LogicLUT="3013" RAMB18="2" SRL="128"/>
+      <LocalResources LogicLUT="112" SRL="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_r_s_axi_U" DEPTH="1" TYPE="resource" MODULENAME="control_r_s_axi" DISPNAME="control_r_s_axi_U" RTLNAME="gnss_correlator_control_r_s_axi">
+      <Resources LogicLUT="211"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" TYPE="resource" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="gnss_correlator_control_s_axi">
+      <Resources LogicLUT="80"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" TYPE="resource" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="gnss_correlator_gmem0_m_axi">
+      <Resources LogicLUT="409" RAMB18="1" SRL="63"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" TYPE="resource" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="gnss_correlator_gmem1_m_axi">
+      <Resources LogicLUT="410" RAMB18="1" SRL="63"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" DEPTH="1" TYPE="function" MODULENAME="gnss_correlator_Pipeline_VITIS_LOOP_30_1" DISPNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" RTLNAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1">
+      <SubModules count="5">flow_control_loop_pipe_sequential_init_U fpext_32ns_64_2_no_dsp_1_U1 fpext_32ns_64_2_no_dsp_1_U2 mac_muladd_18s_18s_34s_34_4_1_U10 mac_mulsub_18s_18s_34s_34_4_1_U9</SubModules>
+      <Resources LogicLUT="1791"/>
+      <LocalResources LogicLUT="1339"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="gnss_correlator_flow_control_loop_pipe_sequential_init">
+      <Resources LogicLUT="197"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/fpext_32ns_64_2_no_dsp_1_U1" DEPTH="2" TYPE="resource" MODULENAME="fpext_32ns_64_2_no_dsp_1" DISPNAME="fpext_32ns_64_2_no_dsp_1_U1" RTLNAME="gnss_correlator_fpext_32ns_64_2_no_dsp_1">
+      <Resources LogicLUT="100"/>
+      <LocalResources LogicLUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/fpext_32ns_64_2_no_dsp_1_U2" DEPTH="2" TYPE="resource" MODULENAME="fpext_32ns_64_2_no_dsp_1" DISPNAME="fpext_32ns_64_2_no_dsp_1_U2" RTLNAME="gnss_correlator_fpext_32ns_64_2_no_dsp_1">
+      <Resources LogicLUT="99"/>
+      <LocalResources LogicLUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/mac_muladd_18s_18s_34s_34_4_1_U10" DEPTH="2" TYPE="resource" MODULENAME="mac_muladd_18s_18s_34s_34_4_1" DISPNAME="mac_muladd_18s_18s_34s_34_4_1_U10" RTLNAME="gnss_correlator_mac_muladd_18s_18s_34s_34_4_1"/>
+    <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/mac_mulsub_18s_18s_34s_34_4_1_U9" DEPTH="2" TYPE="resource" MODULENAME="mac_mulsub_18s_18s_34s_34_4_1" DISPNAME="mac_mulsub_18s_18s_34s_34_4_1_U9" RTLNAME="gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1"/>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="6.44700050354003906" DATAPATH_LOGIC_DELAY="2.18499994277954102" DATAPATH_NET_DELAY="4.26199960708618164" ENDPOINT_PIN="add_ln45_reg_559_reg[2]/D" LOGIC_LEVELS="6" MAX_FANOUT="7" SLACK="3.54599428176879883" STARTPOINT_PIN="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="add_ln45_reg_559_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+      <MODULE_INSTANCES>grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.44700050354003906" DATAPATH_LOGIC_DELAY="2.18499994277954102" DATAPATH_NET_DELAY="4.26199960708618164" ENDPOINT_PIN="add_ln46_reg_584_reg[2]/D" LOGIC_LEVELS="6" MAX_FANOUT="7" SLACK="3.54599428176879883" STARTPOINT_PIN="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]/C">
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1105" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[2]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[1]_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln46_reg_584[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="add_ln46_reg_584_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="898"/>
+      <MODULE_INSTANCES>grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.42300033569335938" DATAPATH_LOGIC_DELAY="2.16099977493286133" DATAPATH_NET_DELAY="4.26199960708618164" ENDPOINT_PIN="add_ln45_reg_559_reg[4]/D" LOGIC_LEVELS="6" MAX_FANOUT="7" SLACK="3.56999397277832031" STARTPOINT_PIN="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="add_ln45_reg_559_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+      <MODULE_INSTANCES>grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.42300033569335938" DATAPATH_LOGIC_DELAY="2.16099977493286133" DATAPATH_NET_DELAY="4.26199960708618164" ENDPOINT_PIN="add_ln46_reg_584_reg[4]/D" LOGIC_LEVELS="6" MAX_FANOUT="7" SLACK="3.56999397277832031" STARTPOINT_PIN="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]/C">
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1105" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[2]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[1]_i_3" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln46_reg_584[4]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="add_ln46_reg_584_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="898"/>
+      <MODULE_INSTANCES>grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.99199914932250977" DATAPATH_LOGIC_DELAY="2.32899999618530273" DATAPATH_NET_DELAY="3.66300010681152344" ENDPOINT_PIN="add_ln45_reg_559_reg[0]/D" LOGIC_LEVELS="7" MAX_FANOUT="7" SLACK="4.00099515914916992" STARTPOINT_PIN="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[7]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145" MODULE_INSTNAME="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" IS_FUNCINST="0"/>
+      <CELL NAME="add_ln45_reg_559_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+      <MODULE_INSTANCES>grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</MODULE_INSTANCES>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/gnss_correlator_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/gnss_correlator_failfast_synth.rpt"/>
+    <ReportFile TYPE="power" PATH="verilog/report/gnss_correlator_power_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/gnss_correlator_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/gnss_correlator_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/gnss_correlator_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/gnss_correlator_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Wed Sep 16 18:10:18 IST 2026"/>
+    <item NAME="Version" VALUE="2025.2 (Build 6295257 on Nov 14 2025)"/>
+    <item NAME="Project" VALUE="gnss_correlator_hls"/>
+    <item NAME="Solution" VALUE="hls (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg484-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>

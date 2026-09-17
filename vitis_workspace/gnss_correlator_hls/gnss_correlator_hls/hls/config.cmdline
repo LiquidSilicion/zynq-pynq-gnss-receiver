@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls
+original_argv=--mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/correlator_hls_config.cfg --work_dir gnss_correlator_hls 
+
