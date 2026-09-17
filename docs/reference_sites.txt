@@ -1,0 +1,15 @@
+https://forum.digilent.com/topic/17422-zedboard-does-not-boot-from-sd-card/
+
+https://digilent.com/reference/_media/reference/programmable-logic/zedboard/zedboard_ug.pdf?_gl=1*m0eij0*_ga*MTc3MjIzNTI0NC4xNzg3NTAwNzkw*_ga_35QL6YVFN1*czE3ODk2MjcxMTgkbzYkZzAkdDE3ODk2MjcxMjIkajU2JGwwJGgxMjQxNDcyMjI0
+
+https://www.avnet.com/fsp/opasdata/d120001/medias/docus/178/GSG-AES-Z7EV-7Z020-G-14.1-V1.pdf
+
+https://www.avnet.com/americas/products/avnet-boards/support/faq/zedboard-bring-up/
+
+https://github.com/analogdevicesinc/kuiper/releases
+
+https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/3281321985/2025.1+Release
+
+https://github.com/ubfx/zedboard-bsp
+
+https://github.com/ubfx/zedboard-bsp/blob/master/README.md
