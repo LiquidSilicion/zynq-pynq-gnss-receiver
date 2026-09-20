@@ -17,84 +17,71 @@ INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-1' from correlator_hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
-INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from correlator_hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'clock=10n' from correlator_hls_config.cfg(11)
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from correlator_hls_config.cfg(5)
 INFO: [HLS 200-2176] Writing Vitis IDE component file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/vitis-comp.json
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 7.43 seconds. CPU system time: 1.23 seconds. Elapsed time: 8.3 seconds; current allocated memory: 486.488 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 5.48 seconds. CPU system time: 1.11 seconds. Elapsed time: 6.36 seconds; current allocated memory: 486.484 MB.
 INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
 INFO: [HLS 200-10] Analyzing design file '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 16.26 seconds. CPU system time: 1.42 seconds. Elapsed time: 17.78 seconds; current allocated memory: 488.289 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.52 seconds. CPU system time: 0.74 seconds. Elapsed time: 1.48 seconds; current allocated memory: 488.238 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 3,426 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 581 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 373 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 370 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 342 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 366 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 368 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.82 seconds. CPU system time: 0.91 seconds. Elapsed time: 10.76 seconds; current allocated memory: 490.188 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 490.188 MB.
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.27 seconds. CPU system time: 0.9 seconds. Elapsed time: 10.66 seconds; current allocated memory: 490.160 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 490.160 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 490.625 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 490.281 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 490.645 MB.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31:1) to (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22) in function 'gnss_correlator'... converting 25 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45:22) to (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:47:1) in function 'gnss_correlator'... converting 5 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 513.617 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 514.359 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 490.281 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 511.270 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 508.895 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'gnss_correlator' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln41) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=sub_ln40) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_1'.
-WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem1_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36), bus read operation ('gmem1_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37) accessing 'gmem1' m_axi read
-WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem0_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34), bus read operation ('gmem0_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35) accessing 'gmem0' m_axi read
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 20, loop 'VITIS_LOOP_30_1'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.34 seconds; current allocated memory: 515.941 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 515.941 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'gnss_correlator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem1_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:28) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:28), bus read operation ('gmem1_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:29) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:29) accessing 'gmem1' m_axi read
+WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem0_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:26) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:26), bus read operation ('gmem0_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:27) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:27) accessing 'gmem0' m_axi read
+WARNING: [HLS 200-886] Cannot meet target clock period in 'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) (combination delay: 22.578 ns) to honor II constraint (II=1) in region 'loop 'VITIS_LOOP_23_1''.
+Resolution: For help on HLS 200-886 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-886.html
+WARNING: [HLS 200-886] Cannot meet target clock period in 'fadd' operation 32 bit ('acc_Q', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32) (combination delay: 22.578 ns) to honor II constraint (II=1) in region 'loop 'VITIS_LOOP_23_1''.
+Resolution: For help on HLS 200-886 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-886.html
+WARNING: [HLS 200-887] Cannot meet target clock period from 'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) to 'store' operation ('acc_I_write_ln20', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20) of variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 32 bit on local variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20 (combination delay: 24.166 ns) to honor II or Latency constraint in region 'VITIS_LOOP_23_1'.
+Resolution: For help on HLS 200-887 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-887.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 21, loop 'VITIS_LOOP_23_1'
+WARNING: [HLS 200-871] Estimated clock period (24.166 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'gnss_correlator' consists of the following:
+	'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) [92]  (22.578 ns)
+	'store' operation ('acc_I_write_ln20', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20) of variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 32 bit on local variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20 [99]  (1.588 ns)
+
+Resolution: For help on HLS 200-1016 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 515.941 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.25 seconds; current allocated memory: 508.895 MB.
+INFO: [HLS 200-2250] Rewind delay = 19 for the pipelined loop 'VITIS_LOOP_23_1' due to a write-after-write dependence on variable 'acc_Q (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:21)'.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 515.941 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' pipeline 'VITIS_LOOP_30_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_18s_18s_34s_34_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_18s_18s_34s_34_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_18s_18s_34_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_18_1_1': 4 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'gnss_correlator_Pipeline_VITIS_LOOP_30_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 516.094 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 508.895 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'gnss_correlator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -109,17 +96,20 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/corr_I' to
 INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/corr_Q' to 's_axilite & ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/num_samples' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'gnss_correlator' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gnss_correlator' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Bundling port 'corr_I', 'corr_Q', 'num_samples' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Bundling port 'signal_I', 'signal_Q', 'code_I' and 'code_Q' to AXI-Lite port control_r.
-INFO: [RTGEN 206-100] Generating core module 'ctlz_18_18_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'gnss_correlator'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.51 seconds; current allocated memory: 522.012 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.63 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.68 seconds; current allocated memory: 525.539 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 508.895 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.63 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.69 seconds; current allocated memory: 508.895 MB.
 INFO: [HLS 200-2225] Wrote inferred directives to file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/inferred_directives.ini
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.69 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.82 seconds; current allocated memory: 533.371 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.48 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.61 seconds; current allocated memory: 512.703 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for gnss_correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for gnss_correlator.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-112] Total CPU user time: 33.67 seconds. Total CPU system time: 3.89 seconds. Total elapsed time: 41.35 seconds; peak allocated memory: 533.371 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 0m 53s
+INFO: [HLS 200-789] **** Estimated Fmax: 41.38 MHz
+INFO: [HLS 200-112] Total CPU user time: 14.1 seconds. Total CPU system time: 3.07 seconds. Total elapsed time: 21.71 seconds; peak allocated memory: 512.703 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 34s

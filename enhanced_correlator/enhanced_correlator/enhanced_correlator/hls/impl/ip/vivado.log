@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 20 21:48:25 2026
+# Process ID         : 25219
+# Current directory  : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/vivado.log
+# Journal file       : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/vivado.jou
+# Running On         : johan2-Yoga-7-15ITL5
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 704.549 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 12330 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 20920 MB
+# Available Virtual  : 9401 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/hls_data.json outdir=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip srcdir=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/misc
+INFO: Copied 29 verilog file(s) to /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/verilog
+INFO: Copied 25 vhdl file(s) to /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/drivers
+Generating 6 subcores in /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/subcore_prj:
+impl/misc/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+impl/misc/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.tcl
+impl/misc/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+impl/misc/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+impl/misc/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+impl/misc/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.tcl
+create_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:05 . Memory (MB): peak = 1634.816 ; gain = 76.055 ; free physical = 873 ; free virtual = 8387
+INFO: Using COE_DIR=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/verilog
+INFO: Generating enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: Generating enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: Generating enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: Generating enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: Generating enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+INFO: Generating enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip via file impl/misc/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip'...
+INFO: Done generating enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip via file impl/misc/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.tcl
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+INFO: Copied 6 subcore files: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.xci /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.xci /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.xci /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/ip/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci
+INFO: Import ports from HDL: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/hdl/vhdl/enhanced_correlator.vhd (enhanced_correlator)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add axi4lite interface s_axi_control_r
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+INFO: Add axi4full interface m_axi_gmem0
+INFO: Add axi4full interface m_axi_gmem1
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/component.xml
+INFO: Created IP archive /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip/xilinx_com_hls_enhanced_correlator_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 21:49:08 2026...

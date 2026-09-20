@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed Sep 16 18:09:42 2026
+| Date         : Sat Sep 19 17:46:37 2026
 | Host         : johan2-Yoga-7-15ITL5 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_methodology -file bd_0_wrapper_methodology_drc_routed.rpt -pb bd_0_wrapper_methodology_drc_routed.pb -rpx bd_0_wrapper_methodology_drc_routed.rpx
 | Design       : bd_0_wrapper
@@ -23,15 +23,656 @@ Table of Contents
           Floorplan: checkpoint_bd_0_wrapper
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 400
+             Checks found: 528
 +-----------+----------+-------------------------------+--------+
 | Rule      | Severity | Description                   | Checks |
 +-----------+----------+-------------------------------+--------+
+| TIMING-16 | Warning  | Large setup violation         | 128    |
 | TIMING-18 | Warning  | Missing input or output delay | 400    |
 +-----------+----------+-------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -3.615 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[31]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -3.944 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[31]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -4.252 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[31]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -4.316 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[31]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -8.427 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[15]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -8.437 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[22]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -8.446 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[29]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -8.516 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[1]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -8.567 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[6]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -8.583 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[11]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -8.610 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[0]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -8.652 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[26]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -8.715 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[24]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -8.733 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[19]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -8.763 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[3]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -8.803 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[21]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -8.808 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[20]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -8.815 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[23]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -8.825 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[21]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -8.831 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[19]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -8.838 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[14]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -8.839 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[29]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -8.843 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[15]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -8.846 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[18]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -8.847 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[22]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -8.847 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[20]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -8.853 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[8]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -8.853 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[26]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -8.854 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[3]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -8.859 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[25]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -8.863 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[7]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -8.873 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[3]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -8.882 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[25]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -8.903 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[15]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -8.907 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[20]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -8.937 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[9]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -8.942 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[18]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -8.943 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[27]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -8.944 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[10]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -8.949 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[2]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -8.949 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[14]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -8.951 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[10]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -8.959 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[1]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -8.960 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[17]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -8.965 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[6]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -8.970 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[21]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -8.973 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[28]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -8.976 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[16]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -8.977 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[13]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -8.978 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[14]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -8.981 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[9]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -8.985 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[11]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -8.993 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[0]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -8.996 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[13]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -8.996 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[16]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -8.998 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[3]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -8.999 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[19]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -9.004 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[7]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -9.013 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[8]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -9.017 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[12]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -9.019 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[4]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -9.021 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[26]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -9.022 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[12]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -9.025 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[4]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -9.026 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[5]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -9.037 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[27]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -9.037 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[30]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -9.040 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[12]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -9.043 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[2]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -9.047 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[23]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -9.057 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[26]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -9.062 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[12]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -9.064 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[4]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -9.066 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[2]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -9.075 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[9]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -9.083 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[28]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -9.089 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[24]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -9.093 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[8]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -9.099 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[13]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -9.107 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[17]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -9.120 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[24]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -9.120 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[8]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -9.120 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[5]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -9.123 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[15]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -9.125 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[29]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -9.136 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[19]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -9.151 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[11]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -9.156 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[30]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -9.157 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[16]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -9.168 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[23]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -9.197 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[4]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -9.198 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[18]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -9.203 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[24]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -9.214 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[14]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -9.219 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[17]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -9.226 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[18]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -9.230 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[5]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -9.231 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[20]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -9.234 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[5]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -9.237 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[23]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -9.253 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[0]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -9.269 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[1]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -9.274 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[17]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -9.279 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[21]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -9.279 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[6]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -9.290 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[30]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -9.292 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[0]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -9.302 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[30]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -9.302 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[27]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -9.310 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[11]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -9.327 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[10]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -9.328 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[10]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -9.335 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[9]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -9.343 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[29]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -9.364 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[25]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -9.381 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[27]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -9.386 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[7]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -9.393 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[22]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -9.394 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -9.399 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -9.405 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#122 Warning
+Large setup violation  
+There is a large setup violation of -9.407 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#123 Warning
+Large setup violation  
+There is a large setup violation of -9.418 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#124 Warning
+Large setup violation  
+There is a large setup violation of -9.438 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#125 Warning
+Large setup violation  
+There is a large setup violation of -9.460 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#126 Warning
+Large setup violation  
+There is a large setup violation of -9.467 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#127 Warning
+Large setup violation  
+There is a large setup violation of -9.514 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#128 Warning
+Large setup violation  
+There is a large setup violation of -9.557 ns between bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C (clocked by ap_clk) and bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]/D (clocked by ap_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on ap_rst_n relative to the rising and/or falling clock edge(s) of ap_clk.

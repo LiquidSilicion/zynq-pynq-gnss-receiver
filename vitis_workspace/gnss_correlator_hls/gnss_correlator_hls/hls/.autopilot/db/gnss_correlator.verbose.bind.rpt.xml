@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gnss_correlator'" level="0">
-<item name = "Date">Wed Sep 16 17:42:51 2026
+<item name = "Date">Sat Sep 19 17:34:39 2026
 </item>
 <item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">gnss_correlator_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 24.166 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,18 +24,18 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">?, ?, ?, ?, 17, 17, loop auto-rewind stp (delay=17 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170">gnss_correlator_Pipeline_VITIS_LOOP_30_1, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_23_1">?, ?, 21, 2, 1, ?, yes</column>
 </table>
 </item>
 </section>

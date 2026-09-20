@@ -1,0 +1,37 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../../vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator_tb.cpp in debug mode
+   Compiling ../../../../../../vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp in debug mode
+   Generating csim.exe
+🧪 Enhanced Correlator C Simulation Testbench (DC Carrier)
+==========================================================
+
+📊 Generating test signal...
+   Carrier frequency: 0.0 Hz (DC)
+   Sample rate: 1023000.0 Hz
+   Samples: 1023
+
+🎯 TEST 1: Perfect Alignment
+   Doppler: 0.0 Hz, Code Phase: 0.0 chips
+
+   Results:
+   Early:  I=-2042.00, Q=    0.00, Power=4169764.00
+   Prompt: I= 2046.00, Q=    0.00, Power=4186116.00
+   Late:   I= 2046.00, Q=    0.00, Power=4186116.00
+
+   ✅ PASS: Prompt correlation strong (power > 3M)
+
+🎯 TEST 2: Code Phase Offset (0.5 chips off)
+   Code Phase: 0.5 chips (true: 0.0 chips)
+
+   Results:
+   Early:  I= 2046.00, Q=    0.00, Power=4186116.00
+   Prompt: I= 2046.00, Q=    0.00, Power=4186116.00
+   Late:   I=-2042.00, Q=    0.00, Power=4169764.00
+
+   ⚠️  WARNING: Triangular peak not as expected
+
+==========================================================
+🏁 Testbench Complete
+==========================================================
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

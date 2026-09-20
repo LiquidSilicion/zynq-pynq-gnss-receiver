@@ -1,0 +1,70 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file enhanced_correlator_hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp' from enhanced_correlator_hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.h' from enhanced_correlator_hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator_tb.cpp' from enhanced_correlator_hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from enhanced_correlator_hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-1' from enhanced_correlator_hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from enhanced_correlator_hls_config.cfg(10)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from enhanced_correlator_hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../../vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator_tb.cpp in debug mode
+   Generating csim.exe
+🧪 Enhanced Correlator C Simulation Testbench
+==============================================
+
+📊 Generating test signal...
+   Carrier frequency: 1000.0 Hz
+   Sample rate: 1023000.0 Hz
+   Samples: 1023
+
+🎯 TEST 1: Perfect Alignment
+   Doppler: 1000.0 Hz, Code Phase: 0.0 chips
+
+   Results:
+   Early:  I=    3.99, Q=   -0.00, Power=     15.88
+   Prompt: I=    0.01, Q=    0.00, Power=      0.00
+   Late:   I=    0.01, Q=    0.00, Power=      0.00
+
+   ❌ FAIL: Prompt correlation weak (power = 0.00)
+
+🎯 TEST 2: Wrong Doppler (500 Hz off)
+   Doppler: 1500.0 Hz (true: 1000.0 Hz)
+
+   Results:
+   Prompt: I=    2.00, Q=  260.51, Power=  67867.68
+
+   ⚠️  WARNING: Correlation not reduced as expected
+
+🎯 TEST 3: Code Phase Offset (0.5 chips off)
+   Code Phase: 0.5 chips (true: 0.0 chips)
+
+   Results:
+   Early:  I=    0.01, Q=    0.00, Power=     15.88
+   Prompt: I=    0.01, Q=    0.00, Power=      0.00
+   Late:   I=    3.99, Q=   -0.05, Power=      0.00
+
+   ⚠️  WARNING: Expected reduced correlation
+
+==============================================
+🏁 Testbench Complete
+==============================================
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 5.67 seconds. Total CPU system time: 1.45 seconds. Total elapsed time: 6.74 seconds; peak allocated memory: 486.488 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 18s

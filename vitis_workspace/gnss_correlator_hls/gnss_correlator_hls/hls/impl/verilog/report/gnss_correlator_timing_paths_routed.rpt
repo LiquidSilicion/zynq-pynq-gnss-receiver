@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed Sep 16 18:10:11 2026
+| Date         : Sat Sep 19 17:46:55 2026
 | Host         : johan2-Yoga-7-15ITL5 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_timing -max_paths 10 -file ./report/gnss_correlator_timing_paths_routed.rpt
 | Design       : bd_0_wrapper
@@ -12,16 +12,16 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanc
 
 Timing Report
 
-Slack (MET) :             3.120ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.557ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.825ns  (logic 2.870ns (42.049%)  route 3.955ns (57.951%))
-  Logic Levels:           9  (CARRY4=4 LUT1=1 LUT5=3 LUT6=1)
+  Data Path Delay:        19.433ns  (logic 12.484ns (64.240%)  route 6.949ns (35.760%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -36,59 +36,61 @@ Slack (MET) :             3.120ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.890 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.890    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2_n_0
-    SLICE_X46Y55         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     4.205 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[16]_i_2/O[3]
-                         net (fo=2, routed)           0.674     4.879    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[16]
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.307     5.186 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7/O
-                         net (fo=4, routed)           0.688     5.874    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7_n_0
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.154     6.028 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2/O
-                         net (fo=1, routed)           0.489     6.517    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2_n_0
-    SLICE_X47Y54         LUT5 (Prop_lut5_I0_O)        0.327     6.844 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_1/O
-                         net (fo=4, routed)           0.831     7.674    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_5_fu_264_p3[2]
-    SLICE_X48Y54         LUT6 (Prop_lut6_I3_O)        0.124     7.798 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[3]_i_1/O
-                         net (fo=1, routed)           0.000     7.798    bd_0_i/hls_inst/inst/add_ln45_fu_276_p2[3]
-    SLICE_X48Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[18])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.815    19.377    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y34         LUT6 (Prop_lut6_I0_O)        0.124    19.501 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.450    19.951    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[16]
+    SLICE_X40Y34         LUT3 (Prop_lut3_I0_O)        0.124    20.075 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[16]_i_1/O
+                         net (fo=2, routed)           0.331    20.406    bd_0_i/hls_inst/inst/grp_fu_182_p2[16]
+    SLICE_X41Y35         FDRE                                         r  bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X48Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X41Y35         FDRE                                         r  bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X48Y54         FDRE (Setup_fdre_C_D)        0.029    10.918    bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]
+    SLICE_X41Y35         FDRE (Setup_fdre_C_D)       -0.040    10.849    bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]
   -------------------------------------------------------------------
-                         required time                         10.918    
-                         arrival time                          -7.798    
+                         required time                         10.849    
+                         arrival time                         -20.406    
   -------------------------------------------------------------------
-                         slack                                  3.120    
+                         slack                                 -9.557    
 
-Slack (MET) :             3.153ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.514ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.838ns  (logic 2.896ns (42.349%)  route 3.942ns (57.651%))
-  Logic Levels:           9  (CARRY4=4 LUT1=1 LUT3=1 LUT5=3)
+  Data Path Delay:        19.390ns  (logic 12.484ns (64.384%)  route 6.906ns (35.616%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -103,59 +105,61 @@ Slack (MET) :             3.153ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.890 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.890    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2_n_0
-    SLICE_X46Y55         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     4.205 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[16]_i_2/O[3]
-                         net (fo=2, routed)           0.674     4.879    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[16]
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.307     5.186 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7/O
-                         net (fo=4, routed)           0.688     5.874    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7_n_0
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.154     6.028 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2/O
-                         net (fo=1, routed)           0.489     6.517    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2_n_0
-    SLICE_X47Y54         LUT5 (Prop_lut5_I0_O)        0.327     6.844 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_1/O
-                         net (fo=4, routed)           0.818     7.661    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_5_fu_264_p3[2]
-    SLICE_X49Y54         LUT3 (Prop_lut3_I2_O)        0.150     7.811 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[2]_i_1/O
-                         net (fo=1, routed)           0.000     7.811    bd_0_i/hls_inst/inst/add_ln45_fu_276_p2[2]
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[29])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.648    19.210    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X39Y31         LUT6 (Prop_lut6_I0_O)        0.124    19.334 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.431    19.765    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[25]
+    SLICE_X41Y31         LUT3 (Prop_lut3_I0_O)        0.124    19.889 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[25]_i_1/O
+                         net (fo=2, routed)           0.474    20.363    bd_0_i/hls_inst/inst/grp_fu_182_p2[25]
+    SLICE_X43Y31         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X43Y31         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X49Y54         FDRE (Setup_fdre_C_D)        0.075    10.964    bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]
+    SLICE_X43Y31         FDRE (Setup_fdre_C_D)       -0.040    10.849    bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]
   -------------------------------------------------------------------
-                         required time                         10.964    
-                         arrival time                          -7.811    
+                         required time                         10.849    
+                         arrival time                         -20.363    
   -------------------------------------------------------------------
-                         slack                                  3.153    
+                         slack                                 -9.514    
 
-Slack (MET) :             3.377ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.467ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.478ns  (logic 2.520ns (38.902%)  route 3.958ns (61.098%))
-  Logic Levels:           7  (CARRY4=3 LUT1=1 LUT3=1 LUT5=1 LUT6=1)
+  Data Path Delay:        19.367ns  (logic 12.484ns (64.459%)  route 6.883ns (35.541%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -170,54 +174,61 @@ Slack (MET) :             3.377ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     3.992 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/O[0]
-                         net (fo=3, routed)           0.606     4.598    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[9]
-    SLICE_X47Y53         LUT3 (Prop_lut3_I0_O)        0.324     4.922 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1/O
-                         net (fo=3, routed)           0.837     5.759    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_fu_256_p3[8]
-    SLICE_X49Y53         LUT5 (Prop_lut5_I1_O)        0.327     6.086 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4/O
-                         net (fo=1, routed)           0.639     6.725    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4_n_0
-    SLICE_X49Y54         LUT6 (Prop_lut6_I4_O)        0.124     6.849 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1/O
-                         net (fo=6, routed)           0.602     7.451    bd_0_i/hls_inst/inst/tmp_5_fu_264_p3[0]
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[4])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.755    19.316    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y30         LUT6 (Prop_lut6_I0_O)        0.124    19.440 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.445    19.885    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[2]
+    SLICE_X38Y29         LUT3 (Prop_lut3_I0_O)        0.124    20.009 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[2]_i_1/O
+                         net (fo=2, routed)           0.331    20.340    bd_0_i/hls_inst/inst/grp_fu_182_p2[2]
+    SLICE_X38Y28         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X38Y28         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X49Y54         FDRE (Setup_fdre_C_D)       -0.061    10.828    bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]
+    SLICE_X38Y28         FDRE (Setup_fdre_C_D)       -0.016    10.873    bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]
   -------------------------------------------------------------------
-                         required time                         10.828    
-                         arrival time                          -7.451    
+                         required time                         10.873    
+                         arrival time                         -20.340    
   -------------------------------------------------------------------
-                         slack                                  3.377    
+                         slack                                 -9.467    
 
-Slack (MET) :             3.433ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.460ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]/D
+  Destination:            bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.514ns  (logic 2.644ns (40.590%)  route 3.870ns (59.410%))
-  Logic Levels:           8  (CARRY4=3 LUT1=1 LUT3=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.407ns  (logic 12.484ns (64.326%)  route 6.923ns (35.674%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT5=2 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -232,56 +243,61 @@ Slack (MET) :             3.433ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     3.992 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/O[0]
-                         net (fo=3, routed)           0.606     4.598    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[9]
-    SLICE_X47Y53         LUT3 (Prop_lut3_I0_O)        0.324     4.922 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1/O
-                         net (fo=3, routed)           0.837     5.759    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_fu_256_p3[8]
-    SLICE_X49Y53         LUT5 (Prop_lut5_I1_O)        0.327     6.086 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4/O
-                         net (fo=1, routed)           0.639     6.725    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4_n_0
-    SLICE_X49Y54         LUT6 (Prop_lut6_I4_O)        0.124     6.849 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1/O
-                         net (fo=6, routed)           0.514     7.363    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_5_fu_264_p3[0]
-    SLICE_X48Y54         LUT6 (Prop_lut6_I1_O)        0.124     7.487 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_1/O
-                         net (fo=1, routed)           0.000     7.487    bd_0_i/hls_inst/inst/add_ln45_fu_276_p2[4]
-    SLICE_X48Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[3])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.953    19.514    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y29         LUT6 (Prop_lut6_I0_O)        0.124    19.638 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.618    20.256    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[1]
+    SLICE_X39Y30         LUT6 (Prop_lut6_I0_O)        0.124    20.380 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/int_corr_Q[1]_i_1/O
+                         net (fo=1, routed)           0.000    20.380    bd_0_i/hls_inst/inst/control_s_axi_U/corr_Q[1]
+    SLICE_X39Y30         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X48Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
+    SLICE_X39Y30         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X48Y54         FDRE (Setup_fdre_C_D)        0.031    10.920    bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]
+    SLICE_X39Y30         FDRE (Setup_fdre_C_D)        0.031    10.920    bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]
   -------------------------------------------------------------------
                          required time                         10.920    
-                         arrival time                          -7.487    
+                         arrival time                         -20.380    
   -------------------------------------------------------------------
-                         slack                                  3.433    
+                         slack                                 -9.460    
 
-Slack (MET) :             3.479ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.438ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.466ns  (logic 2.644ns (40.889%)  route 3.822ns (59.111%))
-  Logic Levels:           8  (CARRY4=3 LUT1=1 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Data Path Delay:        19.307ns  (logic 12.484ns (64.661%)  route 6.823ns (35.339%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -296,56 +312,61 @@ Slack (MET) :             3.479ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     3.992 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/O[0]
-                         net (fo=3, routed)           0.606     4.598    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[9]
-    SLICE_X47Y53         LUT3 (Prop_lut3_I0_O)        0.324     4.922 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1/O
-                         net (fo=3, routed)           0.837     5.759    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_fu_256_p3[8]
-    SLICE_X49Y53         LUT5 (Prop_lut5_I1_O)        0.327     6.086 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4/O
-                         net (fo=1, routed)           0.639     6.725    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4_n_0
-    SLICE_X49Y54         LUT6 (Prop_lut6_I4_O)        0.124     6.849 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1/O
-                         net (fo=6, routed)           0.466     7.315    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_5_fu_264_p3[0]
-    SLICE_X49Y54         LUT2 (Prop_lut2_I0_O)        0.124     7.439 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[1]_i_1/O
-                         net (fo=1, routed)           0.000     7.439    bd_0_i/hls_inst/inst/add_ln45_fu_276_p2[1]
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[32])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.792    19.354    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y33         LUT6 (Prop_lut6_I0_O)        0.124    19.478 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.336    19.813    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[28]
+    SLICE_X40Y33         LUT3 (Prop_lut3_I0_O)        0.124    19.937 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[28]_i_1/O
+                         net (fo=2, routed)           0.343    20.280    bd_0_i/hls_inst/inst/grp_fu_182_p2[28]
+    SLICE_X41Y35         FDRE                                         r  bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X49Y54         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X41Y35         FDRE                                         r  bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X49Y54         FDRE (Setup_fdre_C_D)        0.029    10.918    bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]
+    SLICE_X41Y35         FDRE (Setup_fdre_C_D)       -0.047    10.842    bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]
   -------------------------------------------------------------------
-                         required time                         10.918    
-                         arrival time                          -7.439    
+                         required time                         10.842    
+                         arrival time                         -20.280    
   -------------------------------------------------------------------
-                         slack                                  3.479    
+                         slack                                 -9.438    
 
-Slack (MET) :             3.507ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.418ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[0]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.486ns  (logic 2.644ns (40.764%)  route 3.842ns (59.236%))
-  Logic Levels:           8  (CARRY4=3 LUT1=2 LUT3=1 LUT5=1 LUT6=1)
+  Data Path Delay:        19.318ns  (logic 12.484ns (64.624%)  route 6.834ns (35.376%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -360,56 +381,61 @@ Slack (MET) :             3.507ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     3.992 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/O[0]
-                         net (fo=3, routed)           0.606     4.598    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[9]
-    SLICE_X47Y53         LUT3 (Prop_lut3_I0_O)        0.324     4.922 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1/O
-                         net (fo=3, routed)           0.837     5.759    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_fu_256_p3[8]
-    SLICE_X49Y53         LUT5 (Prop_lut5_I1_O)        0.327     6.086 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4/O
-                         net (fo=1, routed)           0.639     6.725    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4_n_0
-    SLICE_X49Y54         LUT6 (Prop_lut6_I4_O)        0.124     6.849 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1/O
-                         net (fo=6, routed)           0.486     7.335    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_5_fu_264_p3[0]
-    SLICE_X50Y53         LUT1 (Prop_lut1_I0_O)        0.124     7.459 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[0]_i_1/O
-                         net (fo=1, routed)           0.000     7.459    bd_0_i/hls_inst/inst/add_ln45_fu_276_p2[0]
-    SLICE_X50Y53         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[0]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[32])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.792    19.354    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y33         LUT6 (Prop_lut6_I0_O)        0.124    19.478 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.336    19.813    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[28]
+    SLICE_X40Y33         LUT3 (Prop_lut3_I0_O)        0.124    19.937 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[28]_i_1/O
+                         net (fo=2, routed)           0.354    20.291    bd_0_i/hls_inst/inst/grp_fu_182_p2[28]
+    SLICE_X36Y33         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X50Y53         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[0]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X36Y33         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X50Y53         FDRE (Setup_fdre_C_D)        0.077    10.966    bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[0]
+    SLICE_X36Y33         FDRE (Setup_fdre_C_D)       -0.016    10.873    bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]
   -------------------------------------------------------------------
-                         required time                         10.966    
-                         arrival time                          -7.459    
+                         required time                         10.873    
+                         arrival time                         -20.291    
   -------------------------------------------------------------------
-                         slack                                  3.507    
+                         slack                                 -9.418    
 
-Slack (MET) :             3.560ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.407ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[2]/D
+  Destination:            bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.322ns  (logic 2.746ns (43.439%)  route 3.576ns (56.561%))
-  Logic Levels:           8  (CARRY4=4 LUT1=1 LUT5=3)
+  Data Path Delay:        19.262ns  (logic 12.360ns (64.168%)  route 6.902ns (35.832%))
+  Logic Levels:           9  (CARRY4=2 DSP48E1=2 LUT2=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -424,57 +450,59 @@ Slack (MET) :             3.560ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.773 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.773    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2_n_0
-    SLICE_X46Y54         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     3.890 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.890    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2_n_0
-    SLICE_X46Y55         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     4.205 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[16]_i_2/O[3]
-                         net (fo=2, routed)           0.674     4.879    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[16]
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.307     5.186 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7/O
-                         net (fo=4, routed)           0.688     5.874    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7_n_0
-    SLICE_X47Y55         LUT5 (Prop_lut5_I4_O)        0.154     6.028 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2/O
-                         net (fo=1, routed)           0.489     6.517    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2_n_0
-    SLICE_X47Y54         LUT5 (Prop_lut5_I0_O)        0.327     6.844 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_1/O
-                         net (fo=4, routed)           0.451     7.295    bd_0_i/hls_inst/inst/tmp_5_fu_264_p3[2]
-    SLICE_X46Y55         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[2]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[9])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           1.039    19.600    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y33         LUT6 (Prop_lut6_I0_O)        0.124    19.724 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.510    20.235    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[7]
+    SLICE_X41Y31         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X46Y55         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[2]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X41Y31         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X46Y55         FDRE (Setup_fdre_C_D)       -0.034    10.855    bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[2]
+    SLICE_X41Y31         FDRE (Setup_fdre_C_D)       -0.061    10.828    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]
   -------------------------------------------------------------------
-                         required time                         10.855    
-                         arrival time                          -7.295    
+                         required time                         10.828    
+                         arrival time                         -20.235    
   -------------------------------------------------------------------
-                         slack                                  3.560    
+                         slack                                 -9.407    
 
-Slack (MET) :             3.567ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+Slack (VIOLATED) :        -9.405ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[1]/D
+  Destination:            bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.286ns  (logic 2.374ns (37.766%)  route 3.912ns (62.234%))
-  Logic Levels:           6  (CARRY4=2 LUT1=1 LUT4=1 LUT5=1 LUT6=1)
+  Data Path Delay:        19.274ns  (logic 12.484ns (64.772%)  route 6.790ns (35.228%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -489,51 +517,61 @@ Slack (MET) :             3.567ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X44Y51         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y51         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/Q
-                         net (fo=7, routed)           0.769     2.198    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_out[0]
-    SLICE_X48Y53         LUT1 (Prop_lut1_I0_O)        0.150     2.348 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3/O
-                         net (fo=1, routed)           0.505     2.853    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/p_0_in[0]
-    SLICE_X46Y52         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.803     3.656 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.656    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2_n_0
-    SLICE_X46Y53         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     3.875 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2/O[0]
-                         net (fo=3, routed)           0.613     4.488    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln45_fu_250_p2[5]
-    SLICE_X47Y52         LUT5 (Prop_lut5_I4_O)        0.290     4.778 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_3/O
-                         net (fo=3, routed)           0.664     5.442    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_3_n_0
-    SLICE_X47Y53         LUT4 (Prop_lut4_I3_O)        0.332     5.774 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_2/O
-                         net (fo=1, routed)           0.580     6.354    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_2_n_0
-    SLICE_X48Y53         LUT6 (Prop_lut6_I3_O)        0.124     6.478 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[1]_i_1/O
-                         net (fo=5, routed)           0.781     7.259    bd_0_i/hls_inst/inst/tmp_5_fu_264_p3[1]
-    SLICE_X46Y55         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[1]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[15])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.758    19.320    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X39Y33         LUT6 (Prop_lut6_I0_O)        0.124    19.444 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=3, routed)           0.346    19.790    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[13]
+    SLICE_X40Y32         LUT3 (Prop_lut3_I0_O)        0.124    19.914 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[13]_i_1/O
+                         net (fo=2, routed)           0.333    20.247    bd_0_i/hls_inst/inst/grp_fu_182_p2[13]
+    SLICE_X43Y33         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X46Y55         FDRE                                         r  bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[1]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
+    SLICE_X43Y33         FDRE                                         r  bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X46Y55         FDRE (Setup_fdre_C_D)       -0.063    10.826    bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[1]
+    SLICE_X43Y33         FDRE (Setup_fdre_C_D)       -0.047    10.842    bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]
   -------------------------------------------------------------------
-                         required time                         10.826    
-                         arrival time                          -7.259    
+                         required time                         10.842    
+                         arrival time                         -20.247    
   -------------------------------------------------------------------
-                         slack                                  3.567    
+                         slack                                 -9.405    
 
-Slack (MET) :             3.569ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170_ap_start_reg_reg/C
+Slack (VIOLATED) :        -9.399ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/gmem1_addr_reg_1360_reg[61]/D
+  Destination:            bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.409ns  (logic 2.466ns (38.477%)  route 3.943ns (61.523%))
-  Logic Levels:           10  (CARRY4=9 LUT4=1)
+  Data Path Delay:        19.396ns  (logic 12.484ns (64.364%)  route 6.912ns (35.636%))
+  Logic Levels:           10  (CARRY4=2 DSP48E1=2 LUT2=1 LUT5=2 LUT6=3)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -548,66 +586,61 @@ Slack (MET) :             3.569ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X52Y60         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170_ap_start_reg_reg/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X52Y60         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170_ap_start_reg_reg/Q
-                         net (fo=291, routed)         3.596     5.025    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170_ap_start_reg
-    SLICE_X47Y75         LUT4 (Prop_lut4_I1_O)        0.150     5.175 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360[31]_i_4/O
-                         net (fo=1, routed)           0.347     5.522    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360[31]_i_4_n_0
-    SLICE_X48Y75         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.728     6.250 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[31]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.250    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[31]_i_1_n_0
-    SLICE_X48Y76         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.364 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[35]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.364    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[35]_i_1_n_0
-    SLICE_X48Y77         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.478 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[39]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.478    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[39]_i_1_n_0
-    SLICE_X48Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.592 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[43]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.592    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[43]_i_1_n_0
-    SLICE_X48Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.706 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[47]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.706    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[47]_i_1_n_0
-    SLICE_X48Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.820 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[51]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.820    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[51]_i_1_n_0
-    SLICE_X48Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     6.934 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[55]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     6.934    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[55]_i_1_n_0
-    SLICE_X48Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.048 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[59]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.048    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[59]_i_1_n_0
-    SLICE_X48Y83         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     7.382 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U/gmem1_addr_reg_1360_reg[61]_i_1/O[1]
-                         net (fo=1, routed)           0.000     7.382    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sext_ln36_fu_304_p1[61]
-    SLICE_X48Y83         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/gmem1_addr_reg_1360_reg[61]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[24])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           1.030    19.591    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X39Y31         LUT6 (Prop_lut6_I0_O)        0.124    19.715 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.530    20.245    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[22]
+    SLICE_X38Y31         LUT6 (Prop_lut6_I0_O)        0.124    20.369 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/int_corr_Q[22]_i_1/O
+                         net (fo=1, routed)           0.000    20.369    bd_0_i/hls_inst/inst/control_s_axi_U/corr_Q[22]
+    SLICE_X38Y31         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X48Y83         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/gmem1_addr_reg_1360_reg[61]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
+    SLICE_X38Y31         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X48Y83         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/gmem1_addr_reg_1360_reg[61]
+    SLICE_X38Y31         FDRE (Setup_fdre_C_D)        0.081    10.970    bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]
   -------------------------------------------------------------------
-                         required time                         10.951    
-                         arrival time                          -7.382    
+                         required time                         10.970    
+                         arrival time                         -20.369    
   -------------------------------------------------------------------
-                         slack                                  3.569    
+                         slack                                 -9.399    
 
-Slack (MET) :             3.646ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]/C
+Slack (VIOLATED) :        -9.394ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/add_ln46_reg_584_reg[3]/D
+  Destination:            bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.299ns  (logic 2.630ns (41.750%)  route 3.669ns (58.250%))
-  Logic Levels:           9  (CARRY4=4 LUT1=1 LUT5=3 LUT6=1)
+  Data Path Delay:        19.252ns  (logic 12.360ns (64.201%)  route 6.892ns (35.799%))
+  Logic Levels:           9  (CARRY4=2 DSP48E1=2 LUT2=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -622,48 +655,48 @@ Slack (MET) :             3.646ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/ap_clk
-    SLICE_X39Y53         FDRE                                         r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]/C
+                         net (fo=3327, unset)         0.973     0.973    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X34Y28         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X39Y53         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_fu_122_reg[0]/Q
-                         net (fo=7, routed)           0.683     2.112    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_Q_out[0]
-    SLICE_X40Y53         LUT1 (Prop_lut1_I0_O)        0.124     2.236 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574[4]_i_3/O
-                         net (fo=1, routed)           0.379     2.615    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574[4]_i_3_n_0
-    SLICE_X41Y53         CARRY4 (Prop_carry4_CYINIT_CO[3])
-                                                      0.580     3.195 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[4]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.195    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[4]_i_2_n_0
-    SLICE_X41Y54         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.309 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[8]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.309    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[8]_i_2_n_0
-    SLICE_X41Y55         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.423 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[12]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     3.423    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[12]_i_2_n_0
-    SLICE_X41Y56         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     3.757 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln46_reg_574_reg[16]_i_2/O[1]
-                         net (fo=3, routed)           0.662     4.419    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/sub_ln46_fu_296_p2[14]
-    SLICE_X40Y56         LUT5 (Prop_lut5_I1_O)        0.303     4.722 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln46_reg_584[4]_i_7/O
-                         net (fo=4, routed)           0.692     5.414    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln46_reg_584[4]_i_7_n_0
-    SLICE_X40Y56         LUT5 (Prop_lut5_I4_O)        0.154     5.568 f  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[2]_i_2/O
-                         net (fo=1, routed)           0.307     5.874    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[2]_i_2_n_0
-    SLICE_X40Y55         LUT5 (Prop_lut5_I0_O)        0.327     6.201 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln46_reg_579[2]_i_1/O
-                         net (fo=4, routed)           0.947     7.148    bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/tmp_s_fu_310_p3[2]
-    SLICE_X43Y55         LUT6 (Prop_lut6_I3_O)        0.124     7.272 r  bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln46_reg_584[3]_i_1/O
-                         net (fo=1, routed)           0.000     7.272    bd_0_i/hls_inst/inst/add_ln46_fu_322_p2[3]
-    SLICE_X43Y55         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln46_reg_584_reg[3]/D
+    SLICE_X34Y28         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/Q
+                         net (fo=6, routed)           0.598     2.089    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y28         LUT2 (Prop_lut2_I1_O)        0.150     2.239 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.307     2.545    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X34Y29         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.975     3.520 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=20, routed)          1.061     4.582    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y29         LUT6 (Prop_lut6_I1_O)        0.307     4.889 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.723     5.612    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y12          DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    11.461 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=54, routed)          0.875    12.336    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         LUT5 (Prop_lut5_I3_O)        0.124    12.460 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.000    12.460    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X36Y31         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.993 f  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=12, routed)          1.222    14.215    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X35Y31         LUT5 (Prop_lut5_I0_O)        0.124    14.339 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.567    14.905    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    DSP48_X2Y13          DSP48E1 (Prop_dsp48e1_B[6]_P[8])
+                                                      3.656    18.561 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.924    19.485    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X37Y31         LUT6 (Prop_lut6_I0_O)        0.124    19.609 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_gnss_correlator/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1/bd_0_hls_inst_0_gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, routed)           0.615    20.225    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/r_tdata[6]
+    SLICE_X39Y32         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=3408, unset)         0.924    10.924    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X43Y55         FDRE                                         r  bd_0_i/hls_inst/inst/add_ln46_reg_584_reg[3]/C
+                         net (fo=3327, unset)         0.924    10.924    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/ap_clk
+    SLICE_X39Y32         FDRE                                         r  bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X43Y55         FDRE (Setup_fdre_C_D)        0.029    10.918    bd_0_i/hls_inst/inst/add_ln46_reg_584_reg[3]
+    SLICE_X39Y32         FDRE (Setup_fdre_C_D)       -0.058    10.831    bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]
   -------------------------------------------------------------------
-                         required time                         10.918    
-                         arrival time                          -7.272    
+                         required time                         10.831    
+                         arrival time                         -20.225    
   -------------------------------------------------------------------
-                         slack                                  3.646    
+                         slack                                 -9.394    
 
 
 

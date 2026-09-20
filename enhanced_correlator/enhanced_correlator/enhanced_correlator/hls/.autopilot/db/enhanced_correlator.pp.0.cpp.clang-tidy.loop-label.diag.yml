@@ -1,0 +1,76 @@
+---
+MainSourceFile:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_61_1:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      61
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          557520
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_61_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_70_2:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      70
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          557705
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_70_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_71_3:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      71
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          557788
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_71_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_86_4:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      86
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          558209
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_86_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_87_5:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      87
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          558269
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_87_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_88_6:  '
+      FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_enhanced_correlator/src/enhanced_correlator.cpp'
+      FileOffset:      88
+      Replacements:
+        - FilePath:        '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/.autopilot/db/enhanced_correlator.pp.0.cpp'
+          Offset:          558338
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_88_6: '
+    Level:           Remark
+    BuildDirectory:  '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator'
+...

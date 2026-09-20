@@ -6,33 +6,33 @@
 </RunData>
 <TimingReport>
   <TargetClockPeriod>10.000</TargetClockPeriod>
-  <AchievedClockPeriod>6.880</AchievedClockPeriod>
+  <AchievedClockPeriod>19.557</AchievedClockPeriod>
   <CLOCK_NAME>ap_clk</CLOCK_NAME>
-  <CP_FINAL>6.880</CP_FINAL>
-  <CP_ROUTE>6.880</CP_ROUTE>
-  <CP_SYNTH>6.454</CP_SYNTH>
+  <CP_FINAL>19.557</CP_FINAL>
+  <CP_ROUTE>19.557</CP_ROUTE>
+  <CP_SYNTH>20.158</CP_SYNTH>
   <CP_TARGET>10.000</CP_TARGET>
-  <SLACK_FINAL>3.120</SLACK_FINAL>
-  <SLACK_ROUTE>3.120</SLACK_ROUTE>
-  <SLACK_SYNTH>3.546</SLACK_SYNTH>
-  <TIMING_MET>TRUE</TIMING_MET>
-  <TNS_FINAL>0.000</TNS_FINAL>
-  <TNS_ROUTE>0.000</TNS_ROUTE>
-  <TNS_SYNTH>0.000</TNS_SYNTH>
-  <WNS_FINAL>3.120</WNS_FINAL>
-  <WNS_ROUTE>3.120</WNS_ROUTE>
-  <WNS_SYNTH>3.546</WNS_SYNTH>
+  <SLACK_FINAL>-9.557</SLACK_FINAL>
+  <SLACK_ROUTE>-9.557</SLACK_ROUTE>
+  <SLACK_SYNTH>-10.158</SLACK_SYNTH>
+  <TIMING_MET>FALSE</TIMING_MET>
+  <TNS_FINAL>-1138.766</TNS_FINAL>
+  <TNS_ROUTE>-1138.766</TNS_ROUTE>
+  <TNS_SYNTH>-1257.565</TNS_SYNTH>
+  <WNS_FINAL>-9.557</WNS_FINAL>
+  <WNS_ROUTE>-9.557</WNS_ROUTE>
+  <WNS_SYNTH>-10.158</WNS_SYNTH>
 </TimingReport>
 <AreaReport>
   <Resources>
     <BRAM>2</BRAM>
     <CLB>0</CLB>
-    <DSP>4</DSP>
-    <FF>3273</FF>
+    <DSP>10</DSP>
+    <FF>3155</FF>
     <LATCH>0</LATCH>
-    <LUT>2501</LUT>
-    <SLICE>1014</SLICE>
-    <SRL>68</SRL>
+    <LUT>2363</LUT>
+    <SLICE>1039</SLICE>
+    <SRL>85</SRL>
     <URAM>0</URAM>
   </Resources>
   <AvailableResources>
@@ -47,102 +47,180 @@
 </AreaReport>
 <RtlModules>
   <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="gnss_correlator" TOP_CELL="bd_0_i/hls_inst/inst">
-    <SubModules count="5">control_r_s_axi_U control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170</SubModules>
-    <Resources BRAM="2" DSP="4" FF="3273" LUT="2501" LogicLUT="2433" RAMB18="2" SRL="68"/>
-    <LocalResources FF="408" LUT="113" LogicLUT="111" SRL="2"/>
+    <SubModules count="9">control_r_s_axi_U control_s_axi_U fadd_32ns_32ns_32_2_full_dsp_1_U2 faddfsub_32ns_32ns_32_5_full_dsp_1_U1 flow_control_loop_delay_pipe_U fmul_32ns_32ns_32_4_max_dsp_1_U3 fmul_32ns_32ns_32_4_max_dsp_1_U4 gmem0_m_axi_U gmem1_m_axi_U</SubModules>
+    <Resources BRAM="2" DSP="10" FF="3155" LUT="2363" LogicLUT="2278" RAMB18="2" SRL="85"/>
+    <LocalResources FF="635" LUT="22" LogicLUT="3" SRL="19"/>
   </RtlModule>
   <RtlModule CELL="inst/control_r_s_axi_U" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_control_r_s_axi">
     <Resources FF="297" LUT="211" LogicLUT="211"/>
   </RtlModule>
   <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_control_s_axi">
-    <Resources FF="149" LUT="79" LogicLUT="79"/>
+    <Resources FF="151" LUT="137" LogicLUT="137"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_2_full_dsp_1_U2" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1">
+    <Resources DSP="2" FF="98" LUT="345" LogicLUT="345"/>
+    <LocalResources FF="98" LUT="97" LogicLUT="97"/>
+  </RtlModule>
+  <RtlModule CELL="inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U1" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="207" LUT="221" LogicLUT="221"/>
+    <LocalResources FF="98" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/flow_control_loop_delay_pipe_U" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_flow_control_loop_delay_pipe">
+    <Resources FF="2" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U3" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="143" LUT="120" LogicLUT="120"/>
+    <LocalResources FF="96" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U4" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="144" LUT="104" LogicLUT="104"/>
+    <LocalResources FF="97" LUT="32" LogicLUT="32"/>
   </RtlModule>
   <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_gmem0_m_axi">
-    <Resources BRAM="1" FF="739" LUT="435" LogicLUT="402" RAMB18="1" SRL="33"/>
+    <Resources BRAM="1" FF="739" LUT="523" LogicLUT="490" RAMB18="1" SRL="33"/>
   </RtlModule>
   <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_gmem1_m_axi">
-    <Resources BRAM="1" FF="739" LUT="436" LogicLUT="403" RAMB18="1" SRL="33"/>
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170" DEPTH="1" FILE_NAME="gnss_correlator.v" ORIG_REF_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1">
-    <SubModules count="5">flow_control_loop_pipe_sequential_init_U fpext_32ns_64_2_no_dsp_1_U1 fpext_32ns_64_2_no_dsp_1_U2 mac_muladd_18s_18s_34s_34_4_1_U10 mac_mulsub_18s_18s_34s_34_4_1_U9</SubModules>
-    <Resources DSP="4" FF="941" LUT="1228" LogicLUT="1228"/>
-    <LocalResources DSP="1" FF="801" LUT="896" LogicLUT="896"/>
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" ORIG_REF_NAME="gnss_correlator_flow_control_loop_pipe_sequential_init">
-    <Resources FF="5" LUT="190" LogicLUT="190"/>
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/fpext_32ns_64_2_no_dsp_1_U1" DEPTH="2" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" ORIG_REF_NAME="gnss_correlator_fpext_32ns_64_2_no_dsp_1">
-    <LocalResources FF="68" LUT="19" LogicLUT="19"/>
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/fpext_32ns_64_2_no_dsp_1_U2" DEPTH="2" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" ORIG_REF_NAME="gnss_correlator_fpext_32ns_64_2_no_dsp_1">
-    <LocalResources FF="67" LUT="18" LogicLUT="18"/>
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/mac_muladd_18s_18s_34s_34_4_1_U10" DEPTH="2" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" ORIG_REF_NAME="gnss_correlator_mac_muladd_18s_18s_34s_34_4_1">
-  </RtlModule>
-  <RtlModule CELL="inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/mac_mulsub_18s_18s_34s_34_4_1_U9" DEPTH="2" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" ORIG_REF_NAME="gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1">
+    <Resources BRAM="1" FF="739" LUT="524" LogicLUT="491" RAMB18="1" SRL="33"/>
   </RtlModule>
 </RtlModules>
 <TimingPaths>
-  <TPATH DATAPATH_DELAY="6.82533454895019531" DATAPATH_LOGIC_DELAY="2.86999988555908203" DATAPATH_NET_DELAY="3.95533347129821777" ENDPOINT_PIN="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]/D" LOGIC_LEVELS="9" MAX_FANOUT="7" SLACK="3.11966013908386230" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[16]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[3]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[3]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+  <TPATH DATAPATH_DELAY="19.43348503112792969" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.94948482513427734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.55749034881591797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_7" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[16]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_I_fu_98_reg[16]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1143"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="6.83841562271118164" DATAPATH_LOGIC_DELAY="2.89599990844726562" DATAPATH_NET_DELAY="3.94241523742675781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]/D" LOGIC_LEVELS="9" MAX_FANOUT="7" SLACK="3.15257859230041504" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[16]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_7" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+  <TPATH DATAPATH_DELAY="19.38990020751953125" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.90589904785156250" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.51390457153320312" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/m_axis_result_tdata[25]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[25]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[25]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1152"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="6.47777366638183594" DATAPATH_LOGIC_DELAY="2.51999998092651367" DATAPATH_NET_DELAY="3.95777320861816406" ENDPOINT_PIN="bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]/D" LOGIC_LEVELS="7" MAX_FANOUT="7" SLACK="3.37722110748291016" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/trunc_ln45_reg_554_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="905"/>
+  <TPATH DATAPATH_DELAY="19.36741638183593750" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.88341760635375977" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.46742057800292969" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_21" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1152"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="6.51396226882934570" DATAPATH_LOGIC_DELAY="2.64399981498718262" DATAPATH_NET_DELAY="3.86996173858642578" ENDPOINT_PIN="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]/D" LOGIC_LEVELS="8" MAX_FANOUT="7" SLACK="3.43303251266479492" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[4]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+  <TPATH DATAPATH_DELAY="19.40730285644531250" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.92330074310302734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.46030712127685547" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_22" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/int_corr_Q[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1897"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="429"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="6.46623611450195312" DATAPATH_LOGIC_DELAY="2.64399981498718262" DATAPATH_NET_DELAY="3.82223582267761230" ENDPOINT_PIN="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]/D" LOGIC_LEVELS="8" MAX_FANOUT="7" SLACK="3.47875857353210449" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/acc_I_fu_118_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v" LINE_NUMBER="1096"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[4]_i_3" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[4]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549_reg[12]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/select_ln45_reg_549[9]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/trunc_ln45_reg_554[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170/add_ln45_reg_559[1]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="145"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/add_ln45_reg_559_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="897"/>
+  <TPATH DATAPATH_DELAY="19.30697822570800781" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.82297754287719727" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.43798160552978516" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/m_axis_result_tdata[28]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[28]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_I_fu_98_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1143"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="19.31797790527343750" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.83397769927978516" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.41798305511474609" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/m_axis_result_tdata[28]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[28]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1152"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="19.26187896728515625" DATAPATH_LOGIC_DELAY="12.36000061035156250" DATAPATH_NET_DELAY="6.90187835693359375" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]/D" LOGIC_LEVELS="9" MAX_FANOUT="54" SLACK="-9.40688419342041016" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_16" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[7]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="65"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="19.27388381958007812" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.78988265991210938" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.40488815307617188" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_10" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/acc_I_fu_98[13]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="64"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/acc_Q_fu_102_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1152"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="19.39579391479492188" DATAPATH_LOGIC_DELAY="12.48400115966796875" DATAPATH_NET_DELAY="6.91179227828979492" ENDPOINT_PIN="bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]/D" LOGIC_LEVELS="10" MAX_FANOUT="54" SLACK="-9.39879798889160156" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/int_corr_Q[22]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="gnss_correlator.v" LINE_NUMBER="1897"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/control_s_axi_U/int_corr_Q_reg[22]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_control_s_axi.v" LINE_NUMBER="429"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="19.25196838378906250" DATAPATH_LOGIC_DELAY="12.36000061035156250" DATAPATH_NET_DELAY="6.89196968078613281" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]/D" LOGIC_LEVELS="9" MAX_FANOUT="54" SLACK="-9.39397335052490234" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/din0_buf1_reg[24]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="47"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/i_no_versal_es1_workaround.DSP_i_65" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DET_GEN[1].CARRY_MUX_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DET_GEN[0].CARRY_MUX_CARRY4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP_i_10" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.STRUCT_ADD/mant_op_inferred_i_17" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_2_full_dsp_1_U2/dout_r_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v" LINE_NUMBER="65"/>
   </TPATH>
 </TimingPaths>
 <VivadoReportFiles>

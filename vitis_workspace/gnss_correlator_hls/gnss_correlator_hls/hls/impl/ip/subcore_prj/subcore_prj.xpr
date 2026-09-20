@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="71" Path="/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/ip/subcore_prj/subcore_prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="1665f46c88914657b19347348c6aa9d3"/>
+    <Option Name="Id" Val="150ce1d4e9b44c678dc0e55304490ba6"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -89,7 +89,21 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

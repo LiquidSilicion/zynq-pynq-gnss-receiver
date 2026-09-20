@@ -13,3 +13,5 @@ https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/3281321985/2025.1+Release
 https://github.com/ubfx/zedboard-bsp
 
 https://github.com/ubfx/zedboard-bsp/blob/master/README.md
+
+https://github.com/analogdevicesinc/kuiper/releases

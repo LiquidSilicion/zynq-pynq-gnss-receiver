@@ -34,35 +34,39 @@ Create this exact folder structure in your new repository. It shows maturity and
 
 ```text
 zynq-pynq-gnss-receiver/
+├── README.md                          # Project overview
+├── docs/                              # Documentation
+│   ├── architecture.md
+│   └── user_guide.md
 │
-├── docs/                        
-│   ├── system_architecture.md   # Block diagrams and data flow explanations
-│   └── profiling_results.md     # CPU load & TTFF comparisons (SW vs. HW)
+├── hardware/                          # FPGA/Hardware files
+│   ├── vivado/                        # Vivado projects
+│   │   ├── zynq_gnss_correlator_system/
+│   │   └── enhanced_system/
+│   └── ip_repo/                       # Custom HLS IPs
+│       ├── gnss_correlator/           # Original correlator
+│       └── gnss_enhanced_correlator/  # Enhanced correlator (E/P/L)
 │
-├── vivado/                      
-│   ├── scripts/
-│   │   └── create_project.tcl   # Auto-generates the Vivado project (Zynq + ADI IP)
-│   ├── constraints/
-│   │   └── adrv9361_z7035.xdc   # Official Analog Devices pin constraints
-│   └── ip_repo/                 # Your custom accelerated blocks (Verilog or HLS)
-│       └── gnss_correlator_axi/ 
+├── software/                          # Software code
+│   ├── python/                        # Python scripts
+│   │   ├── acquisition_engine.py      # 2D search controller
+│   │   ├── diagnostic_test.py         # Hardware diagnostics
+│   │   ├── gnss_acquisition_test.py   # Acquisition tests
+│   │   └── utils/                     # Helper functions
+│   │       ├── prn_generator.py       # GPS PRN code generator
+│   │       └── hardware_interface.py  # AXI-Lite interface
+│   └── cpp/                           # C/C++ code (future)
+│       ├── tracking_loop/
+│       └── navigation_decoder/
 │
-├── linux-build/                 
-│   ├── device-tree/
-│   │   └── system-user.dtsi     # Device tree overlay to bind custom IP to Linux UIO
-│   └── build_notes.md           # Steps to flash/configure ADI Kuiper Linux
+├── test_data/                         # Test files
+│   ├── synthetic/                     # Generated test signals
+│   └── real/                          # Real GNSS captures
+│       └── .gitignore                 # Don't commit large files
 │
-├── software/                    
-│   ├── gnss-sdr-config/         # Custom .conf files tailored for ADRV9361 input
-│   └── pyadi_control/           
-│       └── rf_capture.py        # Python script to configure AD9361 and capture I/Q
-│
-├── notebooks/                   
-│   ├── 01_rf_sanity_check.ipynb # Verify RF capture and plot Power Spectral Density
-│   ├── 02_sw_baseline.ipynb     # Run vanilla GNSS-SDR, measure baseline performance
-│   └── 03_hw_accel_demo.ipynb   # Trigger custom FPGA IP, measure speedup
-│
-└── README.md                    # High-level overview and quick-start guide
+└── scripts/                           # Build/deployment scripts
+    ├── build_bitstream.sh
+    └── deploy_to_zedboard.sh
 ```
 ---
 ## 🛠️ Prerequisites

@@ -1,6 +1,6 @@
 Execute       source -notrace -encoding utf-8 /opt/Xilinx/2025.2/Vitis/tps/tcl/tcl8.6/clock.tcl 
 Execute         source -encoding utf-8 /opt/Xilinx/2025.2/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
-INFO-FLOW: Workspace /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls opened at Wed Sep 16 17:42:15 IST 2026
+INFO-FLOW: Workspace /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls opened at Sat Sep 19 17:34:22 IST 2026
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       send_msg_by_id INFO @200-2174@%s%s component correlator_hls_config.cfg 
@@ -33,7 +33,7 @@ DBG:HLSDevice: Trying to load device library: /opt/Xilinx/2025.2/Vitis/lib/lnx64
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/2025.2/Vivado/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
-Command           create_platform done; 3.01 sec.
+Command           create_platform done; 3.36 sec.
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/xilinx.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/plb46.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/axi4.gen 
@@ -42,29 +42,29 @@ Execute               source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/i
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.15 sec.
+Command             ap_source done; 0.16 sec.
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command           ap_source done; 0.2 sec.
+Command           ap_source done; 0.21 sec.
 Execute           ap_part_info -name xc7z020-clg484-1 -data info 
 Execute           config_compile -quiet -complex-mul-dsp=0 
-Command         set_part done; 3.26 sec.
-Execute         send_msg_by_id INFO @200-1465@%s 'clock=10ns' from correlator_hls_config.cfg(11) 
-INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from correlator_hls_config.cfg(11)
+Command         set_part done; 3.61 sec.
+Execute         send_msg_by_id INFO @200-1465@%s 'clock=10n' from correlator_hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying config ini 'clock=10n' from correlator_hls_config.cfg(11)
 Execute         create_clock -period 10ns 
 Execute           ap_set_clock -name default -period 10 -unit ns -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from correlator_hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from correlator_hls_config.cfg(5)
 Execute         config_export -format=ip_catalog 
-Command       apply_ini done; 3.3 sec.
+Command       apply_ini done; 3.7 sec.
 Execute       write_component -config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/correlator_hls_config.cfg 
 Execute         send_msg_by_id INFO @200-2176@%s /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/vitis-comp.json 
 INFO: [HLS 200-2176] Writing Vitis IDE component file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/vitis-comp.json
-Command     open_solution done; 3.38 sec.
-Command   open_component done; 3.38 sec.
+Command     open_solution done; 3.8 sec.
+Command   open_component done; 3.81 sec.
 Execute   apply_ini /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/config.cmdline -iscmdline 
 Execute   ::AP::init_summary_file csynth 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
@@ -74,7 +74,7 @@ Execute     ap_part_info -name xc7z020-clg484-1 -data info
 INFO-FLOW: run_clang gnss_correlator.cpp.xilinx-performance-pragma-detector exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/xilinx-performance-pragma-detector /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp -- -fhls -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/2025.2/Vitis/common/technology/autopilot -I /opt/Xilinx/2025.2/Vitis/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -target fpga64-xilinx-linux-gnu -I /usr/include/x86_64-linux-gnu --gcc-toolchain=/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0 -hls-platform-db-name=/opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.cpp.xilinx-performance-pragma-detector.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.cpp.xilinx-performance-pragma-detector.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=1
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 7.43 seconds. CPU system time: 1.23 seconds. Elapsed time: 8.3 seconds; current allocated memory: 486.488 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 5.48 seconds. CPU system time: 1.11 seconds. Elapsed time: 6.36 seconds; current allocated memory: 486.484 MB.
 Execute       send_msg_by_id INFO @200-2191@%s%s C-Synthesis clang-16 
 INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
 Execute       set_directive_top gnss_correlator -name=gnss_correlator 
@@ -86,26 +86,25 @@ INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 INFO-FLOW: run_clang gnss_correlator.cpp.clang exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/clang /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp -foptimization-record-file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --gcc-toolchain=/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/all.directive.json -hls-directive-location -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Xclang -no-opaque-pointers -Xclang -fmerge-all-constants -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/2025.2/Vitis/common/technology/autopilot -I /opt/Xilinx/2025.2/Vitis/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.cpp.clang.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.cpp.clang.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
-INFO-FLOW: Done: GCC PP 39 time: 0.6 seconds 
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds 
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang clang exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/clang -foptimization-record-file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/clang.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/clang.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp  -target fpga -directive=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/.systemc_flag -fix-errors /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -- - -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.39 sec.
+Command       clang_tidy done; 0.16 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp  -target fpga -directive=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/all.directive.json -fix-errors /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -- - -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 3.13 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.1 seconds 
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.1 seconds 
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp  -target fpga 
 INFO-FLOW: run_clang loop-label exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/clang-tidy -export-fixes=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -- - -target fpga -fhls -ferror-limit=0 > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source /opt/Xilinx/2025.2/Vitis/tps/tcl/tcllib2.0/yaml/yaml.tcl 
 Execute           source /opt/Xilinx/2025.2/Vitis/tps/tcl/tcllib2.0/cmdline/cmdline.tcl 
-INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=28
-Command       clang_tidy done; 4.14 sec.
+INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=6
+Command       clang_tidy done; 0.12 sec.
 INFO-FLOW: run_clang gnss_correlator.pp.0.cpp.xilinx-dataflow-lawyer exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/xilinx-dataflow-lawyer -export-fixes=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp -- - -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
 Execute       ap_part_info -name xc7z020-clg484-1 -data info 
@@ -115,7 +114,7 @@ INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
 INFO-FLOW: converting llvm 16.0.4 bc to downstrem bc
 INFO-FLOW: run_clang gnss_correlator.bc.llvm-converter exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-16/bin/llvm-converter -opaque-pointers=0 /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.pre.g.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.bc > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.bc.llvm-converter.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.bc.llvm-converter.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 16.26 seconds. CPU system time: 1.42 seconds. Elapsed time: 17.78 seconds; current allocated memory: 488.289 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.52 seconds. CPU system time: 0.74 seconds. Elapsed time: 1.48 seconds; current allocated memory: 488.238 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.0.bc -args /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.bc 
@@ -126,17 +125,18 @@ INFO-FLOW: run_clang a.g.ld.1.lower.bc.opt exec: /opt/Xilinx/2025.2/Vitis/lnx64/
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds 
+Command       run_link_or_opt done; 0.13 sec.
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc -args /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/2025.2/Vitis/lnx64/lib/libhlsm_39.bc /opt/Xilinx/2025.2/Vitis/lnx64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang a.g.ld.2.m1.bc.llvm-link exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/2025.2/Vitis/lnx64/lib/libhlsm_39.bc /opt/Xilinx/2025.2/Vitis/lnx64/lib/libhlsmc++_39.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
-Command       run_link_or_opt done; 3.57 sec.
+Command       run_link_or_opt done; 3.42 sec.
 Execute       run_link_or_opt -opt -out /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc -args /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=gnss_correlator -reflow-float-conversion 
 INFO-FLOW: run_clang a.g.ld.3.fpc.bc.opt exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll|inline -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=gnss_correlator -reflow-float-conversion -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds 
-Command       run_link_or_opt done; 1.52 sec.
+Command       run_link_or_opt done; 1.47 sec.
 Execute       run_link_or_opt -out /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.4.m2.bc -args /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/2025.2/Vitis/lnx64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang a.g.ld.4.m2.bc.llvm-link exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/2025.2/Vitis/lnx64/lib/libfloatconversion_39.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.4.m2.bc > /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=0
@@ -150,73 +150,69 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 INFO-FLOW: run_clang reflow (background poll_ms 5000) exec: /opt/Xilinx/2025.2/Vitis/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=gnss_correlator -mllvm -hls-db-dir -mllvm /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -reflow-unroll-size-threshold=10000 -mllvm -reflow-unroll-cost-threshold=1000000 -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -reflow-force-aggressive-unroll=0 -mllvm -reflow-aggressive-unroll-adjust-factor=1.000000 -mllvm -reflow-complete-threshold=4 -mllvm -reflow-array-promotion-threshold=64 -mllvm -reflow-enable-critical-path-for-performance=1 -mllvm -assume-maxi-align=1 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-small-array-partition=true -mllvm -reflow-enable-auto-array-promotion=true -mllvm -reflow-enable-auto-array-partition-for-flatten=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -auto-unroll-tripcount-threshold=0 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -reflow-enable-codegen-with-if=true -mllvm -reflow-enable-dataflow-canon=true -mllvm -reflow-enable-dataflow-canon2=true -mllvm -reflow-dump-extra-complexity-metric=true -mllvm -reflow-enable-dse-loop-nest-extraction=false -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -mllvm -use_read_first_ram_in_loop=1 -mllvm -default-clock-uncertainty=2.7 -x ir /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.5.gdce.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 2> /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 3,426 Compile/Link (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 3,426 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 581 Unroll/Inline (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 581 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 373 Unroll/Inline (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 373 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 370 Unroll/Inline (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 370 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 342 Unroll/Inline (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 342 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 341 Array/Struct (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 341 Array/Struct (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 341 Array/Struct (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 341 Array/Struct (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 352 Array/Struct (step 5) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 352 Performance (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 346 Performance (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 346 Performance (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 346 Performance (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 346 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 366 HW Transforms (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 366 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 368 HW Transforms (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
-INFO: [HLS 200-1995] There were 368 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 42 Compile/Link (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 49 Unroll/Inline (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 39 Unroll/Inline (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 44 Unroll/Inline (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 44 Unroll/Inline (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 43 Array/Struct (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 43 Array/Struct (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 43 Array/Struct (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 43 Array/Struct (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 50 Array/Struct (step 5) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 50 Performance (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 48 Performance (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 48 Performance (step 3) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 48 Performance (step 4) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 48 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 72 HW Transforms (step 1) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 70 HW Transforms (step 2) (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2) 
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth_design_size.rpt:2)
 INFO-FLOW: run_clang result=success num-err-msgs=0 num-stderr-lines=24
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.82 seconds. CPU system time: 0.91 seconds. Elapsed time: 10.76 seconds; current allocated memory: 490.188 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 490.188 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.27 seconds. CPU system time: 0.9 seconds. Elapsed time: 10.66 seconds; current allocated memory: 490.160 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 490.160 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -reassociate -gvn -reassociate -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top gnss_correlator -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -promote-dbg-pointer -norm-name /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.0.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 490.625 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 490.281 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.1.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.2.prechk.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 490.645 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 490.281 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.g.1.bc to /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -dce -hls-dead-arg-elim -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -lcssa -loop-simplify -phi-select-elim -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -extract-subproc -global-constprop -deadargelim -globaldce -legalize-global -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -canonicalize-dataflow -directive-preproc -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.1.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.1.tmp.bc -f 
-Command         transform done; 0.14 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.1.tmp.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31:1) to (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30:22) in function 'gnss_correlator'... converting 25 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45:22) to (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:47:1) in function 'gnss_correlator'... converting 5 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 513.617 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 511.270 MB.
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -inst-simplify -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-rewind-sink-hoist -loop-outline -hls-dead-arg-elim -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -mul2addshift -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -gvn -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -inst-clarity -bitwidth -dce -validate-dataflow -dump-loop-dep-to-ir -check-all-ssdm -drop-inferred-ii -dump-complexity-metric /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.2.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           AP::auto_get_db
-Command         transform done; 0.17 sec.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -cdfg-build /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.3.bc -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 514.359 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 508.895 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.56 sec.
-Command     elaborate done; 29.11 sec.
+Command       opt_and_import_c done; 0.27 sec.
+Command     elaborate done; 12.42 sec.
 Execute     ap_eval exec zip -j /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design AP::SynTopModule=gnss_correlator
@@ -224,72 +220,43 @@ INFO: [HLS 200-10] Synthesizing 'gnss_correlator' ...
 Execute     ap_set_top_model gnss_correlator 
 Execute     get_model_list gnss_correlator -filter all-wo-channel -topdown 
 Execute     preproc_iomode -model gnss_correlator 
-Execute     preproc_iomode -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
 Execute     get_model_list gnss_correlator -filter all-wo-channel 
-INFO-FLOW: Model list for configure: gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
-INFO-FLOW: Configuring Module : gnss_correlator_Pipeline_VITIS_LOOP_30_1 ...
-Execute     set_default_model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     apply_spec_resource_limit gnss_correlator_Pipeline_VITIS_LOOP_30_1 
+INFO-FLOW: Model list for configure: gnss_correlator
 INFO-FLOW: Configuring Module : gnss_correlator ...
 Execute     set_default_model gnss_correlator 
 Execute     apply_spec_resource_limit gnss_correlator 
-INFO-FLOW: Model list for preprocess: gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
-INFO-FLOW: Preprocessing Module: gnss_correlator_Pipeline_VITIS_LOOP_30_1 ...
-Execute     set_default_model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     cdfg_preprocess -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     rtl_gen_preprocess gnss_correlator_Pipeline_VITIS_LOOP_30_1 
+INFO-FLOW: Model list for preprocess: gnss_correlator
 INFO-FLOW: Preprocessing Module: gnss_correlator ...
 Execute     set_default_model gnss_correlator 
 Execute     cdfg_preprocess -model gnss_correlator 
 Execute     rtl_gen_preprocess gnss_correlator 
-INFO-FLOW: Model list for synthesis: gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute     set_default_model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     schedule -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln41) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=sub_ln40) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_1'.
-WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem1_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36), bus read operation ('gmem1_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37) accessing 'gmem1' m_axi read
-WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem0_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34), bus read operation ('gmem0_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35) accessing 'gmem0' m_axi read
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 20, loop 'VITIS_LOOP_30_1'
-INFO: [SCHED 204-11] Finished scheduling.
-Command     schedule done; 0.28 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.34 seconds; current allocated memory: 515.941 MB.
-Execute     syn_report -verbosereport -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.verbose.sched.rpt 
-Execute       list_part -family xc7z020-clg484-1 
-Execute         ap_family_info -name xc7z020-clg484-1 -data names 
-Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
-Execute     db_write -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.sched.adb -f 
-INFO-FLOW: Finish scheduling gnss_correlator_Pipeline_VITIS_LOOP_30_1.
-Execute     set_default_model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     bind -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 515.941 MB.
-Execute     syn_report -verbosereport -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.verbose.bind.rpt 
-Execute       list_part -family xc7z020-clg484-1 
-Execute         ap_family_info -name xc7z020-clg484-1 -data names 
-Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
-Execute     db_write -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.bind.adb -f 
-INFO-FLOW: Finish binding gnss_correlator_Pipeline_VITIS_LOOP_30_1.
+INFO-FLOW: Model list for synthesis: gnss_correlator
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'gnss_correlator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute     set_default_model gnss_correlator 
 Execute     schedule -model gnss_correlator 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem1_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:28) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:28), bus read operation ('gmem1_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:29) on port 'gmem1' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:29) accessing 'gmem1' m_axi read
+WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem0_addr_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:26) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:26), bus read operation ('gmem0_addr_1_read', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:27) on port 'gmem0' (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:27) accessing 'gmem0' m_axi read
+WARNING: [HLS 200-886] Cannot meet target clock period in 'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) (combination delay: 22.578 ns) to honor II constraint (II=1) in region 'loop 'VITIS_LOOP_23_1''.
+WARNING: [HLS 200-886] Cannot meet target clock period in 'fadd' operation 32 bit ('acc_Q', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32) (combination delay: 22.578 ns) to honor II constraint (II=1) in region 'loop 'VITIS_LOOP_23_1''.
+WARNING: [HLS 200-887] Cannot meet target clock period from 'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) to 'store' operation ('acc_I_write_ln20', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20) of variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 32 bit on local variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20 (combination delay: 24.166 ns) to honor II or Latency constraint in region 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 21, loop 'VITIS_LOOP_23_1'
+WARNING: [HLS 200-871] Estimated clock period (24.166 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+WARNING: [HLS 200-1016] The critical path in module 'gnss_correlator' consists of the following:
+	'fadd' operation 32 bit ('acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31) [92]  (22.578 ns)
+	'store' operation ('acc_I_write_ln20', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20) of variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 32 bit on local variable 'acc_I', vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:20 [99]  (1.588 ns)
+
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 515.941 MB.
+Command     schedule done; 0.18 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.25 seconds; current allocated memory: 508.895 MB.
 Execute     syn_report -verbosereport -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.verbose.sched.rpt 
 Execute       list_part -family xc7z020-clg484-1 
 Execute         ap_family_info -name xc7z020-clg484-1 -data names 
 Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+INFO: [HLS 200-2250] Rewind delay = 19 for the pipelined loop 'VITIS_LOOP_23_1' due to a write-after-write dependence on variable 'acc_Q (vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:21)'.
 Execute     db_write -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.sched.adb -f 
 INFO-FLOW: Finish scheduling gnss_correlator.
 Execute     set_default_model gnss_correlator 
@@ -299,7 +266,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 515.941 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 508.895 MB.
 Execute     syn_report -verbosereport -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.verbose.bind.rpt 
 Execute       list_part -family xc7z020-clg484-1 
 Execute         ap_family_info -name xc7z020-clg484-1 -data names 
@@ -308,40 +275,8 @@ Execute     db_write -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/viti
 INFO-FLOW: Finish binding gnss_correlator.
 Execute     get_model_list gnss_correlator -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
-Execute     rtl_gen_preprocess gnss_correlator_Pipeline_VITIS_LOOP_30_1 
 Execute     rtl_gen_preprocess gnss_correlator 
-INFO-FLOW: Model list for RTL generation: gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute     create_rtl_model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -top_prefix gnss_correlator_ -sub_prefix gnss_correlator_ -mg_file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gnss_correlator_Pipeline_VITIS_LOOP_30_1' pipeline 'VITIS_LOOP_30_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_18s_18s_34s_34_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_18s_18s_34s_34_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_18s_18s_34_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_18_1_1': 4 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'gnss_correlator_Pipeline_VITIS_LOOP_30_1'.
-Command     create_rtl_model done; 0.18 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 516.094 MB.
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.rtl_wrap.cfg.tcl 
-Execute     gen_rtl gnss_correlator_Pipeline_VITIS_LOOP_30_1 -style xilinx -f -lang vhdl -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/vhdl/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     gen_rtl gnss_correlator_Pipeline_VITIS_LOOP_30_1 -style xilinx -f -lang vlog -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/verilog/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1 
-Execute     syn_report -csynth -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/gnss_correlator_Pipeline_VITIS_LOOP_30_1_csynth.rpt 
-Execute       list_part -family xc7z020-clg484-1 
-Execute         ap_family_info -name xc7z020-clg484-1 -data names 
-Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
-Execute     syn_report -rtlxml -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/gnss_correlator_Pipeline_VITIS_LOOP_30_1_csynth.xml 
-Execute       list_part -family xc7z020-clg484-1 
-Execute         ap_family_info -name xc7z020-clg484-1 -data names 
-Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
-Execute     syn_report -verbosereport -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.verbose.rpt 
-Execute       list_part -family xc7z020-clg484-1 
-Execute         ap_family_info -name xc7z020-clg484-1 -data names 
-Execute         ap_part_info -quiet -name xc7z020-clg484-1 -data family 
-Execute     db_write -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -f -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.adb 
-Execute     db_write -model gnss_correlator_Pipeline_VITIS_LOOP_30_1 -bindview -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/design.bindinfo.xml 
-Execute     gen_tb_info gnss_correlator_Pipeline_VITIS_LOOP_30_1 -p /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1 
+INFO-FLOW: Model list for RTL generation: gnss_correlator
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'gnss_correlator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -357,12 +292,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/corr_I' to
 INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/corr_Q' to 's_axilite & ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'gnss_correlator/num_samples' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'gnss_correlator' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gnss_correlator' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Bundling port 'corr_I', 'corr_Q', 'num_samples' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Bundling port 'signal_I', 'signal_Q', 'code_I' and 'code_Q' to AXI-Lite port control_r.
-INFO: [RTGEN 206-100] Generating core module 'ctlz_18_18_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'gnss_correlator'.
-Command     create_rtl_model done; 0.15 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.51 seconds; current allocated memory: 522.012 MB.
+Command     create_rtl_model done; 0.23 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 508.895 MB.
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.rtl_wrap.cfg.tcl 
 Execute     gen_rtl gnss_correlator -istop -style xilinx -f -lang vhdl -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/vhdl/gnss_correlator 
 Execute     gen_rtl gnss_correlator -istop -style xilinx -f -lang vlog -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/verilog/gnss_correlator 
@@ -391,25 +329,15 @@ Execute     syn_report -wcfg -model gnss_correlator -o /home/johan2/Documents/fp
 Execute     syn_report -protoinst -model gnss_correlator -o /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.protoinst 
 Execute     sc_get_clocks gnss_correlator 
 Execute     sc_get_portdomain gnss_correlator 
-INFO-FLOW: Model list for RTL component generation: gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
-INFO-FLOW: Handling components in module [gnss_correlator_Pipeline_VITIS_LOOP_30_1] ... 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.compgen.tcl 
-INFO-FLOW: Found component gnss_correlator_fpext_32ns_64_2_no_dsp_1.
-INFO-FLOW: Append model gnss_correlator_fpext_32ns_64_2_no_dsp_1
-INFO-FLOW: Found component gnss_correlator_sparsemux_9_3_18_1_1.
-INFO-FLOW: Append model gnss_correlator_sparsemux_9_3_18_1_1
-INFO-FLOW: Found component gnss_correlator_mul_18s_18s_34_1_1.
-INFO-FLOW: Append model gnss_correlator_mul_18s_18s_34_1_1
-INFO-FLOW: Found component gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1.
-INFO-FLOW: Append model gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1
-INFO-FLOW: Found component gnss_correlator_mac_muladd_18s_18s_34s_34_4_1.
-INFO-FLOW: Append model gnss_correlator_mac_muladd_18s_18s_34s_34_4_1
-INFO-FLOW: Found component gnss_correlator_flow_control_loop_pipe_sequential_init.
-INFO-FLOW: Append model gnss_correlator_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Model list for RTL component generation: gnss_correlator
 INFO-FLOW: Handling components in module [gnss_correlator] ... 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.tcl 
-INFO-FLOW: Found component gnss_correlator_ctlz_18_18_1_1.
-INFO-FLOW: Append model gnss_correlator_ctlz_18_18_1_1
+INFO-FLOW: Found component gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.
+INFO-FLOW: Append model gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1
+INFO-FLOW: Found component gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1
 INFO-FLOW: Found component gnss_correlator_gmem0_m_axi.
 INFO-FLOW: Append model gnss_correlator_gmem0_m_axi
 INFO-FLOW: Found component gnss_correlator_gmem1_m_axi.
@@ -418,23 +346,20 @@ INFO-FLOW: Found component gnss_correlator_control_s_axi.
 INFO-FLOW: Append model gnss_correlator_control_s_axi
 INFO-FLOW: Found component gnss_correlator_control_r_s_axi.
 INFO-FLOW: Append model gnss_correlator_control_r_s_axi
-INFO-FLOW: Append model gnss_correlator_Pipeline_VITIS_LOOP_30_1
+INFO-FLOW: Found component gnss_correlator_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model gnss_correlator_flow_control_loop_delay_pipe
 INFO-FLOW: Append model gnss_correlator
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: gnss_correlator_fpext_32ns_64_2_no_dsp_1 gnss_correlator_sparsemux_9_3_18_1_1 gnss_correlator_mul_18s_18s_34_1_1 gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1 gnss_correlator_mac_muladd_18s_18s_34s_34_4_1 gnss_correlator_flow_control_loop_pipe_sequential_init gnss_correlator_ctlz_18_18_1_1 gnss_correlator_gmem0_m_axi gnss_correlator_gmem1_m_axi gnss_correlator_control_s_axi gnss_correlator_control_r_s_axi gnss_correlator_Pipeline_VITIS_LOOP_30_1 gnss_correlator
+INFO-FLOW: All models in this session: gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1 gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1 gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1 gnss_correlator_gmem0_m_axi gnss_correlator_gmem1_m_axi gnss_correlator_control_s_axi gnss_correlator_control_r_s_axi gnss_correlator_flow_control_loop_delay_pipe gnss_correlator
 INFO-FLOW: Generating /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/autopilot.rtl.models.txt file...
-INFO-FLOW: To file: write model gnss_correlator_fpext_32ns_64_2_no_dsp_1
-INFO-FLOW: To file: write model gnss_correlator_sparsemux_9_3_18_1_1
-INFO-FLOW: To file: write model gnss_correlator_mul_18s_18s_34_1_1
-INFO-FLOW: To file: write model gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1
-INFO-FLOW: To file: write model gnss_correlator_mac_muladd_18s_18s_34s_34_4_1
-INFO-FLOW: To file: write model gnss_correlator_flow_control_loop_pipe_sequential_init
-INFO-FLOW: To file: write model gnss_correlator_ctlz_18_18_1_1
+INFO-FLOW: To file: write model gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1
+INFO-FLOW: To file: write model gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1
 INFO-FLOW: To file: write model gnss_correlator_gmem0_m_axi
 INFO-FLOW: To file: write model gnss_correlator_gmem1_m_axi
 INFO-FLOW: To file: write model gnss_correlator_control_s_axi
 INFO-FLOW: To file: write model gnss_correlator_control_r_s_axi
-INFO-FLOW: To file: write model gnss_correlator_Pipeline_VITIS_LOOP_30_1
+INFO-FLOW: To file: write model gnss_correlator_flow_control_loop_delay_pipe
 INFO-FLOW: To file: write model gnss_correlator
 INFO-FLOW: Generating /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/autopilot.rtl.models.tcl file...
 INFO-FLOW: Finished generating RTL model list.
@@ -460,25 +385,21 @@ Execute         source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interfa
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.16 sec.
+Command       ap_source done; 0.15 sec.
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.21 sec.
+Command     ap_source done; 0.2 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/vhdl' dstVlogDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/vlog' tclDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db' modelList='gnss_correlator_fpext_32ns_64_2_no_dsp_1
-gnss_correlator_sparsemux_9_3_18_1_1
-gnss_correlator_mul_18s_18s_34_1_1
-gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1
-gnss_correlator_mac_muladd_18s_18s_34s_34_4_1
-gnss_correlator_flow_control_loop_pipe_sequential_init
-gnss_correlator_ctlz_18_18_1_1
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/vhdl' dstVlogDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/vlog' tclDir='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db' modelList='gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1
+gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1
+gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1
 gnss_correlator_gmem0_m_axi
 gnss_correlator_gmem1_m_axi
 gnss_correlator_control_s_axi
 gnss_correlator_control_r_s_axi
-gnss_correlator_Pipeline_VITIS_LOOP_30_1
+gnss_correlator_flow_control_loop_delay_pipe
 gnss_correlator
 ' expOnly='0'
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
@@ -486,23 +407,22 @@ Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet
 Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.compgen.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.tcl 
 Execute       source ./control.slave.tcl 
 Execute       source ./control.slave.tcl 
 Execute       source ./control_r.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.63 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.68 seconds; current allocated memory: 525.539 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.63 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.69 seconds; current allocated memory: 508.895 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='gnss_correlator_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds 
-INFO-FLOW: create_csynth_xml: all_module_nodes count=2
+INFO-FLOW: create_csynth_xml: all_module_nodes count=1
 INFO-FLOW: Running: create_csynth_xml bind info
-INFO-FLOW: create_csynth_xml: all_bind_nodes count=132
+INFO-FLOW: create_csynth_xml: all_bind_nodes count=23
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds 
-INFO-FLOW: create_csynth_xml: bind_instances counts: modules=2 instances=130
+INFO-FLOW: create_csynth_xml: bind_instances counts: modules=1 instances=21
 INFO-FLOW: Running: create_csynth_xml update csynth_xml_module_hier
 INFO-FLOW: Done: create_csynth_xml update csynth_xml_module_hier time: 0 seconds 
-INFO-FLOW: create_csynth_xml: csynth_xml_module_hier max_depth=3
+INFO-FLOW: create_csynth_xml: csynth_xml_module_hier max_depth=2
 INFO-FLOW: Running: create_csynth_xml gen bind_report_dict
 INFO-FLOW: Done: create_csynth_xml gen bind_report_dict time: 0 seconds 
 INFO-FLOW: Running: create_csynth_xml config info
@@ -511,18 +431,14 @@ INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds 
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/report/csynth.xml
 INFO-FLOW: Running: generate_json
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='gnss_correlator_fpext_32ns_64_2_no_dsp_1
-gnss_correlator_sparsemux_9_3_18_1_1
-gnss_correlator_mul_18s_18s_34_1_1
-gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1
-gnss_correlator_mac_muladd_18s_18s_34s_34_4_1
-gnss_correlator_flow_control_loop_pipe_sequential_init
-gnss_correlator_ctlz_18_18_1_1
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1
+gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1
+gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1
 gnss_correlator_gmem0_m_axi
 gnss_correlator_gmem1_m_axi
 gnss_correlator_control_s_axi
 gnss_correlator_control_r_s_axi
-gnss_correlator_Pipeline_VITIS_LOOP_30_1
+gnss_correlator_flow_control_loop_delay_pipe
 gnss_correlator
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
@@ -535,7 +451,6 @@ Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_wor
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.dataonly.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.rtl_wrap.cfg.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.dataonly.tcl 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.tbgen.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.tbgen.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
@@ -544,10 +459,12 @@ Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_wor
 Execute     sc_get_clocks gnss_correlator 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     source /opt/Xilinx/2025.2/Vitis/tps/tcl/tcllib2.0/fileutil/fileutil.tcl 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.tcl 
-INFO-FLOW: Done: generate_json time: 0.8 seconds 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.tcl 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+INFO-FLOW: Done: generate_json time: 0.7 seconds 
 INFO-FLOW: Running: add_csynth_report_sections
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem0_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem0 DSP 0 BRAM 2 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem1_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem1 DSP 0 BRAM 2 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST gnss_correlator MODULE2INSTS {gnss_correlator gnss_correlator gnss_correlator_Pipeline_VITIS_LOOP_30_1 grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170} INST2MODULE {gnss_correlator gnss_correlator grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170 gnss_correlator_Pipeline_VITIS_LOOP_30_1} INSTDATA {gnss_correlator {DEPTH 1 CHILDREN grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170} grp_gnss_correlator_Pipeline_VITIS_LOOP_30_1_fu_170 {DEPTH 2 CHILDREN {}}} MODULEDATA {gnss_correlator_Pipeline_VITIS_LOOP_30_1 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln30_fu_250_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30 VARIABLE icmp_ln30 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_fu_256_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:30 VARIABLE add_ln30 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_266_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE add_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE fpext PRAGMA {} RTLNAME fpext_32ns_64_2_no_dsp_1_U1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE pf LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fpext} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln34_fu_425_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE sub_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln34_fu_431_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE select_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln34_fu_438_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE icmp_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln34_1_fu_443_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE sub_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME icmp_ln34_1_fu_453_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE icmp_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_1_fu_459_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE add_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln34_2_fu_465_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE sub_ln34_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln34_1_fu_471_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE select_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln34_2_fu_479_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE icmp_ln34_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln34_3_fu_623_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE icmp_ln34_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln34_4_fu_628_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE select_ln34_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE ashr PRAGMA {} RTLNAME ashr_ln34_fu_638_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE ashr_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ashr} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln34_2_fu_647_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE select_ln34_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln34_4_fu_655_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE icmp_ln34_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln34_fu_663_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE shl_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln34_3_fu_668_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE select_ln34_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln34_fu_903_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE xor_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln34_fu_908_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE and_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE or PRAGMA {} RTLNAME or_ln34_fu_913_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE or_ln34 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op or} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln34_1_fu_917_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE xor_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln34_1_fu_923_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE and_ln34_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL onehotencoding_realdef LATENCY 0 OPTYPE sparsemux PRAGMA {} RTLNAME sparsemux_9_3_18_1_1_U3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:34 VARIABLE a LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sparsemux} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_282_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE fpext PRAGMA {} RTLNAME fpext_32ns_64_2_no_dsp_1_U1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE pf_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fpext} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_fu_690_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE sub_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln35_fu_696_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln35_fu_703_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE icmp_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_1_fu_708_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE sub_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME icmp_ln35_1_fu_718_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE icmp_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_1_fu_724_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE add_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_2_fu_730_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE sub_ln35_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln35_1_fu_736_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln35_2_fu_744_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE icmp_ln35_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln35_3_fu_958_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE icmp_ln35_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln35_4_fu_963_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE ashr PRAGMA {} RTLNAME ashr_ln35_fu_973_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE ashr_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ashr} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln35_2_fu_982_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln35_4_fu_990_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE icmp_ln35_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln35_fu_998_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE shl_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln35_3_fu_1003_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln35_fu_1119_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE xor_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln35_fu_1124_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE and_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE or PRAGMA {} RTLNAME or_ln35_fu_754_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE or_ln35 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op or} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln35_1_fu_760_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE xor_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln35_1_fu_766_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE and_ln35_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL onehotencoding_realdef LATENCY 0 OPTYPE sparsemux PRAGMA {} RTLNAME sparsemux_9_3_18_1_1_U5 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE b LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sparsemux} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln36_fu_298_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE add_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE fpext PRAGMA {} RTLNAME fpext_32ns_64_2_no_dsp_1_U2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE pf_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fpext} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_fu_531_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE sub_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln36_fu_537_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE select_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln36_fu_544_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE icmp_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_1_fu_549_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE sub_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME icmp_ln36_1_fu_559_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE icmp_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln36_1_fu_565_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE add_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_2_fu_571_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE sub_ln36_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln36_1_fu_577_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE select_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln36_2_fu_585_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE icmp_ln36_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln36_3_fu_772_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE icmp_ln36_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln36_4_fu_777_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE select_ln36_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE ashr PRAGMA {} RTLNAME ashr_ln36_fu_787_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE ashr_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ashr} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln36_2_fu_796_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE select_ln36_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln36_4_fu_804_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE icmp_ln36_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln36_fu_812_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE shl_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln36_3_fu_817_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE select_ln36_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln36_fu_1011_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE xor_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln36_fu_1016_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE and_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE or PRAGMA {} RTLNAME or_ln36_fu_1021_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE or_ln36 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op or} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln36_1_fu_1025_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE xor_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln36_1_fu_1031_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE and_ln36_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL onehotencoding_realdef LATENCY 0 OPTYPE sparsemux PRAGMA {} RTLNAME sparsemux_9_3_18_1_1_U4 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:36 VARIABLE c LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sparsemux} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_fu_314_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE add_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE fpext PRAGMA {} RTLNAME fpext_32ns_64_2_no_dsp_1_U2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE pf_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fpext} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln37_fu_839_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE sub_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln37_fu_845_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE select_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln37_fu_852_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE icmp_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln37_1_fu_857_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE sub_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME icmp_ln37_1_fu_867_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE icmp_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_1_fu_873_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE add_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln37_2_fu_879_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE sub_ln37_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln37_1_fu_885_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE select_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln37_2_fu_893_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE icmp_ln37_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln37_3_fu_1066_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE icmp_ln37_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln37_4_fu_1071_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE select_ln37_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE ashr PRAGMA {} RTLNAME ashr_ln37_fu_1081_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE ashr_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ashr} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln37_2_fu_1090_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE select_ln37_2 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln37_4_fu_1098_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE icmp_ln37_4 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln37_fu_1106_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE shl_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln37_3_fu_1111_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE select_ln37_3 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln37_fu_1158_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE xor_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln37_fu_1163_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE and_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE or PRAGMA {} RTLNAME or_ln37_fu_1168_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE or_ln37 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op or} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln37_1_fu_1172_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE xor_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE and PRAGMA {} RTLNAME and_ln37_1_fu_1178_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE and_ln37_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op and} VISIBLE false} {BINDTYPE op ID {} IMPL onehotencoding_realdef LATENCY 0 OPTYPE sparsemux PRAGMA {} RTLNAME sparsemux_9_3_18_1_1_U6 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:37 VARIABLE d LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sparsemux} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_18s_18s_34_1_1_U7 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:40 VARIABLE mul_ln40 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_mulsub_18s_18s_34s_34_4_1_U9 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:40 VARIABLE mul_ln40_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE sub PRAGMA {} RTLNAME mac_mulsub_18s_18s_34s_34_4_1_U9 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:40 VARIABLE sub_ln40 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln40_fu_1248_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:40 VARIABLE add_ln40 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_18s_18s_34_1_1_U8 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:41 VARIABLE mul_ln41 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_18s_18s_34s_34_4_1_U10 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:41 VARIABLE mul_ln41_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_18s_18s_34s_34_4_1_U10 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:41 VARIABLE add_ln41 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln41_1_fu_1279_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:41 VARIABLE add_ln41_1 LOOP VITIS_LOOP_30_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true}} AREA {DSP 4 BRAM 0 URAM 0}} gnss_correlator {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln45_fu_236_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE icmp_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln45_fu_250_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE sub_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME tmp_5_fu_264_p1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE select_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE ctlz PRAGMA {} RTLNAME ctlz_18_18_1_1_U25 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE tmp_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ctlz} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_276_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE add_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln45_fu_334_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE shl_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln45_1_fu_362_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE select_ln45_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln45_1_fu_370_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE sub_ln45_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_1_fu_379_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE add_ln45_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME retval_0_i_i69_fu_408_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:45 VARIABLE retval_0_i_i69 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln46_fu_282_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE icmp_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln46_fu_296_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE sub_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME tmp_s_fu_310_p1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE select_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE ctlz PRAGMA {} RTLNAME ctlz_18_18_1_1_U26 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE tmp_s LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ctlz} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_322_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE add_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE shl PRAGMA {} RTLNAME shl_ln46_fu_421_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE shl_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op shl} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln46_1_fu_449_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE select_ln46_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln46_1_fu_457_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE sub_ln46_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op sub} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_1_fu_466_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE add_ln46_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME retval_0_i_i_fu_495_p3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:46 VARIABLE retval_0_i_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false}} AREA {DSP 4 BRAM 4 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem0_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem0 DSP 0 BRAM 2 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem1_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem1 DSP 0 BRAM 2 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST gnss_correlator MODULE2INSTS {gnss_correlator gnss_correlator} INST2MODULE {gnss_correlator gnss_correlator} INSTDATA {gnss_correlator {DEPTH 1 CHILDREN {}}} MODULEDATA {gnss_correlator {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln23_fu_274_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:23 VARIABLE icmp_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_280_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:23 VARIABLE add_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_290_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:26 VARIABLE add_ln26 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln27_fu_306_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:27 VARIABLE add_ln27 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln28_fu_322_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:28 VARIABLE add_ln28 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln29_fu_338_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:29 VARIABLE add_ln29 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 VARIABLE mul LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul} VISIBLE true} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U3 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 VARIABLE mul7 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_5_full_dsp_1_U1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 VARIABLE sub LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fsub} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_2_full_dsp_1_U2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:31 VARIABLE acc_I_1 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd} VISIBLE true} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U4 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32 VARIABLE mul8 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul} VISIBLE true} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U4 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32 VARIABLE mul9 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_5_full_dsp_1_U1 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32 VARIABLE add1 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fsub} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_2_full_dsp_1_U2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:32 VARIABLE acc_Q_1 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME icmp_ln23_1_fu_404_p2 SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:23 VARIABLE icmp_ln23_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME corr_I SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME corr_Q SOURCE vivado/ip_repo/gnss_correlator/src/gnss_correlator.cpp:35 VARIABLE select_ln35_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false}} AREA {DSP 10 BRAM 4 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds 
@@ -555,22 +472,22 @@ Execute     send_msg_by_id INFO @200-2225@%s /home/johan2/Documents/fpga/zynq-py
 INFO: [HLS 200-2225] Wrote inferred directives to file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/syn/inferred_directives.ini
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO-FLOW: Done: add_csynth_report_sections time: 0.5 seconds 
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.69 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.82 seconds; current allocated memory: 533.371 MB.
+INFO-FLOW: Done: add_csynth_report_sections time: 0.4 seconds 
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.48 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.61 seconds; current allocated memory: 512.703 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for gnss_correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for gnss_correlator.
 Execute     syn_report -model gnss_correlator -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 41.38 MHz
 Execute     AP::msg_collection_file -close 
-Command   csynth_design done; 35.63 sec.
+Command   csynth_design done; 15.7 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
 Execute       source -notrace -encoding utf-8 /opt/Xilinx/2025.2/Vitis/tps/tcl/tcl8.6/clock.tcl 
 Execute         source -encoding utf-8 /opt/Xilinx/2025.2/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
-INFO-FLOW: Workspace /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls opened at Wed Sep 16 17:58:26 IST 2026
+INFO-FLOW: Workspace /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls opened at Sat Sep 19 17:35:16 IST 2026
 Execute       source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute       set_part xc7z020-clg484-1 
 Execute         create_platform xc7z020-clg484-1 -board  
@@ -578,7 +495,7 @@ DBG:HLSDevice: Trying to load device library: /opt/Xilinx/2025.2/Vitis/lib/lnx64
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/2025.2/Vivado/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
-Command         create_platform done; 2.95 sec.
+Command         create_platform done; 2.87 sec.
 Execute         source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/xilinx.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/plb46.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/axi4.gen 
@@ -587,7 +504,7 @@ Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/int
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.14 sec.
+Command           ap_source done; 0.15 sec.
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
@@ -595,7 +512,7 @@ Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48
 Command         ap_source done; 0.19 sec.
 Execute         ap_part_info -name xc7z020-clg484-1 -data info 
 Execute         config_compile -quiet -complex-mul-dsp=0 
-Command       set_part done; 3.18 sec.
+Command       set_part done; 3.1 sec.
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       send_msg_by_id INFO @200-2174@%s%s component correlator_hls_config.cfg 
@@ -624,7 +541,7 @@ Execute         send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg484-1' from cor
 INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-1' from correlator_hls_config.cfg(1)
 Execute         set_part xc7z020clg484-1 
 Execute           create_platform xc7z020clg484-1 -board  
-Command           create_platform done; 0.22 sec.
+Command           create_platform done; 0.23 sec.
 Execute           source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/common/xilinx.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/plb46.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/axi4.gen 
@@ -633,15 +550,15 @@ Execute               source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/i
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.15 sec.
+Command             ap_source done; 0.14 sec.
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command           ap_source done; 0.19 sec.
+Command           ap_source done; 0.18 sec.
 Execute           ap_part_info -name xc7z020-clg484-1 -data info 
 Execute           config_compile -quiet -complex-mul-dsp=0 
-Command         set_part done; 0.46 sec.
+Command         set_part done; 0.45 sec.
 Execute         send_msg_by_id INFO @200-1465@%s 'clock=10n' from correlator_hls_config.cfg(11) 
 INFO: [HLS 200-1465] Applying config ini 'clock=10n' from correlator_hls_config.cfg(11)
 Execute         create_clock -period 10ns 
@@ -650,12 +567,12 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from correlator_hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from correlator_hls_config.cfg(5)
 Execute         config_export -format=ip_catalog 
-Command       apply_ini done; 0.51 sec.
+Command       apply_ini done; 0.5 sec.
 Execute       write_component -config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/correlator_hls_config.cfg 
 Execute         send_msg_by_id INFO @200-2176@%s /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/vitis-comp.json 
 INFO: [HLS 200-2176] Writing Vitis IDE component file /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/vitis-comp.json
-Command     open_solution done; 3.77 sec.
-Command   open_component done; 3.78 sec.
+Command     open_solution done; 3.68 sec.
+Command   open_component done; 3.68 sec.
 Execute   apply_ini /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/config.cmdline -iscmdline 
 Execute   ::AP::init_summary_file vivado-impl 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
@@ -686,12 +603,12 @@ Execute         source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interfa
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.16 sec.
+Command       ap_source done; 0.12 sec.
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.2 sec.
+Command     ap_source done; 0.18 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=gnss_correlator xml_exists=0
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.rtl_wrap.cfg.tcl 
@@ -706,19 +623,15 @@ Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_wor
 INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to gnss_correlator
 INFO-FLOW: DBG:PUTS:       generate_datafile_ip_script ip_types={vitis sysgen} #gSsdmPorts=0
 INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=9
-INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=13 #gSsdmPorts=0
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='gnss_correlator_fpext_32ns_64_2_no_dsp_1
-gnss_correlator_sparsemux_9_3_18_1_1
-gnss_correlator_mul_18s_18s_34_1_1
-gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1
-gnss_correlator_mac_muladd_18s_18s_34s_34_4_1
-gnss_correlator_flow_control_loop_pipe_sequential_init
-gnss_correlator_ctlz_18_18_1_1
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=9 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1
+gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1
+gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1
 gnss_correlator_gmem0_m_axi
 gnss_correlator_gmem1_m_axi
 gnss_correlator_control_s_axi
 gnss_correlator_control_r_s_axi
-gnss_correlator_Pipeline_VITIS_LOOP_30_1
+gnss_correlator_flow_control_loop_delay_pipe
 gnss_correlator
 ' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
@@ -731,7 +644,6 @@ Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_wor
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.dataonly.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.rtl_wrap.cfg.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.compgen.dataonly.tcl 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator_Pipeline_VITIS_LOOP_30_1.tbgen.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/gnss_correlator.tbgen.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
@@ -741,7 +653,9 @@ Execute     sc_get_clocks gnss_correlator
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     source /opt/Xilinx/2025.2/Vitis/tps/tcl/tcllib2.0/fileutil/fileutil.tcl 
 Execute       source /opt/Xilinx/2025.2/Vitis/tps/tcl/tcllib2.0/cmdline/cmdline.tcl 
-Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.tcl 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.tcl 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/misc/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
 INFO-FLOW: DBG:PUTS:       generate_syn_sh
 Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
@@ -800,12 +714,12 @@ Execute         source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interfa
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.12 sec.
+Command       ap_source done; 0.14 sec.
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.18 sec.
+Command     ap_source done; 0.19 sec.
 INFO-FLOW: DBG:PUTS:       generate_syn_sh
 Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
@@ -833,12 +747,12 @@ Execute         source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interfa
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.13 sec.
+Command       ap_source done; 0.14 sec.
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/util.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/xfir.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /opt/Xilinx/2025.2/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.17 sec.
+Command     ap_source done; 0.18 sec.
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/autopilot.rtl.models.tcl 
 Execute     source /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
@@ -852,32 +766,32 @@ INFO-FLOW: Done: auto_impl_report gen module_node_dict time: 0 seconds
 INFO-FLOW: Running: auto_impl_report get_csynth_rtlinst_dict
 INFO-FLOW: Done: auto_impl_report get_csynth_rtlinst_dict time: 0 seconds 
 INFO-FLOW: DBG:PUTS:     auto_impl_report: impl processing xml
-INFO-FLOW: Running: auto_impl_report flow=impl process xml nodes: RtlModule (11)
-INFO-FLOW: Done: auto_impl_report flow=impl process xml nodes: RtlModule (11) time: 0 seconds 
-INFO-FLOW: Running: auto_impl_report flow=impl process xml nodes: TimingPaths (5)
-INFO-FLOW: Done: auto_impl_report flow=impl process xml nodes: TimingPaths (5) time: 0 seconds 
+INFO-FLOW: Running: auto_impl_report flow=impl process xml nodes: RtlModule (10)
+INFO-FLOW: Done: auto_impl_report flow=impl process xml nodes: RtlModule (10) time: 0 seconds 
+INFO-FLOW: Running: auto_impl_report flow=impl process xml nodes: TimingPaths (10)
+INFO-FLOW: Done: auto_impl_report flow=impl process xml nodes: TimingPaths (10) time: 0.1 seconds 
 Execute     ap_part_info -quiet -data family -name xc7z020-clg484-1 
 INFO-FLOW: Running: auto_impl_report flow=impl write xml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.xml
 INFO-FLOW: Done: auto_impl_report flow=impl write xml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.xml time: 0 seconds 
 INFO-FLOW: Running: auto_impl_report flow=impl auto_impl_report_txt /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.rpt
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7ce3bf1c3ef8' export_design_flow='impl' export_rpt='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x738d7f10c0a8' export_design_flow='impl' export_rpt='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
 INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_impl.rpt
 INFO-FLOW: Done: auto_impl_report flow=impl auto_impl_report_txt /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_impl.rpt time: 0 seconds 
 INFO-FLOW: DBG:PUTS:     auto_impl_report: syn processing xml
-INFO-FLOW: Running: auto_impl_report flow=syn process xml nodes: RtlModule (11)
-INFO-FLOW: Done: auto_impl_report flow=syn process xml nodes: RtlModule (11) time: 0 seconds 
-INFO-FLOW: Running: auto_impl_report flow=syn process xml nodes: TimingPaths (5)
-INFO-FLOW: Done: auto_impl_report flow=syn process xml nodes: TimingPaths (5) time: 0 seconds 
+INFO-FLOW: Running: auto_impl_report flow=syn process xml nodes: RtlModule (10)
+INFO-FLOW: Done: auto_impl_report flow=syn process xml nodes: RtlModule (10) time: 0 seconds 
+INFO-FLOW: Running: auto_impl_report flow=syn process xml nodes: TimingPaths (10)
+INFO-FLOW: Done: auto_impl_report flow=syn process xml nodes: TimingPaths (10) time: 0.1 seconds 
 Execute     ap_part_info -quiet -data family -name xc7z020-clg484-1 
 INFO-FLOW: Running: auto_impl_report flow=syn write xml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.xml
 INFO-FLOW: Done: auto_impl_report flow=syn write xml /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.xml time: 0 seconds 
 INFO-FLOW: Running: auto_impl_report flow=syn auto_impl_report_txt /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.rpt
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7ce3bf117af8' export_design_flow='syn' export_rpt='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x738d7f0d7078' export_design_flow='syn' export_rpt='/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
 INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_syn.rpt
 INFO-FLOW: Done: auto_impl_report flow=syn auto_impl_report_txt /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/report/verilog/export_syn.rpt time: 0 seconds 
 Execute     send_msg_by_id INFO @200-802@%s gnss_correlator_hls/gnss_correlator.zip 
 INFO: [HLS 200-802] Generated output file gnss_correlator_hls/gnss_correlator.zip
-Command   export_design done; 708.7 sec.
+Command   export_design done; 733.61 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 

@@ -1,0 +1,203 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>8.276</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>8.276</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>8.276</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>1.724</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>1.724</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>1.724</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>1.724</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>2</BRAM>
+    <CLB>0</CLB>
+    <DSP>39</DSP>
+    <FF>9272</FF>
+    <LATCH>0</LATCH>
+    <LUT>9289</LUT>
+    <SRL>314</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>280</BRAM>
+    <CLB>0</CLB>
+    <DSP>220</DSP>
+    <FF>106400</FF>
+    <LUT>53200</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="enhanced_correlator" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="18">control_r_s_axi_U control_s_axi_U fadd_32ns_32ns_32_5_full_dsp_1_U29 fadd_32ns_32ns_32_5_full_dsp_1_U30 faddfsub_32ns_32ns_32_5_full_dsp_1_U28 fcmp_32ns_32ns_1_2_no_dsp_1_U39 fdiv_32ns_32ns_32_16_no_dsp_1_U35 fdiv_32ns_32ns_32_16_no_dsp_1_U36 fdiv_32ns_32ns_32_16_no_dsp_1_U37 fmul_32ns_32ns_32_4_max_dsp_1_U31 fmul_32ns_32ns_32_4_max_dsp_1_U32 fmul_32ns_32ns_32_4_max_dsp_1_U33 fmul_32ns_32ns_32_4_max_dsp_1_U34 gmem0_m_axi_U gmem1_m_axi_U grp_sin_or_cos_float_s_fu_479 grp_sin_or_cos_float_s_fu_495 sitofp_32ns_32_6_no_dsp_1_U38</SubModules>
+    <Resources BRAM="2" DSP="39" FF="9272" LUT="9289" LogicLUT="8975" RAMB18="2" SRL="314"/>
+    <LocalResources FF="2459" LUT="1060" LogicLUT="1060"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_r_s_axi_U" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_control_r_s_axi">
+    <Resources FF="233" LUT="205" LogicLUT="205"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_control_s_axi">
+    <Resources FF="509" LUT="644" LogicLUT="644"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U29" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="208" LUT="373" LogicLUT="373"/>
+    <LocalResources FF="97" LUT="148" LogicLUT="148"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U30" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="175" LUT="225" LogicLUT="225"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="209" LUT="529" LogicLUT="529"/>
+    <LocalResources FF="98" LUT="303" LogicLUT="303"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="68" LUT="328" LogicLUT="328"/>
+    <LocalResources FF="68" LUT="282" LogicLUT="282"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fdiv_32ns_32ns_32_16_no_dsp_1_U35" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1">
+    <Resources FF="762" LUT="788" LogicLUT="754" SRL="34"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fdiv_32ns_32ns_32_16_no_dsp_1_U36" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1">
+    <Resources FF="698" LUT="788" LogicLUT="754" SRL="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fdiv_32ns_32ns_32_16_no_dsp_1_U37" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1">
+    <Resources FF="762" LUT="788" LogicLUT="754" SRL="34"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U31" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="145" LUT="122" LogicLUT="122"/>
+    <LocalResources FF="96" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U32" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="146" LUT="94" LogicLUT="94"/>
+    <LocalResources FF="97" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U33" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="113" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U34" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="113" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_gmem0_m_axi">
+    <Resources BRAM="1" FF="739" LUT="547" LogicLUT="483" RAMB18="1" SRL="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_gmem1_m_axi">
+    <Resources BRAM="1" FF="739" LUT="549" LogicLUT="485" RAMB18="1" SRL="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s">
+    <SubModules count="11">ctlz_32_32_1_1_U10 ctlz_32_32_1_1_U11 mul_15ns_15ns_30_1_1_U8 mul_15ns_15s_30_1_1_U9 mul_23s_22ns_45_1_1_U1 mul_30s_29ns_58_2_1_U2 mul_80s_24ns_80_5_1_U3 ref_4oPi_table_100_U second_order_float_sin_cos_K0_U second_order_float_sin_cos_K1_U second_order_float_sin_cos_K2_U</SubModules>
+    <Resources DSP="13" FF="623" LUT="1226" LogicLUT="1159" SRL="67"/>
+    <LocalResources FF="442" LUT="689" LogicLUT="637" SRL="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/ctlz_32_32_1_1_U10" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_ctlz_32_32_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/ctlz_32_32_1_1_U11" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_ctlz_32_32_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/mul_15ns_15ns_30_1_1_U8" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_15ns_15ns_30_1_1">
+    <Resources DSP="1" LUT="150" LogicLUT="150"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/mul_15ns_15s_30_1_1_U9" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_15ns_15s_30_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/mul_23s_22ns_45_1_1_U1" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_23s_22ns_45_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/mul_30s_29ns_58_2_1_U2" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_30s_29ns_58_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_80s_24ns_80_5_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/ref_4oPi_table_100_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R">
+    <Resources FF="93" LUT="57" LogicLUT="57"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/second_order_float_sin_cos_K0_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R">
+    <Resources FF="22" LUT="107" LogicLUT="107"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/second_order_float_sin_cos_K1_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R">
+    <Resources LUT="87" LogicLUT="87"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_479/second_order_float_sin_cos_K2_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s">
+    <SubModules count="9">ctlz_32_32_1_1_U10 ctlz_32_32_1_1_U11 mul_15ns_15ns_30_1_1_U8 mul_15ns_15s_30_1_1_U9 mul_23s_22ns_45_1_1_U1 mul_30s_29ns_58_2_1_U2 second_order_float_sin_cos_K0_U second_order_float_sin_cos_K1_U second_order_float_sin_cos_K2_U</SubModules>
+    <Resources DSP="8" FF="390" LUT="719" LogicLUT="703" SRL="16"/>
+    <LocalResources FF="336" LUT="362" LogicLUT="346" SRL="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/ctlz_32_32_1_1_U10" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_ctlz_32_32_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/ctlz_32_32_1_1_U11" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_ctlz_32_32_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/mul_15ns_15ns_30_1_1_U8" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_15ns_15ns_30_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/mul_15ns_15s_30_1_1_U9" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_15ns_15s_30_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/mul_23s_22ns_45_1_1_U1" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_23s_22ns_45_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/mul_30s_29ns_58_2_1_U2" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_mul_30s_29ns_58_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/second_order_float_sin_cos_K0_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R">
+    <Resources FF="22" LUT="107" LogicLUT="107"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/second_order_float_sin_cos_K1_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R">
+    <Resources LUT="87" LogicLUT="87"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sin_or_cos_float_s_fu_495/second_order_float_sin_cos_K2_U" DEPTH="2" FILE_NAME="enhanced_correlator_sin_or_cos_float_s.v" ORIG_REF_NAME="enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/sitofp_32ns_32_6_no_dsp_1_U38" DEPTH="1" FILE_NAME="enhanced_correlator.v" ORIG_REF_NAME="enhanced_correlator_sitofp_32ns_32_6_no_dsp_1">
+    <Resources FF="181" LUT="154" LogicLUT="153" SRL="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="2.63471412658691406" DATAPATH_LOGIC_DELAY="0.81300008296966553" DATAPATH_NET_DELAY="1.82171428203582764" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]" LOGIC_LEVELS="1" MAX_FANOUT="18" SLACK="1.72428023815155029" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="xbip_pipe_v3_0_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/i_no_versal_es1_workaround.DSP_i_64" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.63471412658691406" DATAPATH_LOGIC_DELAY="0.81300008296966553" DATAPATH_NET_DELAY="1.82171428203582764" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[2]" LOGIC_LEVELS="1" MAX_FANOUT="18" SLACK="1.72428023815155029" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="xbip_pipe_v3_0_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/i_no_versal_es1_workaround.DSP_i_64" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U29/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.63471412658691406" DATAPATH_LOGIC_DELAY="0.81300008296966553" DATAPATH_NET_DELAY="1.82171428203582764" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]" LOGIC_LEVELS="1" MAX_FANOUT="18" SLACK="1.72428023815155029" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="xbip_pipe_v3_0_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/i_no_versal_es1_workaround.DSP_i_64" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.63471412658691406" DATAPATH_LOGIC_DELAY="0.81300008296966553" DATAPATH_NET_DELAY="1.82171428203582764" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[2]" LOGIC_LEVELS="1" MAX_FANOUT="18" SLACK="1.72428023815155029" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="xbip_pipe_v3_0_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/i_no_versal_es1_workaround.DSP_i_64" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fadd_32ns_32ns_32_5_full_dsp_1_U30/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.63471412658691406" DATAPATH_LOGIC_DELAY="0.81300008296966553" DATAPATH_NET_DELAY="1.82171428203582764" ENDPOINT_PIN="bd_0_i/hls_inst/inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/INMODE[1]" LOGIC_LEVELS="1" MAX_FANOUT="18" SLACK="1.72428023815155029" STARTPOINT_PIN="bd_0_i/hls_inst/inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="xbip_pipe_v3_0_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/BMA_EXP_DELAY/i_pipe/i_no_versal_es1_workaround.DSP_i_64" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="floating_point_v7_1_vh_rfs.vhd" LINE_NUMBER="1"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/enhanced_correlator_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/enhanced_correlator_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/enhanced_correlator_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/enhanced_correlator_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/enhanced_correlator_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/enhanced_correlator_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/enhanced_correlator_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

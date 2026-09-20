@@ -1,0 +1,39 @@
+{
+    "0": {
+        "name": "enhanced_correlator",
+        "file": "enhanced_correlator.cpp",
+        "fileloc": "9",
+        "instructions": "399",
+        "total_instructions": "673",
+        "calls": "1 1",
+        "basicblocks": "24",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "15"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1",
+            "N": "5"
+        }
+    },
+    "1": {
+        "name": "sin_or_cos<float>",
+        "file": "hls_hotbm.h",
+        "fileloc": "209",
+        "instructions": "137",
+        "total_instructions": "137",
+        "calls": "",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "40",
+        "loads": {
+            "G": "4"
+        }
+    }
+}

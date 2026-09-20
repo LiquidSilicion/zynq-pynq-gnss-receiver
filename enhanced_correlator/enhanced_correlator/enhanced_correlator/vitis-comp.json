@@ -1,0 +1,9 @@
+{
+  "name": "enhanced_correlator",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/enhanced_correlator_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

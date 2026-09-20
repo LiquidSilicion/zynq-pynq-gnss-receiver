@@ -1,0 +1,1114 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 20 21:50:10 2026
+# Process ID         : 25545
+# Current directory  : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line       : vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file           : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file       : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Running On         : johan2-Yoga-7-15ITL5
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 1584.759 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 12330 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 20920 MB
+# Available Virtual  : 8583 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 36097
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg484-1 -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25573
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2309.812 ; gain = 491.875 ; free physical = 195 ; free virtual = 6999
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sin_or_cos_float_s' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_mul_23s_22ns_45_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_23s_22ns_45_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_mul_23s_22ns_45_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_23s_22ns_45_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_mul_30s_29ns_58_2_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_30s_29ns_58_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_mul_30s_29ns_58_2_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_30s_29ns_58_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_mul_80s_24ns_80_5_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_80s_24ns_80_5_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_mul_80s_24ns_80_5_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_80s_24ns_80_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sparsemux_17_3_1_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_17_3_1_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_17_3_1_1_1.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sparsemux_17_3_1_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_17_3_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_ctlz_30_30_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_ctlz_30_30_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_ctlz_30_30_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_ctlz_30_30_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sparsemux_33_4_1_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_33_4_1_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_33_4_1_1_1.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sparsemux_33_4_1_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sparsemux_33_4_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_mul_15ns_15ns_30_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_15ns_15ns_30_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_mul_15ns_15ns_30_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_15ns_15ns_30_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_mul_15ns_15s_30_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_15ns_15s_30_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_mul_15ns_15s_30_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_15ns_15s_30_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_ctlz_32_32_1_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_ctlz_32_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_ctlz_32_32_1_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_ctlz_32_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sin_or_cos_float_s' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sin_or_cos_float_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_control_s_axi' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_s_axi.v:319]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_control_s_axi' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_control_r_s_axi' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_r_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_r_s_axi.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_control_r_s_axi' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_r_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_load' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:284]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_srl' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_srl' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_mem' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2410]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_mem' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2410]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_load' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:284]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_read' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo__parameterized1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_srl__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_srl__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_fifo__parameterized1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_burst_converter' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_burst_sequential' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:1656]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_reg_slice' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_reg_slice' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_burst_sequential' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:1656]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_burst_converter' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem0_m_axi_reg_slice__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_reg_slice__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi_read' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:796]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem0_m_axi' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem0_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_load' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:284]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_srl' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_srl' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_mem' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2410]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_mem' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2410]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_load' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:284]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_read' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo__parameterized1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_srl__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_srl__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_fifo__parameterized1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_burst_converter' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_burst_sequential' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:1656]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_reg_slice' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_reg_slice' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_burst_sequential' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:1656]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_burst_converter' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_gmem1_m_axi_reg_slice__parameterized0' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_reg_slice__parameterized0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi_read' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:796]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_gmem1_m_axi' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_gmem1_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 1 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 1 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 14 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/synth/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 4 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/synth/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/synth/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_sitofp_32ns_32_6_no_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-638] synthesizing module 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip/synth/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 1 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip/synth/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.vhd:215]
+INFO: [Synth 8-256] done synthesizing module 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip/synth/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_correlator' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_control_s_axi.v:444]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized97 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized97 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized97 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized97 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized97 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_ne_im is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_result_tuser[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_result_tlast in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port aclken in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port aresetn in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[23] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[22] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[21] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[20] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[19] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[18] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[17] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[16] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[15] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[14] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[13] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[12] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[11] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[10] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[9] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[8] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[7] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[6] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[5] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[4] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[3] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[2] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[1] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tuser[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tlast in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tdata[7] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tdata[6] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tdata[2] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tdata[1] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tdata[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tuser[0] in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_operation_tlast in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_result_tready in module floating_point_v7_1_21_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.750 ; gain = 725.812 ; free physical = 155 ; free virtual = 6749
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.750 ; gain = 725.812 ; free physical = 146 ; free virtual = 6741
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.750 ; gain = 725.812 ; free physical = 146 ; free virtual = 6741
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.8 ; elapsed = 00:00:00.8 . Memory (MB): peak = 2543.750 ; gain = 0.000 ; free physical = 291 ; free virtual = 6727
+INFO: [Netlist 29-17] Analyzing 4568 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/enhanced_correlator_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/enhanced_correlator_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2615.215 ; gain = 0.000 ; free physical = 402 ; free virtual = 6827
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25 instances were transformed.
+  FDE => FDRE: 25 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2615.250 ; gain = 0.000 ; free physical = 323 ; free virtual = 6748
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 2615.250 ; gain = 797.312 ; free physical = 186 ; free virtual = 6679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 2623.219 ; gain = 805.281 ; free physical = 186 ; free virtual = 6679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:55 . Memory (MB): peak = 2623.219 ; gain = 805.281 ; free physical = 186 ; free virtual = 6680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'enhanced_correlator_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'enhanced_correlator_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'enhanced_correlator_control_r_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'enhanced_correlator_control_r_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'enhanced_correlator_gmem0_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'enhanced_correlator_gmem0_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'enhanced_correlator_gmem1_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'enhanced_correlator_gmem1_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-3936] Found unconnected internal register 'bitcast_ln87_1_reg_2000_reg' and it is trimmed from '32' to '31' bits. [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator.v:1679]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'enhanced_correlator_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'enhanced_correlator_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'enhanced_correlator_control_r_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'enhanced_correlator_control_r_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'enhanced_correlator_gmem0_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'enhanced_correlator_gmem0_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'enhanced_correlator_gmem1_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'enhanced_correlator_gmem1_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 2623.219 ; gain = 805.281 ; free physical = 334 ; free virtual = 6749
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/faddfsub_32ns_32ns_32_5_full_dsp_1_U28/enhanced_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'enhanced_correlator_fadd_32ns_32ns_32_5_full_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'enhanced_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'enhanced_correlator_fdiv_32ns_32ns_32_16_no_dsp_1_ip:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/sitofp_32ns_32_6_no_dsp_1_U38/enhanced_correlator_sitofp_32ns_32_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U39/enhanced_correlator_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6014] Unused sequential element grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg was removed.  [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-6014] Unused sequential element grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg was removed.  [/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/8c66/hdl/verilog/enhanced_correlator_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module enhanced_correlator_control_s_axi.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module enhanced_correlator_control_s_axi.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module enhanced_correlator_control_r_s_axi.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module enhanced_correlator_control_r_s_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:22 ; elapsed = 00:03:25 . Memory (MB): peak = 2681.641 ; gain = 863.703 ; free physical = 261 ; free virtual = 6678
+---------------------------------------------------------------------------------
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg_0 : 0 0 : 3515 16441 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg_0 : 0 1 : 3526 16441 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg_0 : 0 2 : 3574 16441 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg_0 : 0 3 : 3551 16441 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_80s_24ns_80_5_1_U3/buff0_reg_0 : 0 4 : 2275 16441 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_30s_29ns_58_2_1_U2/tmp_product_d : 0 0 : 2755 4669 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_30s_29ns_58_2_1_U2/tmp_product_d : 0 1 : 1914 4669 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_30s_29ns_58_2_1_U2/tmp_product_16 : 0 0 : 2755 4669 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_30s_29ns_58_2_1_U2/tmp_product_16 : 0 1 : 1914 4669 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_23s_22ns_45_1_1_U1/tmp_product_a : 0 0 : 3298 4234 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_23s_22ns_45_1_1_U1/tmp_product_a : 0 1 : 936 4234 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_23s_22ns_45_1_1_U1/tmp_product_15 : 0 0 : 3298 4234 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_23s_22ns_45_1_1_U1/tmp_product_15 : 0 1 : 936 4234 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_30s_29ns_58_2_1_U2/tmp_product_10 : 0 0 : 1868 3371 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_30s_29ns_58_2_1_U2/tmp_product_10 : 0 1 : 1503 3371 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_30s_29ns_58_2_1_U2/tmp_product_17 : 0 0 : 1868 3371 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_30s_29ns_58_2_1_U2/tmp_product_17 : 0 1 : 1503 3371 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_15ns_15ns_30_1_1_U8/tmp_product_6 : 0 0 : 2001 2001 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_15ns_15ns_30_1_1_U8/tmp_product_13 : 0 0 : 2001 2001 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_479/mul_15ns_15s_30_1_1_U9/tmp_product_8 : 0 0 : 1834 1834 : Used 1 time 0
+ Sort Area is enhanced_correlator__GB0 grp_sin_or_cos_float_s_fu_495/mul_15ns_15s_30_1_1_U9/tmp_product_14 : 0 0 : 1834 1834 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:38 ; elapsed = 00:03:41 . Memory (MB): peak = 2795.641 ; gain = 977.703 ; free physical = 253 ; free virtual = 6666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:49 ; elapsed = 00:03:53 . Memory (MB): peak = 2846.688 ; gain = 1028.750 ; free physical = 234 ; free virtual = 6533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem0_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem1_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:07 ; elapsed = 00:04:10 . Memory (MB): peak = 2862.703 ; gain = 1044.766 ; free physical = 314 ; free virtual = 6596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:18 ; elapsed = 00:04:22 . Memory (MB): peak = 3001.516 ; gain = 1183.578 ; free physical = 268 ; free virtual = 6500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:18 ; elapsed = 00:04:22 . Memory (MB): peak = 3001.516 ; gain = 1183.578 ; free physical = 268 ; free virtual = 6500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:22 ; elapsed = 00:04:26 . Memory (MB): peak = 3001.516 ; gain = 1183.578 ; free physical = 259 ; free virtual = 6491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:22 ; elapsed = 00:04:26 . Memory (MB): peak = 3001.516 ; gain = 1183.578 ; free physical = 259 ; free virtual = 6491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:23 ; elapsed = 00:04:27 . Memory (MB): peak = 3021.359 ; gain = 1203.422 ; free physical = 258 ; free virtual = 6491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:24 ; elapsed = 00:04:27 . Memory (MB): peak = 3021.359 ; gain = 1203.422 ; free physical = 255 ; free virtual = 6487
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                         | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper_668                 | Dynamic                | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0_622 | C+A'*B'                | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_602                 | Dynamic                | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0_556 | C+A'*B'                | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                     | Dynamic                | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0     | C+A'*B'                | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_96  | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_97  | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_94  | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_68  | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_69  | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_66  | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_40  | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_41  | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_38  | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1     | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2     | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3     | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | A''*B''                | 15     | 15     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (A'*B')'               | 15     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A''*B''                | 22     | 17     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A''*B'')'    | 22     | 18     | -      | -      | 28     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A''*B'                 | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A'*B'')'     | 30     | 12     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A'*B''                 | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A*B'')'      | 0      | 12     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | (A'*B'')'              | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | PCIN>>17+(A'*B'')'     | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+(A'*B'')')'  | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|enhanced_correlator                 | PCIN>>17+(A''*B'')'    | 24     | 17     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+(A''*B'')')' | 24     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|enhanced_correlator                 | A''*B''                | 15     | 15     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (A'*B')'               | 15     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A''*B''                | 22     | 17     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A''*B'')'    | 22     | 18     | -      | -      | 28     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A''*B'                 | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A'*B'')'     | 30     | 12     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|enhanced_correlator                 | A'*B''                 | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|enhanced_correlator                 | (PCIN>>17+A*B'')'      | 0      | 12     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   263|
+|2     |DSP48E1  |    39|
+|19    |LUT1     |   252|
+|20    |LUT2     |  1136|
+|21    |LUT3     |  3321|
+|22    |LUT4     |  1633|
+|23    |LUT5     |  1292|
+|24    |LUT6     |  2431|
+|25    |MUXCY    |  2331|
+|26    |MUXF7    |   255|
+|27    |MUXF8    |    94|
+|28    |RAMB18E1 |     2|
+|29    |SRL16E   |   314|
+|30    |XORCY    |  2182|
+|31    |FDE      |    25|
+|32    |FDRE     |  9165|
+|33    |FDSE     |    82|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:24 ; elapsed = 00:04:28 . Memory (MB): peak = 3021.359 ; gain = 1203.422 ; free physical = 251 ; free virtual = 6487
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:10 ; elapsed = 00:04:16 . Memory (MB): peak = 3021.359 ; gain = 1131.922 ; free physical = 251 ; free virtual = 6491
+Synthesis Optimization Complete : Time (s): cpu = 00:04:24 ; elapsed = 00:04:28 . Memory (MB): peak = 3021.367 ; gain = 1203.422 ; free physical = 251 ; free virtual = 6491
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.57 . Memory (MB): peak = 3021.367 ; gain = 0.000 ; free physical = 268 ; free virtual = 6604
+INFO: [Netlist 29-17] Analyzing 5191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3077.387 ; gain = 0.000 ; free physical = 216 ; free virtual = 6609
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 694 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 669 instances
+  FDE => FDRE: 25 instances
+
+Synth Design complete | Checksum: b1eba91d
+INFO: [Common 17-83] Releasing license: Synthesis
+301 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:53 ; elapsed = 00:04:48 . Memory (MB): peak = 3077.422 ; gain = 1435.219 ; free physical = 191 ; free virtual = 6513
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2366.539; main = 2159.995; forked = 282.236
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3988.043; main = 3077.391; forked = 986.523
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3101.398 ; gain = 0.000 ; free physical = 189 ; free virtual = 6515
+INFO: [Common 17-1381] The checkpoint '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 0e2ed9c2122c5618
+INFO: [Coretcl 2-1174] Renamed 888 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3101.398 ; gain = 0.000 ; free physical = 184 ; free virtual = 6432
+INFO: [Common 17-1381] The checkpoint '/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/enhanced_correlator/enhanced_correlator/enhanced_correlator/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 21:55:31 2026...

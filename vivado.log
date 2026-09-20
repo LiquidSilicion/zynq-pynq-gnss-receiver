@@ -1,0 +1,438 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 20 22:08:53 2026
+# Process ID         : 36247
+# Current directory  : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver
+# Command line       : vivado
+# Log file           : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado.log
+# Journal file       : /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado.jou
+# Running On         : johan2-Yoga-7-15ITL5
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 1077.492 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 12330 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 20920 MB
+# Available Virtual  : 12573 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.1/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/scu35/1.0/board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.1/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385_2/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.0/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.1/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.1/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/scu35/1.0/board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.1/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385_2/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.0/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.1/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/johan2'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/johan2' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/johan2/zynq_gnss_correlator_system'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+open_project: Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 10293.656 ; gain = 414.320 ; free physical = 1552 ; free virtual = 10457
+update_compile_order -fileset sources_1
+create_bd_design "enhanced_system"
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/enhanced_system/enhanced_system.bd> 
+create_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 10431.719 ; gain = 0.000 ; free physical = 1392 ; free virtual = 10359
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:enhanced_correlator:1.0 enhanced_correlator_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/ACLK]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control]
+Slave segment '/enhanced_correlator_0/s_axi_control/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control_r]
+Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>.
+endgroup
+regenerate_bd_layout
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property CONFIG.PCW_USE_S_AXI_HP0 {1} [get_bd_cells processing_system7_0]
+endgroup
+open_bd_design {/home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd}
+Reading block design file </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:hls:gnss_correlator:1.0 - gnss_correlator_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Successfully read diagram <system> from block design file </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd>
+current_bd_design [get_bd_designs enhanced_system]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets axi_interconnect_0_M00_AXI] [get_bd_intf_nets axi_interconnect_0_M01_AXI] [get_bd_cells axi_interconnect_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+regenerate_bd_layout
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control_r]
+INFO: [BD 5-455] Automation on '/proc_sys_reset_0/ext_reset_in' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/proc_sys_reset_0/slowest_sync_clk' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/enhanced_correlator_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem0' at <0x0000_0000 [ 512M ]>.
+endgroup
+delete_bd_objs [get_bd_cells proc_sys_reset_0]
+startgroup
+set_property -dict [list \
+  CONFIG.NUM_MI {3} \
+  CONFIG.NUM_SI {3} \
+] [get_bd_cells smartconnect_0]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/enhanced_correlator_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/m_axi_gmem1]
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem1' at <0x0000_0000 [ 512M ]>.
+regenerate_bd_layout
+current_bd_design [get_bd_designs system]
+regenerate_bd_layout
+current_bd_design [get_bd_designs enhanced_system]
+delete_bd_objs [get_bd_intf_nets enhanced_correlator_0_m_axi_gmem1] [get_bd_intf_nets enhanced_correlator_0_m_axi_gmem0] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_cells axi_mem_intercon]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/enhanced_correlator_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+startgroup
+delete_bd_objs [get_bd_intf_nets smartconnect_0_M01_AXI] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_intf_nets smartconnect_0_M00_AXI] [get_bd_intf_nets enhanced_correlator_0_m_axi_gmem0] [get_bd_intf_nets processing_system7_0_DDR]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets rst_ps7_0_100M_peripheral_aresetn] [get_bd_nets processing_system7_0_FCLK_CLK0]
+delete_bd_objs [get_bd_cells axi_mem_intercon]
+delete_bd_objs [get_bd_intf_ports DDR] [get_bd_intf_ports FIXED_IO]
+delete_bd_objs [get_bd_cells processing_system7_0] [get_bd_cells smartconnect_0] [get_bd_cells rst_ps7_0_100M] [get_bd_cells enhanced_correlator_0]
+endgroup
+current_bd_design [get_bd_designs system]
+startgroup
+set_property location {0.5 -827 -1323} [get_bd_cells processing_system7_0]
+set_property location {1 -827 -1323} [get_bd_cells axi_smc]
+set_property location {1 -827 -1323} [get_bd_cells rst_ps7_0_100M]
+set_property location {1 -827 -1323} [get_bd_cells gnss_correlator_0]
+endgroup
+regenerate_bd_layout
+close_bd_design [get_bd_designs system]
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+startgroup
+current_bd_design [get_bd_designs enhanced_system]
+create_bd_cell -type ip -vlnv xilinx.com:hls:enhanced_correlator:1.0 enhanced_correlator_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/enhanced_correlator_0/s_axi_control/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/enhanced_correlator_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/s_axi_control_r]
+Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>.
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property CONFIG.PCW_USE_S_AXI_HP0 {1} [get_bd_cells processing_system7_0]
+endgroup
+open_bd_design {/home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd}
+Reading block design file </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:hls:gnss_correlator:1.0 - gnss_correlator_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Successfully read diagram <system> from block design file </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/system.bd>
+current_bd_design [get_bd_designs enhanced_system]
+regenerate_bd_layout
+current_bd_design [get_bd_designs system]
+current_bd_design [get_bd_designs enhanced_system]
+startgroup
+set_property -dict [list \
+  CONFIG.NUM_MI {3} \
+  CONFIG.NUM_SI {3} \
+] [get_bd_cells smartconnect_0]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/enhanced_correlator_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem0' at <0x0000_0000 [ 512M ]>.
+delete_bd_objs [get_bd_intf_nets enhanced_correlator_0_m_axi_gmem0] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_cells axi_mem_intercon]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M02_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/enhanced_correlator_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/m_axi_gmem0]
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+WARNING: [BD 41-1743] Cannot assign slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' into address space '/processing_system7_0/Data' because no valid addressing path exists. The addressing path from slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' to address space '/processing_system7_0/Data' terminates at master interface '/processing_system7_0/M_AXI_GP0'. The apertures for this interface {<0x4000_0000 [ 1G ]>} do not intersect with previous path apertures {<0x0000_0000 [ 512M ]>}. This assignment will be automatically excluded.
+Slave segment '/enhanced_correlator_0/s_axi_control/Reg' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem0' at <0x4000_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/enhanced_correlator_0/s_axi_control/Reg' with 'register' usage does not match address space '/enhanced_correlator_0/Data_m_axi_gmem0' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem0' at <0x4001_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' with 'register' usage does not match address space '/enhanced_correlator_0/Data_m_axi_gmem0' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/enhanced_correlator_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins enhanced_correlator_0/m_axi_gmem1]
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem1' at <0x0000_0000 [ 512M ]>.
+Slave segment '/enhanced_correlator_0/s_axi_control/Reg' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem1' at <0x4000_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/enhanced_correlator_0/s_axi_control/Reg' with 'register' usage does not match address space '/enhanced_correlator_0/Data_m_axi_gmem1' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' is being assigned into address space '/enhanced_correlator_0/Data_m_axi_gmem1' at <0x4001_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/enhanced_correlator_0/s_axi_control_r/Reg' with 'register' usage does not match address space '/enhanced_correlator_0/Data_m_axi_gmem1' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+endgroup
+regenerate_bd_layout
+set_property location {2 652 -68} [get_bd_cells smartconnect_0]
+set_property location {2.5 862 180} [get_bd_cells enhanced_correlator_0]
+set_property location {2 485 163} [get_bd_cells smartconnect_0]
+set_property location {3 855 173} [get_bd_cells enhanced_correlator_0]
+regenerate_bd_layout
+current_bd_design [get_bd_designs system]
+validate_bd_design -force
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4001_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4001_0000 [ 64K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S02_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4001_0000 [ 64K ]> from slave interface '/axi_smc/S02_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/axi_smc/S02_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_axi_smc_0: SmartConnect system_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Common 17-365] Interrupt caught but 'validate_bd_design' cannot be canceled. Please wait for command to finish.
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 10932.641 ; gain = 0.000 ; free physical = 864 ; free virtual = 9912
+validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 10932.641 ; gain = 0.000 ; free physical = 989 ; free virtual = 10037
+INFO: [Common 17-681] Processing pending cancel.
+current_bd_design [get_bd_designs enhanced_system]
+validate_bd_design
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4001_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S01_AXI' to master interface '/smartconnect_0/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S02_AXI' to master interface '/smartconnect_0/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] enhanced_system_smartconnect_0_1: SmartConnect enhanced_system_smartconnect_0_1 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 10941.039 ; gain = 0.000 ; free physical = 946 ; free virtual = 10062
+current_bd_design [get_bd_designs system]
+close_bd_design [get_bd_designs system]
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+current_bd_design [get_bd_designs enhanced_system]
+save_bd_design
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/enhanced_system/enhanced_system.bd> 
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/enhanced_system/ui/bd_256e1578.ui> 
+validate_bd_design -force
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4001_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S01_AXI' to master interface '/smartconnect_0/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S02_AXI' to master interface '/smartconnect_0/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] enhanced_system_smartconnect_0_1: SmartConnect enhanced_system_smartconnect_0_1 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+xit::source_ipfile: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 11031.746 ; gain = 0.000 ; free physical = 881 ; free virtual = 9969
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 11031.746 ; gain = 0.000 ; free physical = 754 ; free virtual = 9842
+validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 11031.746 ; gain = 0.000 ; free physical = 772 ; free virtual = 9861
+save_bd_design
+Wrote  : </home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/enhanced_system/enhanced_system.bd> 
+close_bd_design [get_bd_designs enhanced_system]
+make_wrapper -files [get_files /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/sources_1/bd/enhanced_system/enhanced_system.bd] -top
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+INFO: [BD 41-1662] The design 'enhanced_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/synth/enhanced_system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/sim/enhanced_system.v
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/hdl/enhanced_system_wrapper.v
+add_files -norecurse /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/hdl/enhanced_system_wrapper.v
+update_compile_order -fileset sources_1
+set_property top enhanced_system_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.srcs/utils_1/imports/synth_1/system_wrapper.dcp with file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/synth_1/system_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem0.
+Excluding slave segment /enhanced_correlator_0/s_axi_control/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+Excluding slave segment /enhanced_correlator_0/s_axi_control_r/Reg from address space /enhanced_correlator_0/Data_m_axi_gmem1.
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+INFO: [BD 41-1662] The design 'enhanced_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/synth/enhanced_system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/enhanced_correlator_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/sim/enhanced_system.v
+Verilog Output written to : /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/hdl/enhanced_system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block enhanced_correlator_0 .
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+Exporting to file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/ip/enhanced_system_smartconnect_0_1/bd_0/hw_handoff/enhanced_system_smartconnect_0_1.hwh
+Generated Hardware Definition File /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/ip/enhanced_system_smartconnect_0_1/bd_0/synth/enhanced_system_smartconnect_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block smartconnect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/hw_handoff/enhanced_system.hwh
+Generated Hardware Definition File /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/synth/enhanced_system.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/enhanced_system.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/enhanced_system.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.gen/sources_1/bd/enhanced_system/enhanced_system_sv.sveo
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP enhanced_system_rst_ps7_0_100M_1, cache-ID = 4ad57d2a9d8cd76a; cache size = 84.243 MB.
+[Sun Sep 20 22:30:45 2026] Launched enhanced_system_smartconnect_0_1_synth_1, enhanced_system_enhanced_correlator_0_1_synth_1, enhanced_system_processing_system7_0_1_synth_1, synth_1...
+Run output will be captured here:
+enhanced_system_smartconnect_0_1_synth_1: /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/enhanced_system_smartconnect_0_1_synth_1/runme.log
+enhanced_system_enhanced_correlator_0_1_synth_1: /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/enhanced_system_enhanced_correlator_0_1_synth_1/runme.log
+enhanced_system_processing_system7_0_1_synth_1: /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/enhanced_system_processing_system7_0_1_synth_1/runme.log
+synth_1: /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/synth_1/runme.log
+[Sun Sep 20 22:30:45 2026] Launched impl_1...
+Run output will be captured here: /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:29 ; elapsed = 00:01:21 . Memory (MB): peak = 11203.684 ; gain = 72.969 ; free physical = 661 ; free virtual = 9901
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.99 . Memory (MB): peak = 11311.422 ; gain = 0.000 ; free physical = 2772 ; free virtual = 9780
+INFO: [Netlist 29-17] Analyzing 1617 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.19 . Memory (MB): peak = 11442.211 ; gain = 9.258 ; free physical = 2670 ; free virtual = 9647
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 12049.746 ; gain = 10.000 ; free physical = 2165 ; free virtual = 9125
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 12049.746 ; gain = 0.000 ; free physical = 2165 ; free virtual = 9125
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12049.746 ; gain = 0.000 ; free physical = 2165 ; free virtual = 9125
+Read placeStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 12066.746 ; gain = 17.000 ; free physical = 2218 ; free virtual = 9163
+Read PulsedLatchDB: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 12066.746 ; gain = 0.000 ; free physical = 2218 ; free virtual = 9163
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.42 . Memory (MB): peak = 12077.746 ; gain = 11.000 ; free physical = 2204 ; free virtual = 9150
+Read Physdb Files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 12077.746 ; gain = 38.000 ; free physical = 2204 ; free virtual = 9150
+Restored from archive | CPU: 3.620000 secs | Memory: 24.644257 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 12077.746 ; gain = 38.000 ; free physical = 2204 ; free virtual = 9150
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 12085.426 ; gain = 0.000 ; free physical = 2185 ; free virtual = 9154
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 224 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 210 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 12 instances
+
+open_run: Time (s): cpu = 00:01:01 ; elapsed = 00:00:39 . Memory (MB): peak = 12471.230 ; gain = 1267.547 ; free physical = 1483 ; free virtual = 8625
+open_report: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 12527.090 ; gain = 49.109 ; free physical = 1298 ; free virtual = 8483
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 22:59:25 2026...

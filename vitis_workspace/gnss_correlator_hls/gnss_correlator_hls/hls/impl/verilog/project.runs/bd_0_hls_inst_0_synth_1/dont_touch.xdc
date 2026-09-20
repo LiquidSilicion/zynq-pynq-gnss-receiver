@@ -4,8 +4,14 @@
 # IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci
 # IP: The module: 'bd_0_hls_inst_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip} -quiet] -quiet
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip} -quiet] -quiet
+
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip} -quiet] -quiet
+
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip} -quiet] -quiet
 
 # XDC: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/gnss_correlator_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'bd_0_hls_inst_0'. Do not add the DONT_TOUCH constraint.
@@ -14,8 +20,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells inst -quiet] -quiet
 # IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci
 # IP: The module: 'bd_0_hls_inst_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip} -quiet] -quiet
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip} -quiet] -quiet
+
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip} -quiet] -quiet
+
+# IP: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip || ORIG_REF_NAME==gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip} -quiet] -quiet
 
 # XDC: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vitis_workspace/gnss_correlator_hls/gnss_correlator_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/gnss_correlator_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'bd_0_hls_inst_0'. Do not add the DONT_TOUCH constraint.

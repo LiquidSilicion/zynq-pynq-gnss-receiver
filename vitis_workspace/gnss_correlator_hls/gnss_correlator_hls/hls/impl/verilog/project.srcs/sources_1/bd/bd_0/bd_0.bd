@@ -1191,7 +1191,7 @@
     "components": {
       "hls_inst": {
         "vlnv": "xilinx.com:hls:gnss_correlator:1.0",
-        "ip_revision": "2114788798",
+        "ip_revision": "2114793095",
         "xci_name": "bd_0_hls_inst_0",
         "xci_path": "ip/bd_0_hls_inst_0/bd_0_hls_inst_0.xci",
         "inst_hier_path": "hls_inst",

@@ -4,7 +4,7 @@ set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 0
 set isPipelined_legacy 0
-set pipeline_type none
+set pipeline_type loop_auto_rewind
 set FunctionProtocol ap_ctrl_hs
 set restart_counter_num 0
 set isOneStateSeq 0
@@ -15,7 +15,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 4
+set cdfgNum 3
 set C_modelName {gnss_correlator}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
@@ -311,19 +311,9 @@ set ArgLastReadFirstWriteLatency {
 		signal_Q {Type I LastRead 0 FirstWrite -1}
 		code_I {Type I LastRead 0 FirstWrite -1}
 		code_Q {Type I LastRead 0 FirstWrite -1}
-		corr_I {Type O LastRead -1 FirstWrite 4}
-		corr_Q {Type O LastRead -1 FirstWrite 4}
-		num_samples {Type I LastRead 0 FirstWrite -1}}
-	gnss_correlator_Pipeline_VITIS_LOOP_30_1 {
-		gmem1 {Type I LastRead 10 FirstWrite -1}
-		gmem0 {Type I LastRead 10 FirstWrite -1}
-		num_samples {Type I LastRead 0 FirstWrite -1}
-		sext_ln30 {Type I LastRead 0 FirstWrite -1}
-		sext_ln30_1 {Type I LastRead 0 FirstWrite -1}
-		sext_ln30_2 {Type I LastRead 0 FirstWrite -1}
-		sext_ln30_3 {Type I LastRead 0 FirstWrite -1}
-		acc_Q_out {Type O LastRead -1 FirstWrite 17}
-		acc_I_out {Type O LastRead -1 FirstWrite 17}}}
+		corr_I {Type O LastRead -1 FirstWrite 18}
+		corr_Q {Type O LastRead -1 FirstWrite 18}
+		num_samples {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -333,6 +323,7 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

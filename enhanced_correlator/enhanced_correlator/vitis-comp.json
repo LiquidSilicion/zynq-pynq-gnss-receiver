@@ -1,0 +1,14 @@
+{
+  "name": "enhanced_correlator",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "enhanced_correlator_hls_config.cfg"
+    ],
+    "work_dir": "enhanced_correlator"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

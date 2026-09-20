@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 20,
+    "calls": "1 1 2 2 2",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "enhanced_correlator.cpp",
+    "fileloc": 9,
+    "instructions": 194,
+    "memory_accesses": 0,
+    "name": "enhanced_correlator",
+    "stores": {
+      "T": 6
+    },
+    "total_instructions": 662
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 25,
+    "file": "hls_hotbm.h",
+    "fileloc": 209,
+    "instructions": 198,
+    "loads": {
+      "G": 4
+    },
+    "memory_accesses": 0,
+    "name": "sin_or_cos<float>",
+    "total_instructions": 198
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 11,
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 51,
+    "instructions": 24,
+    "memory_accesses": 0,
+    "name": "__hls_fptosi_float_i32",
+    "total_instructions": 24
+  }
+}

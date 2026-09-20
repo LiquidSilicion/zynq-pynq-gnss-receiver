@@ -1917,7 +1917,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>50c148b4</spirit:value>
+            <spirit:value>d384e790</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1936,7 +1936,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>22e4dc33</spirit:value>
+            <spirit:value>424aa63a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1955,7 +1955,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c61e1acb</spirit:value>
+            <spirit:value>1020b4fb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1974,7 +1974,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0b95c2ab</spirit:value>
+            <spirit:value>905c4211</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4393,7 +4393,15 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci</spirit:name>
+        <spirit:name>hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -4405,15 +4413,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_ctlz_18_18_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_flow_control_loop_delay_pipe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4422,26 +4434,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/gnss_correlator_gmem1_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mac_muladd_18s_18s_34s_34_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mul_18s_18s_34_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_sparsemux_9_3_18_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4462,7 +4454,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci</spirit:name>
+        <spirit:name>hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -4476,17 +4476,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_ctlz_18_18_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/gnss_correlator_flow_control_loop_delay_pipe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4497,31 +4502,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/gnss_correlator_gmem1_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mac_muladd_18s_18s_34s_34_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_mul_18s_18s_34_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/gnss_correlator_sparsemux_9_3_18_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4549,7 +4529,15 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci</spirit:name>
+        <spirit:name>hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -4561,15 +4549,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_ctlz_18_18_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_fpext_32ns_64_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_flow_control_loop_delay_pipe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4581,29 +4573,9 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mac_muladd_18s_18s_34s_34_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mul_18s_18s_34_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_sparsemux_9_3_18_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/gnss_correlator.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f0f6eb37</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c4615c96</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4619,7 +4591,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip/gnss_correlator_fpext_32ns_64_2_no_dsp_1_ip.xci</spirit:name>
+        <spirit:name>hdl/ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -4633,17 +4613,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_ctlz_18_18_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_fadd_32ns_32ns_32_2_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_fpext_32ns_64_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/gnss_correlator_flow_control_loop_delay_pipe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/gnss_correlator_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4654,31 +4639,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/gnss_correlator_gmem1_m_axi.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_gnss_correlator_Pipeline_VITIS_LOOP_30_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mac_muladd_18s_18s_34s_34_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mac_mulsub_18s_18s_34s_34_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_mul_18s_18s_34_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/gnss_correlator_sparsemux_9_3_18_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -5015,7 +4975,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="29">undef</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="29">17</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -5028,8 +4988,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Gnss_correlator</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114788798</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-16T12:28:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114793095</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-09-19T12:05:55Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -5040,10 +5000,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d95876f6"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="f5f2820a"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="503774b1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9a4d0d82"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5b5deeed"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="8404cf31"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="3655e44f"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f8a34d27"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7e35c6e2"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
