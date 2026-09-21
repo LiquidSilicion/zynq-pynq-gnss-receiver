@@ -473,3 +473,193 @@ ninja: build stopped: subcommand failed.
 
 
 
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/Xilinx/2025.2/Vitis/bin/ninja cmTC_effcd && [1/2] Building CXX object CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-g++.real
+Target: microblaze-xilinx-elf
+Configured with: ../../../../../../work-shared/gcc-13.3.0-r0/gcc-13.3.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=microblaze-xilinx-elf --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/microblaze-xilinx-elf --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/host --with-gnu-ld --enable-shared --enable-languages=c,c++,fortran --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-libstdcxx-pch --program-prefix=microblaze-xilinx-elf- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/13.3.0 --with-build-time-tools=/host-native/usr/microblaze-xilinx-elf/bin --with-sysroot=/not/exist --with-build-sysroot=/host --with-plugin-ld=ld --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array --enable-multilib --disable-initfini_array --disable-__cxa_atexit --disable-libstdcxx-pch --with-newlib --disable-threads --enable-plugins --with-gnu-as --disable-libitm --disable-tm-clone-registry --without-long-double-128 --with-sysroot=/not/exist
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 13.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_effcd.dir/'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/cc1plus -quiet -v -iprefix /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/ -isysroot /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_effcd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -version -o /tmp/ccbGJr7C.s
+GNU C++17 (GCC) version 13.3.0 (microblaze-xilinx-elf)
+	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/../../../../../microblaze-xilinx-elf/include"
+ignoring duplicate directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/include"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/local/include"
+ignoring duplicate directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/../../../../../microblaze-xilinx-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0/microblaze-xilinx-elf
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0/backward
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/
+End of search list.
+Compiler executable checksum: 5ee332ca6c15a39532a83f3839ef2841
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_effcd.dir/'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/as -v -o CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccbGJr7C.s
+GNU assembler version 2.42.0 (microblaze-xilinx-elf) using BFD version (GNU Binutils) 2.42.0.20240723
+COMPILER_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/
+LIBRARY_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_effcd
+FAILED: cmTC_effcd 
+: && /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++  -v CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_effcd   && :
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-g++.real
+COLLECT_LTO_WRAPPER=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/lto-wrapper
+Target: microblaze-xilinx-elf
+Configured with: ../../../../../../work-shared/gcc-13.3.0-r0/gcc-13.3.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=microblaze-xilinx-elf --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/microblaze-xilinx-elf --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/host --with-gnu-ld --enable-shared --enable-languages=c,c++,fortran --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-libstdcxx-pch --program-prefix=microblaze-xilinx-elf- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/13.3.0 --with-build-time-tools=/host-native/usr/microblaze-xilinx-elf/bin --with-sysroot=/not/exist --with-build-sysroot=/host --with-plugin-ld=ld --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array --enable-multilib --disable-initfini_array --disable-__cxa_atexit --disable-libstdcxx-pch --with-newlib --disable-threads --enable-plugins --with-gnu-as --disable-libitm --disable-tm-clone-registry --without-long-double-128 --with-sysroot=/not/exist
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 13.3.0 (GCC) 
+COMPILER_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/
+LIBRARY_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'cmTC_effcd' '-dumpdir' 'cmTC_effcd.'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/collect2 -plugin /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/liblto_plugin.so -plugin-opt=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cckJZoP7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lxil -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc --sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf --build-id -N -relax -G 0 -dT /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/xilinx.ld -o cmTC_effcd /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/crt0.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crti.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtbegin.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/crtinit.o -L/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0 -L/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc -L/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0 -L/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib CMakeFiles/cmTC_effcd.dir/CMakeCXXCompilerABI.cpp.o --build-id=none -lstdc++ -lm -lgcc -start-group -lgloss -lxil -lc -lm -end-group -lgcc /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtend.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtn.o
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+
+Determining if the CXX compiler works failed with the following output:
+Change Dir: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/Xilinx/2025.2/Vitis/bin/ninja cmTC_ba03d && [1/2] Building CXX object CMakeFiles/cmTC_ba03d.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_ba03d
+FAILED: cmTC_ba03d 
+: && /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++   CMakeFiles/cmTC_ba03d.dir/testCXXCompiler.cxx.o -o cmTC_ba03d   && :
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/Xilinx/2025.2/Vitis/bin/ninja cmTC_5bf75 && [1/2] Building CXX object CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-g++.real
+Target: microblaze-xilinx-elf
+Configured with: ../../../../../../work-shared/gcc-13.3.0-r0/gcc-13.3.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=microblaze-xilinx-elf --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/microblaze-xilinx-elf --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/host --with-gnu-ld --enable-shared --enable-languages=c,c++,fortran --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-libstdcxx-pch --program-prefix=microblaze-xilinx-elf- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/13.3.0 --with-build-time-tools=/host-native/usr/microblaze-xilinx-elf/bin --with-sysroot=/not/exist --with-build-sysroot=/host --with-plugin-ld=ld --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array --enable-multilib --disable-initfini_array --disable-__cxa_atexit --disable-libstdcxx-pch --with-newlib --disable-threads --enable-plugins --with-gnu-as --disable-libitm --disable-tm-clone-registry --without-long-double-128 --with-sysroot=/not/exist
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 13.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_5bf75.dir/'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/cc1plus -quiet -v -iprefix /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/ -isysroot /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5bf75.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -version -o /tmp/ccPgulHA.s
+GNU C++17 (GCC) version 13.3.0 (microblaze-xilinx-elf)
+	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/../../../../../microblaze-xilinx-elf/include"
+ignoring duplicate directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/include"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/local/include"
+ignoring duplicate directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed"
+ignoring nonexistent directory "/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/../../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/../../../../../microblaze-xilinx-elf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0/microblaze-xilinx-elf
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/c++/13.3.0/backward
+ /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/include/
+End of search list.
+Compiler executable checksum: 5ee332ca6c15a39532a83f3839ef2841
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_5bf75.dir/'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/as -v -o CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccPgulHA.s
+GNU assembler version 2.42.0 (microblaze-xilinx-elf) using BFD version (GNU Binutils) 2.42.0.20240723
+COMPILER_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/
+LIBRARY_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-dumpdir' 'CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_5bf75
+FAILED: cmTC_5bf75 
+: && /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++  -v CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5bf75   && :
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-g++.real
+COLLECT_LTO_WRAPPER=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/lto-wrapper
+Target: microblaze-xilinx-elf
+Configured with: ../../../../../../work-shared/gcc-13.3.0-r0/gcc-13.3.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=microblaze-xilinx-elf --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/microblaze-xilinx-elf --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/host --with-gnu-ld --enable-shared --enable-languages=c,c++,fortran --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-libstdcxx-pch --program-prefix=microblaze-xilinx-elf- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/13.3.0 --with-build-time-tools=/host-native/usr/microblaze-xilinx-elf/bin --with-sysroot=/not/exist --with-build-sysroot=/host --with-plugin-ld=ld --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array --enable-multilib --disable-initfini_array --disable-__cxa_atexit --disable-libstdcxx-pch --with-newlib --disable-threads --enable-plugins --with-gnu-as --disable-libitm --disable-tm-clone-registry --without-long-double-128 --with-sysroot=/not/exist
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 13.3.0 (GCC) 
+COMPILER_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/
+LIBRARY_PATH=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/:/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf' '-v' '-o' 'cmTC_5bf75' '-dumpdir' 'cmTC_5bf75.'
+ /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/collect2 -plugin /opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/liblto_plugin.so -plugin-opt=/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDJfq8C.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lxil -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc --sysroot=/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf --build-id -N -relax -G 0 -dT /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/xilinx.ld -o cmTC_5bf75 /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/crt0.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crti.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtbegin.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/crtinit.o -L/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0 -L/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/../../lib/microblaze-xilinx-elf/gcc -L/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0 -L/opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib CMakeFiles/cmTC_5bf75.dir/CMakeCXXCompilerABI.cpp.o --build-id=none -lstdc++ -lm -lgcc -start-group -lgloss -lxil -lc -lm -end-group -lgcc /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtend.o /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/microblaze-xilinx-elf/13.3.0/crtn.o
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+
+Determining if the CXX compiler works failed with the following output:
+Change Dir: /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/Xilinx/2025.2/Vitis/bin/ninja cmTC_7ee83 && [1/2] Building CXX object CMakeFiles/cmTC_7ee83.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_7ee83
+FAILED: cmTC_7ee83 
+: && /opt/Xilinx/2025.2/Vitis/gnu/microblaze/lin/bin/mb-g++   CMakeFiles/cmTC_7ee83.dir/testCXXCompiler.cxx.o -o cmTC_7ee83   && :
+/opt/Xilinx/2025.2/gnu/microblaze/lin/x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ld.real: cannot find -lxil: No such file or directory
+collect2.real: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
