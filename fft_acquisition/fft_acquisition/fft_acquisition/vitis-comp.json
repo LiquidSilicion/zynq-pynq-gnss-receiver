@@ -1,0 +1,9 @@
+{
+  "name": "fft_acquisition",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["hls-debug.cfg ..\/fft_acquisition_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

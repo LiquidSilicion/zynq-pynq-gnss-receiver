@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/complex_scale.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 18:55:09 2026",
+ "timestampMillis": "1789997109854",
+ "buildStep": {
+  "cmdId": "420cf309-20bd-4398-816f-fc98991cd31e",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/logs/complex_scale.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale_hls_config.cfg --work_dir complex_scale ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale_hls_config.cfg",
+   "--work_dir",
+   "complex_scale"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 18:55:09 2026",
+ "timestampMillis": "1789997109854",
+ "status": {
+  "cmdId": "420cf309-20bd-4398-816f-fc98991cd31e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120522",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "complex_scale",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_scale/src/complex_scale.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_scale/src/complex_scale.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120524",
+ "buildStep": {
+  "cmdId": "75adb338-18c1-40fc-8a78-094aafc2f789",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120524",
+ "status": {
+  "cmdId": "75adb338-18c1-40fc-8a78-094aafc2f789",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120526",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120527",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120528",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120528",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120529",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 18:55:20 2026",
+ "timestampMillis": "1789997120529",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 19:02:49 2026",
+ "timestampMillis": "1789997569905",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 19:02:49 2026",
+ "timestampMillis": "1789997569922",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_scale/complex_scale/complex_scale/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 19:02:49 2026",
+ "timestampMillis": "1789997569923",
+ "status": {
+  "cmdId": "75adb338-18c1-40fc-8a78-094aafc2f789",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 19:02:50 2026",
+ "timestampMillis": "1789997570887",
+ "status": {
+  "cmdId": "420cf309-20bd-4398-816f-fc98991cd31e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 19:02:50 2026",
+ "timestampMillis": "1789997570895",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 19:02:50 2026",
+ "timestampMillis": "1789997570899",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

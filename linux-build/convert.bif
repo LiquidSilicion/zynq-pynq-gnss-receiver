@@ -1,4 +1,4 @@
 the_ROM_image:
 {
-    /home/johan2/zynq_gnss_correlator_system/zynq_gnss_correlator_system.runs/impl_1/enhanced_system_wrapper.bit
+   /home/johan2/zynq_gnss_acquisition/zynq_gnss_acquisition.runs/impl_1/zynq_gnss_acquisition_bd_wrapper.bit
 }

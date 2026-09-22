@@ -1,0 +1,9 @@
+{
+  "name": "complex_conjugate",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/complex_conjugate_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

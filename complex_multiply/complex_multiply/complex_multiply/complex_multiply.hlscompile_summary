@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/complex_multiply.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 17:27:26 2026",
+ "timestampMillis": "1789991846236",
+ "buildStep": {
+  "cmdId": "1de7cb33-d3c5-4d08-9745-e93f15a6976f",
+  "name": "v++",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/logs/complex_multiply.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg --work_dir complex_multiply ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg",
+   "--work_dir",
+   "complex_multiply"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg",
+    "content": "part=xc7z020clg484-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=complex_multiply\nsyn.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.cpp\nsyn.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.h\ntb.file=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply_tb.cpp\nclock=10ns"
+   }
+  ],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:26 2026",
+ "timestampMillis": "1789991846236",
+ "status": {
+  "cmdId": "1de7cb33-d3c5-4d08-9745-e93f15a6976f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856743",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "complex_multiply",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856746",
+ "buildStep": {
+  "cmdId": "b94cd3db-67da-4d45-bfe1-d6455f8df198",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856746",
+ "status": {
+  "cmdId": "b94cd3db-67da-4d45-bfe1-d6455f8df198",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856747",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856747",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:36 2026",
+ "timestampMillis": "1789991856748",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:56 2026",
+ "timestampMillis": "1789991876969",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:56 2026",
+ "timestampMillis": "1789991876970",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:56 2026",
+ "timestampMillis": "1789991876970",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:56 2026",
+ "timestampMillis": "1789991876971",
+ "status": {
+  "cmdId": "b94cd3db-67da-4d45-bfe1-d6455f8df198",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:57 2026",
+ "timestampMillis": "1789991877289",
+ "status": {
+  "cmdId": "1de7cb33-d3c5-4d08-9745-e93f15a6976f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:57 2026",
+ "timestampMillis": "1789991877471",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/reports/v++_compile_complex_multiply_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:57 2026",
+ "timestampMillis": "1789991877472",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/reports/.db/v++_compile_complex_multiply_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

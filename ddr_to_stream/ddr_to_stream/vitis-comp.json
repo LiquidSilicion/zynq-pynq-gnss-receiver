@@ -1,0 +1,14 @@
+{
+  "name": "ddr_to_stream",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "ddr_to_stream_hls_config.cfg"
+    ],
+    "work_dir": "ddr_to_stream"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

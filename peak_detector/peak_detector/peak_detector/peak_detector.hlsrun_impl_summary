@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/peak_detector.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 17:48:24 2026",
+ "timestampMillis": "1789993104961",
+ "buildStep": {
+  "cmdId": "62cadd81-87b0-4a37-8d62-098b2b6d6006",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/logs/peak_detector.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg --work_dir peak_detector ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg",
+   "--work_dir",
+   "peak_detector"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:48:24 2026",
+ "timestampMillis": "1789993104961",
+ "status": {
+  "cmdId": "62cadd81-87b0-4a37-8d62-098b2b6d6006",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115542",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "peak_detector",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/peak_detector/src/peak_detector.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/peak_detector/src/peak_detector.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115544",
+ "buildStep": {
+  "cmdId": "3d7722ae-0a96-44ec-9373-56ed19a541a3",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115545",
+ "status": {
+  "cmdId": "3d7722ae-0a96-44ec-9373-56ed19a541a3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115547",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115548",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115548",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115549",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115549",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:48:35 2026",
+ "timestampMillis": "1789993115550",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:56:44 2026",
+ "timestampMillis": "1789993604955",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:56:44 2026",
+ "timestampMillis": "1789993604962",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:56:44 2026",
+ "timestampMillis": "1789993604963",
+ "status": {
+  "cmdId": "3d7722ae-0a96-44ec-9373-56ed19a541a3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:56:45 2026",
+ "timestampMillis": "1789993605693",
+ "status": {
+  "cmdId": "62cadd81-87b0-4a37-8d62-098b2b6d6006",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:56:45 2026",
+ "timestampMillis": "1789993605695",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:56:45 2026",
+ "timestampMillis": "1789993605696",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

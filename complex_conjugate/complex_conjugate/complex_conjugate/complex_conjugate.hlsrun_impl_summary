@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/complex_conjugate.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 21:32:39 2026",
+ "timestampMillis": "1790006559269",
+ "buildStep": {
+  "cmdId": "4c63769b-f0a6-42b3-a347-090d66e1a3a5",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/logs/complex_conjugate.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate_hls_config.cfg --work_dir complex_conjugate ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate_hls_config.cfg",
+   "--work_dir",
+   "complex_conjugate"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 21:32:39 2026",
+ "timestampMillis": "1790006559270",
+ "status": {
+  "cmdId": "4c63769b-f0a6-42b3-a347-090d66e1a3a5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570163",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "complex_conjugate",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_conjugate/src/complex_conjugate.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_conjugate/src/complex_conjugate.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570165",
+ "buildStep": {
+  "cmdId": "4cb0c38f-04c2-40b7-846f-108683ab0078",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570166",
+ "status": {
+  "cmdId": "4cb0c38f-04c2-40b7-846f-108683ab0078",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570169",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570169",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570170",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570170",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570171",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:32:50 2026",
+ "timestampMillis": "1790006570171",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:39:15 2026",
+ "timestampMillis": "1790006955318",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:39:15 2026",
+ "timestampMillis": "1790006955334",
+ "report": {
+  "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 21:39:15 2026",
+ "timestampMillis": "1790006955335",
+ "status": {
+  "cmdId": "4cb0c38f-04c2-40b7-846f-108683ab0078",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 21:39:16 2026",
+ "timestampMillis": "1790006956598",
+ "status": {
+  "cmdId": "4c63769b-f0a6-42b3-a347-090d66e1a3a5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:39:16 2026",
+ "timestampMillis": "1790006956602",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 21:39:16 2026",
+ "timestampMillis": "1790006956604",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

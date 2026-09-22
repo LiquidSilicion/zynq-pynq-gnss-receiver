@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/complex_multiply.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 17:26:51 2026",
+ "timestampMillis": "1789991811256",
+ "buildStep": {
+  "cmdId": "fec21617-805c-4a95-923f-b6926413d54f",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/logs/complex_multiply.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg --work_dir complex_multiply ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg",
+   "--work_dir",
+   "complex_multiply"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:26:51 2026",
+ "timestampMillis": "1789991811256",
+ "status": {
+  "cmdId": "fec21617-805c-4a95-923f-b6926413d54f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 17:27:01 2026",
+ "timestampMillis": "1789991821672",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "complex_multiply",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/complex_multiply/src/complex_multiply.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 17:27:01 2026",
+ "timestampMillis": "1789991821675",
+ "buildStep": {
+  "cmdId": "3b21b596-0bcb-4393-8c17-77ab0a4d8d9e",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:01 2026",
+ "timestampMillis": "1789991821675",
+ "status": {
+  "cmdId": "3b21b596-0bcb-4393-8c17-77ab0a4d8d9e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:06 2026",
+ "timestampMillis": "1789991826466",
+ "status": {
+  "cmdId": "3b21b596-0bcb-4393-8c17-77ab0a4d8d9e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:27:06 2026",
+ "timestampMillis": "1789991826791",
+ "status": {
+  "cmdId": "fec21617-805c-4a95-923f-b6926413d54f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:06 2026",
+ "timestampMillis": "1789991826792",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:27:06 2026",
+ "timestampMillis": "1789991826792",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

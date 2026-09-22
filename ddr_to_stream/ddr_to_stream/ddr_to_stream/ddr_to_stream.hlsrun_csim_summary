@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream/ddr_to_stream.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Sep 22 00:19:41 2026",
+ "timestampMillis": "1790016581586",
+ "buildStep": {
+  "cmdId": "69e2bb53-1a1e-4103-9abd-d7e3b84f64a5",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream/logs/ddr_to_stream.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream_hls_config.cfg --work_dir ddr_to_stream ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream_hls_config.cfg",
+   "--work_dir",
+   "ddr_to_stream"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep 22 00:19:41 2026",
+ "timestampMillis": "1790016581586",
+ "status": {
+  "cmdId": "69e2bb53-1a1e-4103-9abd-d7e3b84f64a5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Sep 22 00:19:53 2026",
+ "timestampMillis": "1790016593401",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "ddr_to_stream",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/ddr_to_stream/src/ddr_to_stream.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/ddr_to_stream/src/ddr_to_stream.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Sep 22 00:19:53 2026",
+ "timestampMillis": "1790016593404",
+ "buildStep": {
+  "cmdId": "b461bb35-6d1d-4e95-bafb-7c4ca1bfdbfd",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep 22 00:19:53 2026",
+ "timestampMillis": "1790016593404",
+ "status": {
+  "cmdId": "b461bb35-6d1d-4e95-bafb-7c4ca1bfdbfd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep 22 00:19:58 2026",
+ "timestampMillis": "1790016598720",
+ "status": {
+  "cmdId": "b461bb35-6d1d-4e95-bafb-7c4ca1bfdbfd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep 22 00:19:59 2026",
+ "timestampMillis": "1790016599057",
+ "status": {
+  "cmdId": "69e2bb53-1a1e-4103-9abd-d7e3b84f64a5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep 22 00:19:59 2026",
+ "timestampMillis": "1790016599058",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep 22 00:19:59 2026",
+ "timestampMillis": "1790016599058",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

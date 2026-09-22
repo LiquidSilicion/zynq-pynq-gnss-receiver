@@ -1,0 +1,159 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/fft_acquisition.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 15:08:19 2026",
+ "timestampMillis": "1789983499465",
+ "buildStep": {
+  "cmdId": "1bb7a537-dae0-404a-9579-7fa97d5c70d7",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/logs/fft_acquisition.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/hls-debug.cfg --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition_hls_config.cfg --work_dir fft_acquisition ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/hls-debug.cfg",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition_hls_config.cfg",
+   "--work_dir",
+   "fft_acquisition"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 15:08:19 2026",
+ "timestampMillis": "1789983499466",
+ "status": {
+  "cmdId": "1bb7a537-dae0-404a-9579-7fa97d5c70d7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 15:08:30 2026",
+ "timestampMillis": "1789983510238",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "fft_acquisition",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/fft_acquisition/src/fft_acquisition.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/fft_acquisition/src/fft_acquisition.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 15:08:30 2026",
+ "timestampMillis": "1789983510240",
+ "buildStep": {
+  "cmdId": "02fc706b-3856-4d0b-8598-6ae5c567f970",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 15:08:30 2026",
+ "timestampMillis": "1789983510241",
+ "status": {
+  "cmdId": "02fc706b-3856-4d0b-8598-6ae5c567f970",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 15:08:39 2026",
+ "timestampMillis": "1789983519883",
+ "status": {
+  "cmdId": "02fc706b-3856-4d0b-8598-6ae5c567f970",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 15:08:40 2026",
+ "timestampMillis": "1789983520192",
+ "status": {
+  "cmdId": "1bb7a537-dae0-404a-9579-7fa97d5c70d7",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 15:08:40 2026",
+ "timestampMillis": "1789983520192",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 15:08:40 2026",
+ "timestampMillis": "1789983520193",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco/carrier_nco.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 17:05:35 2026",
+ "timestampMillis": "1789990535193",
+ "buildStep": {
+  "cmdId": "b768e0e5-9d3e-4d11-aad1-85b2350c319e",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco/logs/carrier_nco.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco_hls_config.cfg --work_dir carrier_nco ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco_hls_config.cfg",
+   "--work_dir",
+   "carrier_nco"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:05:35 2026",
+ "timestampMillis": "1789990535193",
+ "status": {
+  "cmdId": "b768e0e5-9d3e-4d11-aad1-85b2350c319e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 17:05:45 2026",
+ "timestampMillis": "1789990545182",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "carrier_nco",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 17:05:45 2026",
+ "timestampMillis": "1789990545184",
+ "buildStep": {
+  "cmdId": "f9f5126e-90ba-465e-ba3a-e55234ca8395",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:05:45 2026",
+ "timestampMillis": "1789990545184",
+ "status": {
+  "cmdId": "f9f5126e-90ba-465e-ba3a-e55234ca8395",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:05:46 2026",
+ "timestampMillis": "1789990546932",
+ "status": {
+  "cmdId": "f9f5126e-90ba-465e-ba3a-e55234ca8395",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:05:47 2026",
+ "timestampMillis": "1789990547254",
+ "status": {
+  "cmdId": "b768e0e5-9d3e-4d11-aad1-85b2350c319e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:05:47 2026",
+ "timestampMillis": "1789990547255",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:05:47 2026",
+ "timestampMillis": "1789990547256",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

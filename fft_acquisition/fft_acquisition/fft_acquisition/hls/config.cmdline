@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition
+original_argv=--mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition/hls-debug.cfg --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/fft_acquisition/fft_acquisition/fft_acquisition_hls_config.cfg --work_dir fft_acquisition 
+

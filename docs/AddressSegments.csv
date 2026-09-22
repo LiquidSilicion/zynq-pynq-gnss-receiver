@@ -1,0 +1,38 @@
+######################################################################################
+# This is a generated CSV file representing the addressing in design zynq_gnss_acquisition_bd
+#
+# Format:
+# Master Segment Name, Address Space, Slave Segment, Offset, Range ...
+#      Excluded (optional), Included (optional), Unassigned (optional)
+######################################################################################
+
+# 
+# Assignments in Address Space /carrier_nco_0/Data_m_axi_gmem0
+#
+SEG_processing_system7_0_HP0_DDR_LOWOCM,/carrier_nco_0/Data_m_axi_gmem0,/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM,0x00000000,512M
+# 
+# Assignments in Address Space /carrier_nco_0/Data_m_axi_gmem1
+#
+SEG_processing_system7_0_HP0_DDR_LOWOCM,/carrier_nco_0/Data_m_axi_gmem1,/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM,0x00000000,512M
+# 
+# Assignments in Address Space /ddr_to_stream_0/Data_m_axi_gmem
+#
+SEG_processing_system7_0_HP0_DDR_LOWOCM,/ddr_to_stream_0/Data_m_axi_gmem,/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM,0x00000000,512M
+# 
+# Assignments in Address Space /ddr_to_stream_1/Data_m_axi_gmem
+#
+SEG_processing_system7_0_HP0_DDR_LOWOCM,/ddr_to_stream_1/Data_m_axi_gmem,/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM,0x00000000,512M
+# 
+# Assignments in Address Space /processing_system7_0/Data
+#
+SEG_carrier_nco_0_Reg,/processing_system7_0/Data,/carrier_nco_0/s_axi_control/Reg,0x40000000,64K
+SEG_carrier_nco_0_Reg_1,/processing_system7_0/Data,/carrier_nco_0/s_axi_control_r/Reg,0x40010000,64K
+SEG_complex_conjugate_1_Reg,/processing_system7_0/Data,/complex_conjugate_1/s_axi_control/Reg,0x40020000,64K
+SEG_complex_conjugate_2_Reg,/processing_system7_0/Data,/complex_conjugate_2/s_axi_control/Reg,0x40030000,64K
+SEG_complex_multiply_0_Reg,/processing_system7_0/Data,/complex_multiply_0/s_axi_control/Reg,0x40040000,64K
+SEG_complex_scale_0_Reg,/processing_system7_0/Data,/complex_scale_0/s_axi_control/Reg,0x40050000,64K
+SEG_ddr_to_stream_0_Reg,/processing_system7_0/Data,/ddr_to_stream_0/s_axi_control/Reg,0x40060000,64K
+SEG_ddr_to_stream_0_Reg_1,/processing_system7_0/Data,/ddr_to_stream_0/s_axi_control_r/Reg,0x40070000,64K
+SEG_ddr_to_stream_1_Reg,/processing_system7_0/Data,/ddr_to_stream_1/s_axi_control/Reg,0x40080000,64K
+SEG_ddr_to_stream_1_Reg_1,/processing_system7_0/Data,/ddr_to_stream_1/s_axi_control_r/Reg,0x40090000,64K
+SEG_peak_detector_0_Reg,/processing_system7_0/Data,/peak_detector_0/s_axi_control/Reg,0x400A0000,64K

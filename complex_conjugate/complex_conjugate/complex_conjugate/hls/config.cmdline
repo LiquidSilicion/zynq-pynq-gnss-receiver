@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate
+original_argv=--mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_conjugate/complex_conjugate/complex_conjugate_hls_config.cfg --work_dir complex_conjugate 
+

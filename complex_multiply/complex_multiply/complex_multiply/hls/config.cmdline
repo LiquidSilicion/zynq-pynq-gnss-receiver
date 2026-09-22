@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply
+original_argv=--mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/complex_multiply/complex_multiply/complex_multiply_hls_config.cfg --work_dir complex_multiply 
+

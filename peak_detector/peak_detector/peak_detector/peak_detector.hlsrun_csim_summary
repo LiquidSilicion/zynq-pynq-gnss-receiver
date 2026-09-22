@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/peak_detector.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Sep 21 17:46:25 2026",
+ "timestampMillis": "1789992985158",
+ "buildStep": {
+  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "name": "vitis-run",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/logs/peak_detector.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg --work_dir peak_detector ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg",
+   "--work_dir",
+   "peak_detector"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:46:25 2026",
+ "timestampMillis": "1789992985159",
+ "status": {
+  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Sep 21 17:46:35 2026",
+ "timestampMillis": "1789992995462",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "peak_detector",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/peak_detector/src/peak_detector.cpp",
+     "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/peak_detector/src/peak_detector.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Sep 21 17:46:35 2026",
+ "timestampMillis": "1789992995464",
+ "buildStep": {
+  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "name": "",
+  "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:46:35 2026",
+ "timestampMillis": "1789992995464",
+ "status": {
+  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:46:40 2026",
+ "timestampMillis": "1789993000499",
+ "status": {
+  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Sep 21 17:46:40 2026",
+ "timestampMillis": "1789993000812",
+ "status": {
+  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:46:40 2026",
+ "timestampMillis": "1789993000813",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Sep 21 17:46:40 2026",
+ "timestampMillis": "1789993000814",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

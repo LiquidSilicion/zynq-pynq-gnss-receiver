@@ -1,0 +1,14 @@
+{
+  "name": "complex_multiply",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "complex_multiply_hls_config.cfg"
+    ],
+    "work_dir": "complex_multiply"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

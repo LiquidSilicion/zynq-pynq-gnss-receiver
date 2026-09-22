@@ -1,0 +1,9 @@
+{
+  "name": "peak_detector",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/peak_detector_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

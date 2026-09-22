@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco
+original_argv=--mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco/carrier_nco_hls_config.cfg --work_dir carrier_nco 
+

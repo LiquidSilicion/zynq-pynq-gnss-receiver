@@ -1,0 +1,14 @@
+{
+  "name": "carrier_nco",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "carrier_nco_hls_config.cfg"
+    ],
+    "work_dir": "carrier_nco"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

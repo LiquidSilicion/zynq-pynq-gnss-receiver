@@ -1,0 +1,9 @@
+{
+  "name": "carrier_nco",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/carrier_nco_hls_config.cfg"],
+    "work_dir": "."
+  }
+}

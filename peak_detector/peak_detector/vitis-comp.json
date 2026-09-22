@@ -1,0 +1,14 @@
+{
+  "name": "peak_detector",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "peak_detector_hls_config.cfg"
+    ],
+    "work_dir": "peak_detector"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

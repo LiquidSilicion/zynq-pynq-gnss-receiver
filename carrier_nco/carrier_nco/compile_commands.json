@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco",
+    "arguments": [
+      "/opt/Xilinx/2025.2/Vitis/lnx64/tools/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/2025.2/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=carrier_nco",
+      "-c",
+      "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco.cpp"
+    ],
+    "file": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco.cpp"
+  },
+  {
+    "directory": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/carrier_nco/carrier_nco",
+    "arguments": [
+      "/opt/Xilinx/2025.2/Vitis/lnx64/tools/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/opt/Xilinx/2025.2/Vitis/include",
+      "-c",
+      "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco_tb.cpp"
+    ],
+    "file": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/vivado/ip_repo/carrier_nco/src/carrier_nco_tb.cpp"
+  }
+]

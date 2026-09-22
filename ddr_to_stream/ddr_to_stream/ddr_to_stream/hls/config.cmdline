@@ -1,0 +1,3 @@
+relativeroot=/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream
+original_argv=--mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/ddr_to_stream/ddr_to_stream/ddr_to_stream_hls_config.cfg --work_dir ddr_to_stream 
+
