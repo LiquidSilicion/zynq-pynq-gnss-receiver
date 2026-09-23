@@ -1,14 +1,12 @@
-# 2026-09-22T16:16:23.465867151
+# 2026-09-21T21:29:23.717669101
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="complex_conjugate")
 
+comp = client.create_hls_component(name = "complex_conjugate",cfg_file = ["complex_conjugate_hls_config.cfg"],template = "empty_hls_component")
+
 comp = client.get_component(name="complex_conjugate")
-comp.run(operation="C_SIMULATION")
-
-comp.run(operation="C_SIMULATION")
-
 comp.run(operation="C_SIMULATION")
 
 comp.run(operation="SYNTHESIS")

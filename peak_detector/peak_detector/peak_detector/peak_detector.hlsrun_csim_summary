@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Mon Sep 21 17:46:25 2026",
- "timestampMillis": "1789992985158",
+ "dateTimestamp": "Tue Sep 22 17:06:10 2026",
+ "timestampMillis": "1790076970839",
  "buildStep": {
-  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "cmdId": "c9f9c5e7-874e-4a24-825c-7bff33fcb3c9",
   "name": "vitis-run",
   "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/logs/peak_detector.steps.log",
   "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg --work_dir peak_detector ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Sep 21 17:46:25 2026",
- "timestampMillis": "1789992985159",
+ "dateTimestamp": "Tue Sep 22 17:06:10 2026",
+ "timestampMillis": "1790076970839",
  "status": {
-  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "cmdId": "c9f9c5e7-874e-4a24-825c-7bff33fcb3c9",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Mon Sep 21 17:46:35 2026",
- "timestampMillis": "1789992995462",
+ "dateTimestamp": "Tue Sep 22 17:06:20 2026",
+ "timestampMillis": "1790076980850",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Mon Sep 21 17:46:35 2026",
- "timestampMillis": "1789992995464",
+ "dateTimestamp": "Tue Sep 22 17:06:20 2026",
+ "timestampMillis": "1790076980851",
  "buildStep": {
-  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "cmdId": "d99c5ddf-bc40-41de-8d27-15ba369ab52b",
   "name": "",
   "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Sep 21 17:46:35 2026",
- "timestampMillis": "1789992995464",
+ "dateTimestamp": "Tue Sep 22 17:06:20 2026",
+ "timestampMillis": "1790076980852",
  "status": {
-  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "cmdId": "d99c5ddf-bc40-41de-8d27-15ba369ab52b",
   "state": "CS_RUNNING"
  }
 }
@@ -108,10 +108,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Sep 21 17:46:40 2026",
- "timestampMillis": "1789993000499",
+ "dateTimestamp": "Tue Sep 22 17:06:25 2026",
+ "timestampMillis": "1790076985986",
  "status": {
-  "cmdId": "05b0cadd-edf3-4668-86b4-e7029a7f3cc1",
+  "cmdId": "d99c5ddf-bc40-41de-8d27-15ba369ab52b",
   "state": "CS_PASSED"
  }
 }
@@ -119,10 +119,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Sep 21 17:46:40 2026",
- "timestampMillis": "1789993000812",
+ "dateTimestamp": "Tue Sep 22 17:06:26 2026",
+ "timestampMillis": "1790076986330",
  "status": {
-  "cmdId": "2702410d-8bb7-4349-a80b-5397480e11b0",
+  "cmdId": "c9f9c5e7-874e-4a24-825c-7bff33fcb3c9",
   "state": "CS_PASSED"
  }
 }
@@ -130,8 +130,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Sep 21 17:46:40 2026",
- "timestampMillis": "1789993000813",
+ "dateTimestamp": "Tue Sep 22 17:06:26 2026",
+ "timestampMillis": "1790076986331",
  "report": {
   "path": "",
   "name": "",
@@ -144,8 +144,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Sep 21 17:46:40 2026",
- "timestampMillis": "1789993000814",
+ "dateTimestamp": "Tue Sep 22 17:06:26 2026",
+ "timestampMillis": "1790076986331",
  "report": {
   "path": "",
   "name": "",

@@ -1,8 +1,10 @@
-# 2026-09-22T16:31:57.988831311
+# 2026-09-21T18:46:58.052792234
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="complex_scale")
+
+comp = client.create_hls_component(name = "complex_scale",cfg_file = ["complex_scale_hls_config.cfg"],template = "empty_hls_component")
 
 comp = client.get_component(name="complex_scale")
 comp.run(operation="C_SIMULATION")

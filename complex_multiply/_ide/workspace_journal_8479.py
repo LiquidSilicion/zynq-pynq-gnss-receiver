@@ -1,10 +1,12 @@
-# 2026-09-22T22:14:42.918910696
+# 2026-09-22T16:01:12.949186837
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="complex_multiply")
 
 comp = client.get_component(name="complex_multiply")
+comp.run(operation="C_SIMULATION")
+
 comp.run(operation="C_SIMULATION")
 
 comp.run(operation="SYNTHESIS")
