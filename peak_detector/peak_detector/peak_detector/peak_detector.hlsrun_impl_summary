@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Tue Sep 22 17:08:12 2026",
- "timestampMillis": "1790077092313",
+ "dateTimestamp": "Wed Sep 23 18:49:42 2026",
+ "timestampMillis": "1790169582330",
  "buildStep": {
-  "cmdId": "3116d4d3-afef-4d8b-a29b-6d83cb0a0041",
+  "cmdId": "6ff5c398-bdfb-4bcb-883f-94d400487ebc",
   "name": "vitis-run",
   "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/logs/peak_detector.steps.log",
   "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector_hls_config.cfg --work_dir peak_detector ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Sep 22 17:08:12 2026",
- "timestampMillis": "1790077092313",
+ "dateTimestamp": "Wed Sep 23 18:49:42 2026",
+ "timestampMillis": "1790169582331",
  "status": {
-  "cmdId": "3116d4d3-afef-4d8b-a29b-6d83cb0a0041",
+  "cmdId": "6ff5c398-bdfb-4bcb-883f-94d400487ebc",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102830",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593631",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102832",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593633",
  "buildStep": {
-  "cmdId": "4358bc5d-10fa-4bb3-b265-c9b6a4e1adc0",
+  "cmdId": "8c667199-c02d-4d0d-bff0-159e21ba96f3",
   "name": "",
   "logFile": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102832",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593634",
  "status": {
-  "cmdId": "4358bc5d-10fa-4bb3-b265-c9b6a4e1adc0",
+  "cmdId": "8c667199-c02d-4d0d-bff0-159e21ba96f3",
   "state": "CS_RUNNING"
  }
 }
@@ -108,8 +108,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102835",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593636",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/verilog",
   "name": "",
@@ -122,8 +122,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102836",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593637",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_syn.rpt",
   "name": "",
@@ -136,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102837",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593638",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_syn.xml",
   "name": "",
@@ -150,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102837",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593638",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/verilog",
   "name": "",
@@ -164,8 +164,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102838",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593639",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_impl.rpt",
   "name": "",
@@ -178,8 +178,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:08:22 2026",
- "timestampMillis": "1790077102838",
+ "dateTimestamp": "Wed Sep 23 18:49:53 2026",
+ "timestampMillis": "1790169593640",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls/impl/report/verilog/export_impl.xml",
   "name": "",
@@ -192,8 +192,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:16:31 2026",
- "timestampMillis": "1790077591916",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110077",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls",
   "name": "",
@@ -206,8 +206,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:16:31 2026",
- "timestampMillis": "1790077591919",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110080",
  "report": {
   "path": "/home/johan2/Documents/fpga/zynq-pynq-gnss-receiver/peak_detector/peak_detector/peak_detector/hls",
   "name": "",
@@ -220,10 +220,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Sep 22 17:16:31 2026",
- "timestampMillis": "1790077591919",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110081",
  "status": {
-  "cmdId": "4358bc5d-10fa-4bb3-b265-c9b6a4e1adc0",
+  "cmdId": "8c667199-c02d-4d0d-bff0-159e21ba96f3",
   "state": "CS_PASSED"
  }
 }
@@ -231,10 +231,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Sep 22 17:16:32 2026",
- "timestampMillis": "1790077592274",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110916",
  "status": {
-  "cmdId": "3116d4d3-afef-4d8b-a29b-6d83cb0a0041",
+  "cmdId": "6ff5c398-bdfb-4bcb-883f-94d400487ebc",
   "state": "CS_PASSED"
  }
 }
@@ -242,8 +242,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:16:32 2026",
- "timestampMillis": "1790077592275",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110924",
  "report": {
   "path": "",
   "name": "",
@@ -256,8 +256,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Sep 22 17:16:32 2026",
- "timestampMillis": "1790077592276",
+ "dateTimestamp": "Wed Sep 23 18:58:30 2026",
+ "timestampMillis": "1790170110925",
  "report": {
   "path": "",
   "name": "",

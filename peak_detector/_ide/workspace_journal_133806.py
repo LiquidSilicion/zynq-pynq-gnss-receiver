@@ -1,14 +1,10 @@
-# 2026-09-23T18:41:45.630762880
+# 2026-09-22T17:05:26.691653889
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="peak_detector")
 
 comp = client.get_component(name="peak_detector")
-comp.run(operation="C_SIMULATION")
-
-comp.run(operation="C_SIMULATION")
-
 comp.run(operation="C_SIMULATION")
 
 comp.run(operation="SYNTHESIS")
