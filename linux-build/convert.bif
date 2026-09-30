@@ -1,4 +1,4 @@
 the_ROM_image:
 {
-   /home/johan2/zynq_gnss_acquisition/zynq_gnss_acquisition.runs/impl_1/zynq_gnss_acquisition_bd_wrapper.bit
+   /home/johan2/zynq_tracking_engine/zynq_tracking_engine.runs/impl_1/zynq_tracking_engine_bd_wrapper.bit
 }
